@@ -45,6 +45,7 @@ nav:
     - Citing a Dandiset: "citing.md"
     - Debugging: "15_debugging.md"
     - DANDI CLI and Python API: https://dandi.readthedocs.io
+  - Community Integrations: "70_community_integrations.md"
   - Developer Guide:
     - Project Structure: "20_project_structure.md"
     - Notes: "40_development.md"
