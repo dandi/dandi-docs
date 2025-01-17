@@ -1,9 +1,9 @@
-# DANDI Handbook
-Handbook for interacting with the DANDI Archive.
+# DANDI Docs
+Documentation for interacting with the DANDI Archive.
 
 ## DANDI Style Guidelines
 
-Follow the guidelines below when creating and revising text in the DANDI Handbook:
+Follow the guidelines below when creating and revising text in the DANDI Docs:
 
 *	**dandi-** repositories — hyphenate the names of DANDI GitHub repositories (e.g. **dandi-archive**); "Dandisets" is an exception because it is a
 complete word
@@ -20,7 +20,7 @@ complete word
 
 ## HOWTO
 
-This handbook uses [mkdocs](https://www.mkdocs.org/) to render the handbook written as a collection of markdown files into a website.
+The DANDI Docs uses [mkdocs](https://www.mkdocs.org/) to render the documentation written as a collection of markdown files into a website.
 If you would like to render it locally, you would need to create and configure a python environment according to configuration provided in [requirements.txt](./requirements.txt) file, e.g. via
 
     python3 -m venv venv && source venv/bin/activate && python3 -m pip install -r requirements.txt

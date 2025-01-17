@@ -37,13 +37,13 @@ and use the tag [dandi](https://neurostars.org/tag/dandi).
 ## Contributing and Feedback
 
 We are looking for people to give us feedback on this documentation. If anything
-is unclear, [open an issue on our repository](https://github.com/dandi/handbook/issues). You can also get in touch on 
+is unclear, [open an issue on our repository](https://github.com/dandi/dandi-docs/issues). You can also get in touch on 
 our Slack channel, which is available to those who have
 registered an account on the archive.
 
 If you want to get started right away and contribute directly to this
 documentation, see the [About This Documentation](.
-/100_about_this_doc.md) section.
+/100_contribute_docs.md) section.
 
 ## License
 
