@@ -56,7 +56,7 @@ nav:
     - Dandiset Examples: https://www.dandiarchive.org/example-notebooks
   - Health Status:
     - Dandisets: https://github.com/dandi/dandisets-healthstatus
-    - Services: https://www.dandiarchive.org/upptime
+    - Services: https://status.dandiarchive.org
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
