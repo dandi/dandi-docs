@@ -23,4 +23,4 @@ The DANDI project is organized around several **GitHub** repositories:
 | [helpdesk](https://github.com/dandi/helpdesk) | Contains our community help platform where you can submit [issues](https://github.com/dandi/helpdesk/issues/new/choose).
 | [schema](https://github.com/dandi/schema) | Provides the details and some supporting code for the DANDI metadata schema. 
 | [schema Python library](https://github.com/dandi/dandi-schema) | Provides a Python library for updating the schema and for creating and validating DANDI objects.
-| [website](https://github.com/dandi/dandi.github.io) | Provides an overview of the DANDI project and the team members and collaborators. |
+| [DANDI About website](https://github.com/dandi/dandi-about) | Provides an overview of the DANDI project and the team members and collaborators. |
