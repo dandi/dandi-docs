@@ -53,7 +53,7 @@ nav:
     - Contributing Documentation: "100_contribute_docs.md"
   - DANDI Hub: "50_hub.md"
   - Tutorials:
-    - Dandiset Examples: https://www.dandiarchive.org/example-notebooks
+    - Dandiset Examples: https://dandi.github.io/example-notebooks
   - Health Status:
     - Dandisets: https://github.com/dandi/dandisets-healthstatus
     - Services: https://www.dandiarchive.org/upptime
