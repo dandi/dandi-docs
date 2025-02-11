@@ -16,7 +16,7 @@ it tries to solve, check out the [Introduction](./01_introduction.md).
 To start using the archive, head over to [Using DANDI](./10_using_dandi.md) in the User Guide section.
 
 If are a developer and want to know how the project is organized, check out the [Project Structure](.
-/20_project_structure)
+/20_project_structure.md)
 page in the Developer Guide section.
 
 
