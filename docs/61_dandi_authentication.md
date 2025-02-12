@@ -43,10 +43,10 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 Create a `Social Application` object with:
 
-• The Provider as `GitHub`
-• The client ID as your GitHub OAuth client ID
-• The client secret as your GitHub OAuth client secret
-• Two `Sites` objects -- these objects you should have created a few steps prior
+* The Provider as `GitHub`
+* The client ID as your GitHub OAuth client ID
+* The client secret as your GitHub OAuth client secret
+* Two `Sites` objects -- these objects you should have created a few steps prior
 
 ### Updating (or creating) the "Application" Object
 
