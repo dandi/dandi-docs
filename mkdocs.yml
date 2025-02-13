@@ -47,6 +47,7 @@ nav:
     - DANDI CLI and Python API: https://dandi.readthedocs.io
   - Developer Guide:
     - Project Structure: "20_project_structure.md"
+    - Models Integration: "21_models_integration.md"
     - Notes: "40_development.md"
     - REST API Swagger: https://api.dandiarchive.org/swagger
     - REST API Redoc: https://api.dandiarchive.org/redoc
@@ -67,6 +68,11 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.critic
   - pymdownx.magiclink
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - toc:
       permalink: True
 
