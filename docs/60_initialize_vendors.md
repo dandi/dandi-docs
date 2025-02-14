@@ -2,30 +2,12 @@
 
 The DANDI ecosystem relies on vendor services to operate.  So first you will need to set up accounts with the following vendors:
 
-• **Heroku**
-
-Provisions the servers and worker processes for the API. Heroku also handles the Postgres instance responsible
-for data models in the DANDI Archive.
-
-• **AWS**
-
-Provides storage buckets, as well as domain management, for resources across the DANDI ecosystem 
-
-• **GitHub**
-
-Serves as the authentication provider for accounts across the DANDI ecosystem
-
-• **Terraform Cloud**
-
-Manages provisioned resources across cloud vendors in a version-controlled manner. 
-
-• **Netlify**
-
-Deploys production frontend build, as well as s staging previews to assist with frontend development
-
-• **Sentry**
-
-Provides observability and monitoring for API events
+• **Heroku**: Provisions the API componenents
+• **AWS**: Provides storage buckets, as well as domain management, for resources across the DANDI ecosystem 
+• **GitHub**: Serves as the authentication provider for accounts across the DANDI ecosystem
+• **Terraform Cloud**: Manages provisioned resources across cloud vendors in a version-controlled manner. 
+• **Netlify**: Deploys production frontend build, as well as staging previews to assist with frontend development
+• **Sentry**: Provides observability and monitoring for API events
 
 Some services are not yet integrated within the main infrastructure:
 
