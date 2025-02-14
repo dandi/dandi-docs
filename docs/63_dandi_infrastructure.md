@@ -133,6 +133,16 @@ expressed by the certificate and linking them as records in your DNS Hosted Zone
 While your DANDI Archive clone may differ in traffic and activity, the defaults set in `dandi-infrastructure` rarely
 exceed 75% usage.
 
+Keep in mind the different [pricing structures](https://www.heroku.com/pricing) that come with choosing different Heroku dyno sizes
+
+### Heroku Add-Ons
+
+In addition to the Heroku 'dynos' that are added for compute, multiple Heroku 'add-ons' are included
+
+- [CloudAMQP](https://elements.heroku.com/addons/cloudamqp) -- **Use Case**: Message Broker
+- [Postgres](https://elements.heroku.com/addons/heroku-postgresql) -- **Use Case**: Database
+- [Papertrail](https://elements.heroku.com/addons/papertrail) -- **Use Case**: Log Management
+
 ### Heroku API Domain
 
 Heroku will provision an API endpoint for your DANDI Archive. In order to properly map and configure that domain, first proceed to the 
