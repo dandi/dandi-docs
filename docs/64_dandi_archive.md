@@ -203,3 +203,12 @@ heroku run python manage.py createcachetable dandi_cache_table --app <insert-app
 ```
 
 You may not see updated stats immediately, as the stats are cached for 12 hours at a time.
+
+## Customizing Logos on the UI
+
+If you'd like to provide your own logo specific to your DANDI clone, you'll need to simply replace the referenced SVG logo in `web/src/assets/logo.svg`
+
+For reference, [see here](https://github.com/dandi/dandi-archive/blob/master/web/src/assets/logo.svg)
+
+You'll want to ensure that your logo is in SVG format. Updating this logo reference will change the [navigation bar logo](https://github.com/dandi/dandi-archive/blob/8e09a374ff1fd256acc26c86ceb81aef9fe358df/web/src/components/AppBar/AppBar.vue#L55), as well as the
+logo that is [visible on the landing page](https://github.com/dandi/dandi-archive/blob/8e09a374ff1fd256acc26c86ceb81aef9fe358df/web/src/views/HomeView/HomeView.vue#L8)
