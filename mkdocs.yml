@@ -44,7 +44,7 @@ nav:
       - Overview and Architecture: "59_overview.md"
       - Initialize Vendor Accounts for DANDI: "60_initialize_vendors.md"
       - DANDI Authentication: "61_dandi_authentication.md"
-      - DANDI CLI: "62_dandi_cli.md"
+      - DANDI Client: "62_dandi_cli.md"
       - DANDI Infrastructure: "63_dandi_infrastructure.md"
       - DANDI Archive: "64_dandi_archive.md"
       - DANDI Hub: "65_dandi_hub.md"

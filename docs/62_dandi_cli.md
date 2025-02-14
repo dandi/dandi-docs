@@ -1,7 +1,7 @@
-For data management (predominately `upload`, `download` and `validation` of data 
-to/from DANDI), a local CLI (command line interface) is used.
+Data management including upload, download, and validation is handled through a local DANDI Client.  
+The DANDI Client provides both a command line interface (CLI) and Python API.
 
-## Referencing your API
+## Update the DANDI Client to reference your API
 
 To reference your DANDI-clone API, [update the URLs reference per each CLI action](https://github.com/dandi/dandi-cli/blob/15196a93310618f8897c7b43444e216bbb094549/dandi/consts.py#L119-L135) and push a PR to the [dandi-cli GitHub repository](https://github.com/dandi/dandi-cli).
 
@@ -26,7 +26,7 @@ known_instances = {
         f"http://{instancehost}:8085",
         f"http://{instancehost}:8000/api",
     ),
-    "<your-dandi-clone>": DandiInstance( # Your own "dandi""
+    "<your-dandi-clone>": DandiInstance( # Your own "dandi"
         "<your-dandi-clone>", # Your own "dandi"
         "https://<your-dandi-clone-domain>.org", 
         "https://api.<your-dandi-clone-domain>.org/api", 

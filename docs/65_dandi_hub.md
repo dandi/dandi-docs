@@ -7,7 +7,7 @@ For example configurations that have been previously generated for the DANDI, LI
 
 Resources
 
-• [Source code and instructions]( https://github.com/dandi/dandi-hub)
+• [Source code and instructions](https://github.com/dandi/dandi-hub)
 
 • [DANDI Hub](https://hub.dandiarchive.org/)
 
