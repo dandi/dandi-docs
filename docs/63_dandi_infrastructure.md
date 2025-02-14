@@ -13,6 +13,10 @@ alt="terraform_config"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
+As described in #Understanding-the-DANDI-Infrastructure, 
+the terraform code in the [dandi-infrastructure](https://github.com/dandi/dandi-infrastructure) 
+repository includes many components that may not be needed for your use case.  You will need to define the infrastructure components in stepwise fashion, starting with the `api.tf` and `sponsored_bucket.tf`.
+
 ## Applying Terraform
 
 There are two ways in which you can invoke `terraform plan` and `terraform apply` upon your infrastructure.

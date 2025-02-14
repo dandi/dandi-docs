@@ -34,14 +34,14 @@ known_instances = {
 }
 ```
 
-Once your DANDI clone is added to list of available `DandiInstance` objects, you should be able to perform operations via the `-i` flag -- for example:
+Once your DANDI clone is added to the list of available `DandiInstance` objects, you should be able to perform operations via the `-i` flag.  For example:
 
 `dandi upload -i <your-dandi-clone>`
 
-**Note**: Users will be prompted for a `DANDI_API_KEY`
-env. var [see here for code reference](https://github.com/dandi/dandi-cli/blob/6aa414c4db47394970f586cc4fb9758a634aef87/dandi/dandiapi.py#L492-L499)
+## Access credentials
 
-You do not need to create a unique value here -- a user can just reference the `DANDI_API_KEY` their API issues in their respective clone.
+Users will be prompted for a `DANDI_API_KEY`
+environment variable.  This variable does not need to be unique to your DANDI clone.  A user can just set their `DANDI_API_KEY` to the value that your DANDI API clone issues.  See docs on [storing access credentials](https://www.dandiarchive.org/handbook/13_upload/#storing-access-credentials).
 
 ## Handling Versioning
 
@@ -50,7 +50,10 @@ DANDI CLI leverages a tool called [versioneer](https://pypi.org/project/versione
 Upon merging of a PR into `main`, if a given GitHub label is attached to the PR (`major`, `minor` or `patch` specifically)
 `versioneer` will generate a human-readable CHANGELOG entry, and then push to PyPI the proper new semantic version.
 
-
+### Versioning-Realted Resources
+- [PyPI package](https://pypi.org/project/dandi/)
+- [Source code](https://github.com/dandi/dandi-cli)
+- [Developer instructions](https://github.com/dandi/dandi-cli/blob/master/DEVELOPMENT.md)
 
 
 

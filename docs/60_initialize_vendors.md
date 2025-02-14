@@ -3,7 +3,7 @@
 The DANDI ecosystem relies on vendor services to operate.  So first you will need to set up accounts with the following vendors:
 
 • **Heroku**: Provisions the API componenents
-• **AWS**: Provides storage buckets, as well as domain management, for resources across the DANDI ecosystem 
+• **AWS**: Provides storage buckets, as well as domain management, for resources across the DANDI ecosystem. As well as the services (Kubernetes, etc.) for deploying the JupyterHub.
 • **GitHub**: Serves as the authentication provider for accounts across the DANDI ecosystem
 • **Terraform Cloud**: Manages provisioned resources across cloud vendors in a version-controlled manner. 
 • **Netlify**: Deploys production frontend build, as well as staging previews to assist with frontend development
