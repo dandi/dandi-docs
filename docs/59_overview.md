@@ -10,10 +10,9 @@ This section provides a high-level view of how DANDI’s core components fit tog
 The DANDI platform is essentially composed of:
 
 1. **Storage**: S3 buckets (AWS) where data actually resides.
-2. **API**: A Django/Girder-based backend application (hosted on Heroku) that handles the DANDI data model, user authentication, and orchestrates S3 interactions.
+2. **API**: A Django/Resonant-based backend application (hosted on Heroku) that handles the DANDI data model, user authentication, and orchestrates S3 interactions.
 3. **Frontend**: A Vue-based web application (hosted on Netlify) for users to browse, search, and manage data in the archive.
 4. **Workers**: Celery workers (also on Heroku) for asynchronous tasks such as file checksum calculations, analytics, and housekeeping.
-
 5. **Observability**: Log aggregation and alerting (Heroku logs, optional additional logs), plus Sentry for error-tracking and notifications. TODO(asmacdo) verify
 6. **Infrastructure-As-Code**: Terraform scripts that glue everything together—AWS S3 resources, Netlify or domain DNS, Heroku apps, etc.
 
@@ -50,7 +49,7 @@ Provides storage buckets, as well as domain management, for resources across the
 
 Provisions the servers, worker processes, and the database for the API.
 
-1. **API**: Django, extended by Girder 4, provides REST endpoints for metadata, asset management, versioning, and authentication.
+1. **API**: Django, extended by [Resonant](https://github.com/kitware-resonant/terraform-heroku-resonant), provides REST endpoints for metadata, asset management, versioning, and authentication.
 2. **Postgres**: Stores user metadata, dandiset metadata, and references to S3 objects.
 3. **Workers (Celery)**: Offload long-running tasks (checksums, analytics, zarr validation, etc.).
 
@@ -67,4 +66,4 @@ Provisions the servers, worker processes, and the database for the API.
 The single source of truth for spinning up or tearing down resources such as S3 buckets, IAM users, Route 53 DNS, Heroku pipeline config, Netlify domain config, etc.
 
 * **Repo**: The [`dandi-infrastructure`](https://github.com/dandi/dandi-infrastructure) repo.
-* **Terraform Cloud**: Used to run or apply changes after you push commits to the infrastructure repo.
+* **Terraform Cloud**: Used to plan or apply changes after you push commits to the infrastructure repo.

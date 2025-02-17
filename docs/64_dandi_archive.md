@@ -183,6 +183,11 @@ alt="user_metadata"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
+## Backups
+
+We are using [Heroku's "continuous protection" feature](https://devcenter.heroku.com/articles/heroku-postgres-data-safety-and-continuous-protection) which provides database backups reaching back in time 4 days.
+Additionally, we are configured to take a backup image of the Postgres database every day at 2am EST.
+
 ## Addition of the Cache Table for Metrics
 
 On the DANDI homepage, metrics exist for how many users, and how much data is stored in the Archive.
