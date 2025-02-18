@@ -51,6 +51,14 @@ nav:
     - Notes: "40_development.md"
     - REST API Swagger: https://api.dandiarchive.org/swagger
     - REST API Redoc: https://api.dandiarchive.org/redoc
+    - Create DANDI Instance:
+      - Overview and Architecture: "59_overview.md"
+      - Initialize Vendor Accounts for DANDI: "60_initialize_vendors.md"
+      - DANDI Authentication: "61_dandi_authentication.md"
+      - DANDI Client: "62_dandi_cli.md"
+      - DANDI Infrastructure: "63_dandi_infrastructure.md"
+      - DANDI Archive: "64_dandi_archive.md"
+      - DANDI Hub: "65_dandi_hub.md"
     - Contributing Documentation: "100_contribute_docs.md"
   - DANDI Hub: "50_hub.md"
   - Tutorials:

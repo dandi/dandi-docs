@@ -10,7 +10,7 @@ On the landing page of each Dandiset, you can find `Download` button on the righ
 button, you will see the specific command you can use with DANDI Python CLI (as well as the information on how to download the CLI).
 
 <img
-src="../img/web_dandiset_rsp_download.png"
+src="../img/web_dandiset_rsp_download.jpg"
 alt="web_dandiset_rsp_download"
 style="width: 30%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -20,7 +20,7 @@ style="width: 30%; height: auto; display: block; margin-left: auto;  margin-righ
 The right-side panel of the Dandiset landing page allows you also to access the list of folders and files.
 
 <img
-src="../img/web_dandiset_files.png"
+src="../img/web_dandiset_files.jpg"
 alt="web_dandiset_files"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 

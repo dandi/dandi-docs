@@ -1,7 +1,7 @@
 # Welcome to the DANDI Archive Documentation
 
 <img
-src="./img/dandi-banner.png"
+src="./img/dandi-banner.jpg"
 alt="dandi_banner"
 style="width: 75%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -30,8 +30,8 @@ request features [at our helpdesk](https://github.com/dandi/helpdesk/issues/new/
 and use the tag [dandi](https://neurostars.org/tag/dandi).
 - You can use the DANDI Slack workspace, which we will invite you to after approving your [registration on 
   DANDI using GitHub](https://dandiarchive.org/) (this registration is required to upload data or to use the DANDI 
-  JupyterHub). See [here for details on how to 
-  register](./13_upload.md).
+  JupyterHub). See [here for details on how to
+  [register](./13_upload.md).
 - Email us: [info@dandiarchive.org](mailto: info@dandiarchive.org)
 
 ## Contributing and Feedback
