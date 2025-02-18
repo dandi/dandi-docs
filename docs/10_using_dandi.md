@@ -37,7 +37,7 @@ To view a specific public Dandiset and download one of its files:
 
 4. From the right side of the Dandiset landing page, click FILES to see a list of all folders and files for that 
    Dandiset. Click the download icon <img
-src="../img/download_file_icon.png"
+src="../img/download_file_icon.jpg"
 alt="download_file_icon"/> to download a 
    specific file. 
 **Note:** To download an entire Dandiset, you will need to follow the instructions in the 

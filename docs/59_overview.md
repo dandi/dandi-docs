@@ -20,7 +20,7 @@ The DANDI platform is essentially composed of:
 These services interconnect as follows:
 
 <img
-src="../img/client_requests.png"
+src="../img/client_requests.jpg"
 alt="client_requests"
 style="width: 90%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -35,7 +35,7 @@ style="width: 90%; height: auto; display: block; margin-left: auto;  margin-righ
 ## Key Components
 
 <img
-src="../img/deployment.png"
+src="../img/deployment.jpg"
 alt="dandi_deployment"
 style="width: 90%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 

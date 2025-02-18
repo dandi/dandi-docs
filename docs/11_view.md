@@ -7,7 +7,7 @@ on `PUBLIC DANDISET` to access all Dandisets currently available
 in the archive, and you can sort them by name, identifier, size, or date of modification.
 
 <img
-src="../img/web_browse.png"
+src="../img/web_browse.jpg"
 alt="web_browse"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -18,7 +18,7 @@ return a subset of all Dandisets, while `"mouse house"` will likely not return a
 word is used as an `OR`.
 
 <img
-src="../img/web_search.png"
+src="../img/web_search.jpg"
 alt="web_search"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -27,7 +27,7 @@ When you click on one of the Dandisets, you can see that the searching phrase ca
 appear in the description, keywords, or in the assets summary.
 
 <img
-src="../img/web_search_dandiset.png"
+src="../img/web_search_dandiset.jpg"
 alt="web_search_dandiset"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -40,7 +40,7 @@ metadata provided by the owners such as contact information, description, licens
  a summary of the Dandiset including information about species, techniques, and standards.
 
 <img
-src="../img/web_dandiset_lp.png"
+src="../img/web_dandiset_lp.jpg"
 alt="web_dandiset_lp"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -54,7 +54,7 @@ found by clicking `Metadata` on the right-side panel. For Dandiset owners, this 
 adding relevant metadata to populate the landing page.
 
 <img
-src="../img/web_dandiset_metadata.png"
+src="../img/web_dandiset_metadata.jpg"
 alt="web_dandiset_metadata"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -64,7 +64,7 @@ The right side panel allows you also to access a file browser to navigate the li
 in a Dandiset.
 
 <img
-src="../img/web_dandiset_files.png"
+src="../img/web_dandiset_files.jpg"
 alt="web_dandiset_files"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -80,7 +80,7 @@ services that can open the file. *Note:* that these services often have size lim
 If you log in as a registered user, you will also see `My Dandisets` tab:
 
 <img
-src="../img/my_dandiset.png"
+src="../img/my_dandiset.jpg"
 alt="my_dandiset"
 style="width: 7
 0%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>

@@ -1,7 +1,7 @@
 # Welcome to the DANDI Archive Documentation
 
 <img
-src="./img/dandi-banner.png"
+src="./img/dandi-banner.jpg"
 alt="dandi_banner"
 style="width: 75%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 

@@ -34,7 +34,7 @@ Heroku provides observability in a very convenient manner. If you'd like to see 
 
 <br/><br/>
 <img
-src="../img/metrics_heroku.png"
+src="../img/metrics_heroku.jpg"
 alt="metrics_heroku"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -47,7 +47,7 @@ You'll find options in the `Access` tab
 
 <br/><br/>
 <img
-src="../img/members_heroku.png"
+src="../img/members_heroku.jpg"
 alt="members_heroku"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -61,7 +61,7 @@ Go into your Heroku app, and identify the `Run Console` option:
 
 <br/><br/>
 <img
-src="../img/heroku_console.png"
+src="../img/heroku_console.jpg"
 alt="heroku_console"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -70,7 +70,7 @@ Initialize a `bash` session
 
 <br/><br/>
 <img
-src="../img/heroku_bash.png"
+src="../img/heroku_bash.jpg"
 alt="heroku_bash"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -81,7 +81,7 @@ You'll now want to create a `superuser`
 
 <br/><br/>
 <img
-src="../img/heroku_user.png"
+src="../img/heroku_user.jpg"
 alt="heroku_user"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -110,7 +110,7 @@ To invoke the pipeline, proceed to the `Actions` tab in GitHub and find the pipe
 
 <br/><br/>
 <img
-src="../img/github_actions_workflow.png"
+src="../img/github_actions_workflow.jpg"
 alt="github_actions_workflow"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -119,7 +119,7 @@ Proceed to click the `Run Workflow` option.
 
 <br/><br/>
 <img
-src="../img/github_run_workflow.png"
+src="../img/github_run_workflow.jpg"
 alt="github_run_workflow"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -130,7 +130,7 @@ Other than the output of the CI/CD workflow, you can observe the status of the n
 
 <br/><br/>
 <img
-src="../img/github_label.png"
+src="../img/github_label.jpg"
 alt="github_label"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -167,7 +167,7 @@ Click on the `Users` tab -- in the tab, find the appropriate user and click on t
 
 <br/><br/>
 <img
-src="../img/user_approval.png"
+src="../img/user_approval.jpg"
 alt="user_approval"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -178,7 +178,7 @@ Click `Approved` and then `Save` on the bottom of the screen -- the user will no
 
 <br/><br/>
 <img
-src="../img/user_metadata.png"
+src="../img/user_metadata.jpg"
 alt="user_metadata"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -189,7 +189,7 @@ On the DANDI homepage, metrics exist for how many users, and how much data is st
 
 <br/><br/>
 <img
-src="../img/dandi_stats.png"
+src="../img/dandi_stats.jpg"
 alt="dandi_stats"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>

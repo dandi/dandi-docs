@@ -17,7 +17,7 @@ The Django Admin panel should be located at: `<your_full_api_url/admin`
 
 <br/><br/>
 <img
-src="../img/admin_panel.png"
+src="../img/admin_panel.jpg"
 alt="admin_panel"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -26,7 +26,7 @@ Proceed to the `Sites` tab. Create 2 sites: one for your UI, and another for you
 
 <br/><br/>
 <img
-src="../img/site_admin.png"
+src="../img/site_admin.jpg"
 alt="site_admin"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -36,7 +36,7 @@ Click `Add Social Application` in the top right corner.
 
 <br/><br/>
 <img
-src="../img/social_app_panel.png"
+src="../img/social_app_panel.jpg"
 alt="social_app_panel"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -57,7 +57,7 @@ If this object exists (it can if you ran migrations first or deployed to Heroku)
 
 <br/><br/>
 <img
-src="../img/django_app.png"
+src="../img/django_app.jpg"
 alt="django_app"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
