@@ -16,7 +16,7 @@ it tries to solve, check out the [Introduction](./01_introduction.md).
 To start using the archive, head over to [Using DANDI](./10_using_dandi.md) in the User Guide section.
 
 If are a developer and want to know how the project is organized, check out the [Project Structure](.
-/20_project_structure)
+/20_project_structure.md)
 page in the Developer Guide section.
 
 
@@ -37,7 +37,7 @@ and use the tag [dandi](https://neurostars.org/tag/dandi).
 ## Contributing and Feedback
 
 We are looking for people to give us feedback on this documentation. If anything
-is unclear, [open an issue on our repository](https://github.com/dandi/handbook/issues). You can also get in touch on
+is unclear, [open an issue on our repository](https://github.com/dandi/dandi-docs/issues). You can also get in touch on 
 our Slack channel, which is available to those who have
 registered an account on the archive.
 

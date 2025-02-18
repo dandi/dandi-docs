@@ -1,9 +1,9 @@
 site_name: DANDI Documentation
-repo_name: "dandi/handbook"
-repo_url: "https://github.com/dandi/handbook"
+repo_name: "dandi/dandi-docs"
+repo_url: "https://github.com/dandi/dandi-docs"
 copyright: "CC-BY 4.0"
 use_directory_urls: true
-site_url: https://www.dandiarchive.org/handbook/
+site_url: https://docs.dandiarchive.org
 
 # Material theme
 theme:
@@ -12,8 +12,18 @@ theme:
   favicon: img/favicon.ico
   logo: img/dandi-logo-square_sw.jpg
   palette:
-    primary: "dark blue"
-    accent: "light blue"
+    - scheme: default
+      toggle: 
+        icon: material/weather-night
+        name: Dark mode
+      primary: "dark blue"
+      accent: "light blue"
+    - scheme: slate
+      toggle: 
+        icon: material/weather-sunny
+        name: Light mode
+      primary: "dark blue"
+      accent: "light blue"
   features:
     - toc.integrate
 
@@ -37,6 +47,7 @@ nav:
     - DANDI CLI and Python API: https://dandi.readthedocs.io
   - Developer Guide:
     - Project Structure: "20_project_structure.md"
+    - Models Integration: "21_models_integration.md"
     - Notes: "40_development.md"
     - REST API Swagger: https://api.dandiarchive.org/swagger
     - REST API Redoc: https://api.dandiarchive.org/redoc
@@ -51,10 +62,10 @@ nav:
     - Contributing Documentation: "100_contribute_docs.md"
   - DANDI Hub: "50_hub.md"
   - Tutorials:
-    - Dandiset Examples: https://www.dandiarchive.org/example-notebooks
+    - Dandiset Examples: https://dandi.github.io/example-notebooks
   - Health Status:
     - Dandisets: https://github.com/dandi/dandisets-healthstatus
-    - Services: https://www.dandiarchive.org/upptime
+    - Services: https://status.dandiarchive.org
   - Terms and Policies:
       - Terms: "about/terms.md"
       - Policies: "about/policies.md"
@@ -65,6 +76,11 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.critic
   - pymdownx.magiclink
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - toc:
       permalink: True
 

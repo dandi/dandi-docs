@@ -16,7 +16,7 @@
   DANDI project data access, archival, and re-distribution (see **License** below).
 - **Data file formats:** DANDI only accepts data using standardized formats such
   as [Neurodata Without Borders](https://nwb.org), [Brain Imaging Data Structure](https://bids.neuroimaging.io/),
-  [Neuroimaging Data Model](NIDM), and other [BRAIN Initiative](https://braininitiative.nih.gov/)
+  [Neuroimaging Data Model](https://nidm.nidash.org/), and other [BRAIN Initiative](https://braininitiative.nih.gov/)
   standards. We are working with the community to improve these standards and to
   make DANDI archive FAIR.
 - **Data quality:** All data are provided “as-is”, and the user shall hold

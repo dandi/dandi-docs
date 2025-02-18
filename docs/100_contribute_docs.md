@@ -1,4 +1,4 @@
-# Contributing to this Handbook
+# Contributing to this documentation
 
 This documentation is a work in progress and we welcome all input: if something
 is missing or unclear, let us know by [opening an issue on our helpdesk](https://github.com/dandi/helpdesk/issues/new/choose).
@@ -11,13 +11,13 @@ and extra plugins to generate the website.
 To test locally, you will need to install the Python dependencies. To do that, type the following commands:
 
 ```
-git clone https://github.com/dandi/handbook.git
-cd handbook
+git clone https://github.com/dandi/dandi-docs.git
+cd dandi-docs
 pip install -r requirements.txt
 ```
 
-If you are working on your *fork*, simply replace `https://github.com/dandi/handbook.git`
-with `git clone git@github.com/<username>/handbook.git` , where `<username>` is your
+If you are working on your *fork*, simply replace `https://github.com/dandi/dandi-docs.git`
+with `git clone git@github.com/<username>/dandi-docs.git` , where `<username>` is your
 GitHub username.
 
 Once done, you need to run MkDocs. Simply type:
