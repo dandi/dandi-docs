@@ -1,4 +1,4 @@
-This step assumes that you have completed all steps in: [Initialize Vendors](../60_initialize_vendors) & [DANDI Infrastructure](../63_dandi_infrastructure)
+This step assumes that you have completed all steps in: [Initialize Vendors](../60_initialize_vendors) & [DANDI Infrastructure](../63_dandi_infrastructure).
 
 ## Initial Steps
 
@@ -6,14 +6,14 @@ This step assumes that you have completed all steps in: [Initialize Vendors](../
 
 Resources (e.g. the servers and environment ) for DANDI Archive are provisioned upon applying the Terraform definitions in
 `dandi-infrastructure`, specifically in the [api.tf definition](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/api.tf)
-The resources won't be running anything until your first Heroku `release` upon the Heroku app
+The resources won't be running anything until your first Heroku `release` upon the Heroku app.
 
-To see how your code would translate into a new `Heroku` release, [see the GitHub actions workflow used by DANDI Archive here](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-production-deploy.yml)
+To see how your code would translate into a new `Heroku` release, [see the GitHub actions workflow used by DANDI Archive here](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-production-deploy.yml).
 
 ## Understanding the concept of the Procfile for Heroku
 
 Heroku initializes compute on servers (known as `dynos` in Heroku land). Each `dyno` that you have runs a process.
-Which process, the resources allocated to that process, and how that process is run, is defined in a `Procfile`
+Which process, the resources allocated to that process, and how that process is run, is defined in a `Procfile`.
 
 DANDI Archive defines a [Procfile](https://github.com/dandi/dandi-archive/blob/master/Procfile). In this `Procfile`,
 you'll see several entries:
@@ -26,7 +26,7 @@ you'll see several entries:
 
 This `Procfile` shouldn't need to be changed or reconfigured much for a DANDI-clone; however, it is important to note so that one may understand how DANDI Archive is working.
 
-For information on the resource allocation of `dynos` in DANDI Archive, please reference documentation in [the Dandi Infrastructure Docs](../63_dandi_infrastructure)
+For information on the resource allocation of `dynos` in DANDI Archive, please reference the [DANDI Infrastructure Docs](../63_dandi_infrastructure).
 
 ## Understanding metrics and logging via Heroku
 
@@ -88,7 +88,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 You'll be prompted to create a user -- **Note: use an email that is not associated with your GitHub account, as GitHub is the default authentication provider for DANDI Archive**.
 
-To do one final test, try using your credentials to log into the Django Admin panel -- it should be located at `/admin` for your API, such as `your-apps-domain.com/admin`
+To do one final test, try using your credentials to log into the Django Admin panel -- it should be located at `/admin` for your API, such as `your-apps-domain.com/admin`.
 
 You are all set here!
 
@@ -98,9 +98,7 @@ A majority of the necessary setup steps here are defined already [during the ven
 
 The only other major initial setup step for the DANDI Archive frontend is regarding authentication -- [see here for more details](../61_dandi_authentication/#populating-appropriate-values-for-the-frontend-to-handle-authentication)
 
-## API Deployment
-
-### Via GitHub CI/CD
+## API Deployment with GitHub CI/CD
 
 Within the DANDI Archive repository, GitHub actions workflows exist for deployments to [production](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-production-deploy.yml) and [staging](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-staging-deploy.yml) environments
 
@@ -139,7 +137,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 ## Updating Allowed Hosts
 
-For the Django-based DANDI Archive API to receive and send HTTP requests without CORS errors, you'll need to update `ALLOWED_HOSTS` within the `dandiapi/settings.py` file.
+For the Django-based DANDI Archive API to receive and send HTTP requests without CORS errors, you'll need to add `ALLOWED_HOSTS` within the `dandiapi/settings.py` file.
 
 The `settings.py` file, in general, can be understood as the configuration file for the Django app -- [see the Django docs for more info here](https://docs.djangoproject.com/en/5.0/topics/settings/)
 
@@ -163,7 +161,7 @@ By default in DANDI, only users whose emails end in `.edu` are automatically app
 
 For all other users, proceed into the Django Admin panel.
 
-Click on the `Users` tab -- in the tab, find the appropriate user and click on their e-mail
+Click on the `Users` tab -- in the tab, find the appropriate user and click on their e-mail.
 
 <br/><br/>
 <img
@@ -174,7 +172,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 Scroll down to the `User Metadata` section, where you will see a `Status` option.
 
-Click `Approved` and then `Save` on the bottom of the screen -- the user will now have access to a valid API Key, in which they can interact with relevant assets within your Archive
+Click `Approved` and then `Save` on the bottom of the screen -- the user will now have access to a valid API Key, in which they can interact with relevant assets within your Archive.
 
 <br/><br/>
 <img
@@ -216,4 +214,4 @@ If you'd like to provide your own logo specific to your DANDI clone, you'll need
 For reference, [see here](https://github.com/dandi/dandi-archive/blob/master/web/src/assets/logo.svg)
 
 You'll want to ensure that your logo is in SVG format. Updating this logo reference will change the [navigation bar logo](https://github.com/dandi/dandi-archive/blob/8e09a374ff1fd256acc26c86ceb81aef9fe358df/web/src/components/AppBar/AppBar.vue#L55), as well as the
-logo that is [visible on the landing page](https://github.com/dandi/dandi-archive/blob/8e09a374ff1fd256acc26c86ceb81aef9fe358df/web/src/views/HomeView/HomeView.vue#L8)
+logo that is [visible on the landing page](https://github.com/dandi/dandi-archive/blob/8e09a374ff1fd256acc26c86ceb81aef9fe358df/web/src/views/HomeView/HomeView.vue#L8).

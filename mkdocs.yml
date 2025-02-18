@@ -10,7 +10,7 @@ theme:
   name: "material"
   language: "en"
   favicon: img/favicon.ico
-  logo: img/dandi-logo-square_sw.jpg
+  logo: img/dandi-logo-square_sw.png
   palette:
     - scheme: default
       toggle: 

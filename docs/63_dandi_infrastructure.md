@@ -13,7 +13,7 @@ alt="terraform_config"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-As described in [Understanding-the-DANDI-Infrastructure](https://github.com/dandi/dandi-infrastructure) 
+As described in the [Understanding the DANDI Infrastructure](#Understanding-the-DANDI-Infrastructure) section, the [dandi-infrastructure](https://github.com/dandi/dandi-infrastructure) 
 repository includes many components that may not be needed for your use case.  You will need to define the infrastructure components in stepwise fashion, starting with the `api.tf` and `sponsored_bucket.tf`.
 
 ## Applying Terraform
@@ -76,7 +76,7 @@ DANDI Infrastructure connects domains from three different vendors:
 ### Netlify
 
 Although Netlify prescribes mapping of Netlify-issued DNS records directly, DANDI Infrastructure relies on mapping Netlify's Load Balancer IP to the respective A Name Record in AWS Route 53, 
-as prescribed in [Netlify's docs here](https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain)
+as prescribed in [Netlify's docs](https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain)
 
 ```
 resource "aws_route53_record" "gui" {
@@ -88,7 +88,7 @@ resource "aws_route53_record" "gui" {
 }
 ```
 
-Note the code blob above, as referenced from [DANDI Infrastructure domain.tf Terraform template](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/domain.tf#L13).
+Note the code snippet above is from the DANDI Infrastructure [domain.tf](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/domain.tf#L13).
 
 ### AWS Route 53 and ACM
 
@@ -112,7 +112,7 @@ alt="public_cert"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-When setting up the certificate, provide a value of `*.<your_domain_name>` -- the goal being that the `*` will serve as a wildcard for both your API and UI DNS records
+When setting up the certificate, provide a value of `*.<your_domain_name>` -- the goal being that the `*` will serve as a wildcard for both your API and UI DNS records.
 
 <br/><br/>
 <img
@@ -154,7 +154,7 @@ alt="heroku_settings"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-Scroll down and find configuration options for SSL and Domains. Heroku will give you random DNS target for 
+Scroll down and find configuration options for SSL and Domains. Heroku will give you a random DNS target for 
 the API (in the case of the screenshot below `sleepy-jellyfish-0e1p913yo2bgizl1808pss2p.herokudns.com`)
 
 <br/><br/>
@@ -178,7 +178,7 @@ As long as the CNAME is covered by a valid SSL certificate, should be fully set 
 ## AWS Buckets
 
 While [Resonant](https://github.com/kitware-resonant/terraform-heroku-resonant) does declare S3-based resources, configuration is still needed within DANDI Infrastructure.
-Find your AWS Account ID. This value will be referenced in the `main.tf` Terraform template
+Find your AWS Account ID. This value will be referenced in the `main.tf` Terraform template.
 
 <br/><br/>
 <img
@@ -196,7 +196,7 @@ and [staging_pipeline.tf](https://github.com/dandi/dandi-infrastructure/blob/mas
 
 Setting up staging will require unique AWS Route 53 Domains, as well a different Heroku app with different compute.
 
-**Note -- ensure you review your `web/netlify.toml` file -- this will define different environment variables that correspond with staging vs. production**
+**Note -- ensure you review your `web/netlify.toml` file in DANDI Archive -- this will define different environment variables that correspond with staging vs. production**
 
 ### Email Setup
 
