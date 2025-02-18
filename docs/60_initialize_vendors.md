@@ -4,7 +4,7 @@ The DANDI ecosystem relies on vendor services to operate.  So first you will nee
 
 - **Heroku**: Provisions the API components.
 
-- **AWS**: Provides storage buckets, as well as domain management, for resources across the DANDI ecosystem. As well as the services (Kubernetes, etc.) for deploying the JupyterHub.
+- **AWS**: Provides storage buckets (S3), as well as domain management (Route53), for resources across the DANDI ecosystem. As well as the services (EC2, Kubernetes, etc.) for deploying the JupyterHub.
 
 - **GitHub**: Serves as the authentication provider for accounts across the DANDI ecosystem.
 
