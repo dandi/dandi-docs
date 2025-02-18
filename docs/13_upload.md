@@ -1,4 +1,4 @@
-# Creating Dandisets and Uploading Data
+# Creating Dandisets and Uploading Data to EMBER-DANDI
 
 This page provides instructions for creating a new Dandiset and uploading data to DANDI.
 
@@ -14,7 +14,7 @@ This page provides instructions for creating a new Dandiset and uploading data t
     Feel free to [reach out to us for help](https://github.com/dandi/helpdesk/discussions).
 
 2. **Choose a server.**
-    - **Production server**: https://dandiarchive.org. This is the main server for DANDI and should be used for sharing neuroscience data.
+    - **Production server**: https://dandi.emberarchive.org. This is the main server for EMBER-DANDI and should be used for sharing neuroscience data.
       When you create a Dandiset, a permanent ID is automatically assigned to it.
       This Dandiset can be fully public or embargoed according to NIH policy.
       All data are uploaded as draft and can be adjusted before publishing on the production server.
@@ -24,11 +24,11 @@ This page provides instructions for creating a new Dandiset and uploading data t
    
      The below instructions will alert you to where the commands for interacting with these two different servers differ slightly. 
 
-3. **Register for DANDI and copy the API key.** To create a new Dandiset and upload your data, you need to have a DANDI account.
-     * If you do not already have an account, see [Create a DANDI Account](./16_account.md) page for instructions. 
+3. **Register for  EMBER-DANDI and copy the API key.** To create a new Dandiset and upload your data, you need to have an EMBER-DANDI account.
+     * If you do not already have an account, see [Create an EMBER-DANDI Account](./16_account.md) page for instructions. 
      * Once you are logged in, copy your API key.
      Click on your user initials in the top-right corner after logging in.
-     Production (https://dandiarchive.org) and staging (https://gui-staging.dandiarchive.org) servers have different API keys and different logins.
+     Production (https://dandi.emberarchive.org) and staging (https://dandi.emberarchive.org) servers have different API keys and different logins.
      * Store your API key somewhere that the CLI can find it; see ["Storing Access Credentials"](#storing-access-credentials) below.
 
 ## Data upload/management workflow
@@ -57,7 +57,7 @@ The CLI approach may be more suitable for users who are comfortable with the com
         nwbinspector --help
 
      Thoroughly read the NWBInspector report and try to address as many issues as possible.
-     **DANDI will prevent validation and upload of any issues labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
+     **EMBER-DANDI will prevent validation and upload of any issues labeled as level 'CRITICAL' or above when using the `--config dandi` option.**
      See ["Validation Levels for NWB Files"](./135_validation.md) for more information about validation criteria for 
      uploading NWB files and which are deemed critical. We recommend regularly running the inspector early in the process to generate the best NWB files possible. Note that some auto-detected violations, such as `check_data_orientation`, may be safely ignored in the event 
      that the data is confirmed to be in the correct form. See [the NWBInspector CLI documentation](https://nwbinspector.readthedocs.io/en/dev/user_guide/using_the_command_line_interface.html) for more information.
@@ -74,7 +74,7 @@ The CLI approach may be more suitable for users who are comfortable with the com
 
 1. **Upload the data to DANDI.** This can either be done through the NWB GUIDE, or programmatically:
 
-        dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
+        dandi download https://dandi.emberarchive.org/<dataset_id>/draft
         cd <dataset_id>
         dandi organize <source_folder> -f dry
         dandi organize <source_folder>
@@ -87,7 +87,7 @@ The CLI approach may be more suitable for users who are comfortable with the com
      If you have an issue using the DANDI Client, see the [DANDI Debugging section](./15_debugging.md).
 
 1. **Add metadata to the Dandiset.** Visit your Dandiset landing page:
-   `https://dandiarchive.org/dandiset/<dataset_id>/draft` and click on the `METADATA` link.
+   `https://dandi.emberarchive.org/dandiset/<dataset_id>/draft` and click on the `METADATA` link.
 
 
 ## Storing Access Credentials
