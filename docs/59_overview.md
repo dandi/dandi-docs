@@ -14,7 +14,7 @@ The DANDI platform is essentially composed of:
 3. **Frontend**: A Vue-based web application (hosted on Netlify) for users to browse, search, and manage data in the archive.
 4. **Workers**: Celery workers (also on Heroku) for asynchronous tasks such as file checksum calculations, analytics, and housekeeping.
 5. **Observability**: Log aggregation and alerting (Heroku logs, optional additional logs), plus Sentry for error-tracking and notifications.
-6. **Infrastructure-As-Code**: Terraform scripts that glue everything together—AWS S3 resources, Netlify or domain DNS, Heroku apps, etc.
+6. **Infrastructure-As-Code**: Terraform scripts that glue everything together—AWS (S3, Route53, etc), Netlify, Heroku, etc.
 
 These services interconnect as follows:
 
