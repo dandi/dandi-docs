@@ -1,8 +1,8 @@
 ## Configuring Terraform
 
-[First, make sure you have properly set up your Terraform Cloud account and linked the account to the proper GitHub repository](../60_initialize_vendors/#terraform-cloud)
+[First, make sure you have set up your Terraform Cloud account and linked the account to the GitHub repository](../60_initialize_vendors/#terraform-cloud)
 
-To double-check whether your GitHub repository is properly linked, proceed to the `Version Control` tab.
+To double-check whether your GitHub repository is linked, proceed to the `Version Control` tab.
 
 The `Version Control` Repository value should point to the repository, and the `Terraform Working Directory` should point to `terraform` 
 
@@ -13,8 +13,7 @@ alt="terraform_config"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-As described in #Understanding-the-DANDI-Infrastructure, 
-the terraform code in the [dandi-infrastructure](https://github.com/dandi/dandi-infrastructure) 
+As described in [Understanding-the-DANDI-Infrastructure](https://github.com/dandi/dandi-infrastructure) 
 repository includes many components that may not be needed for your use case.  You will need to define the infrastructure components in stepwise fashion, starting with the `api.tf` and `sponsored_bucket.tf`.
 
 ## Applying Terraform
@@ -50,14 +49,13 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 ## Understanding the DANDI Infrastructure
 
-### Girder
+### Resonant
 
 In the [api.tf definition](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/api.tf), there is reference
-to a `source` keyword, where a [Terraform module called girder is defined](https://github.com/girder/terraform-heroku-girder4).
+to a `source` keyword, where a Terraform module called [Resonant](https://github.com/kitware-resonant/terraform-heroku-resonant) is defined.
 
-In the Girder submodule, AWS and Heroku resources are defined that facilitate base resources for compute and networking to work with DANDI Archive.
-
-Within the DANDI Infrastructure downstream, Girder is used by declaring values that the Terraform module expects. **Resources declared by Girder cannot be overwritten**
+In the Resonant submodule, AWS and Heroku resources are defined that facilitate base resources for compute and networking to work with DANDI Archive.
+Within the DANDI Infrastructure downstream, Resonant is used by declaring values that the Terraform module expects. **Resources declared by Resonant cannot be overwritten**
 
 #### Sponsored Bucket
 
@@ -70,6 +68,7 @@ A `sponsored bucket` is also declared in the `main.tf`, with downstream, related
 **DANDI Infrastructure assumes that you 1. own a domain, and 2. have purchased that domain (or have that domain managed) via AWS Route 53**
 
 DANDI Infrastructure connects domains from three different vendors:
+
 - **Netlify**: Manages load balancer IPs and custom domains for the UI.
 - **AWS Route 53**: Manages CNAME records for SSL certificates and links Heroku API URLs to domains.
 - **Heroku**: Provides domains for API services, which are aliased via AWS Route 53.
@@ -178,8 +177,7 @@ As long as the CNAME is covered by a valid SSL certificate, should be fully set 
 
 ## AWS Buckets
 
-While [Girder](https://github.com/girder/terraform-heroku-girder4) does declare S3-based resources, configuration is still needed within DANDI Infrastructure.
-
+While [Resonant](https://github.com/kitware-resonant/terraform-heroku-resonant) does declare S3-based resources, configuration is still needed within DANDI Infrastructure.
 Find your AWS Account ID. This value will be referenced in the `main.tf` Terraform template
 
 <br/><br/>
@@ -202,4 +200,4 @@ Setting up staging will require unique AWS Route 53 Domains, as well a different
 
 ### Email Setup
 
-TBD
+We will add docs in the future (https://github.com/dandi/dandi-docs/issues/177).

@@ -9,7 +9,7 @@ created during [Obtaining your Oauth App creds](..60_initialize_vendors/#obtaini
 
 ### Creating "Sites" and "Social App" Objects
 
-**In order to complete this step, you will need to have deployed an initial DANDI Archive API** -- see here for more details [Creating the DANDI Archive API](../64_dandi_archive)
+**In order to complete this step, you will need to have deployed an initial DANDI Archive API**.  See [Creating the DANDI Archive API](../64_dandi_archive) for more details.
 
 First, sign in via the Django admin panel with your credentials created via the [Creating an admin user account for the DANDI Archive API step](../64_dandi_archive/#creating-a-django-superuser-admin-account)
 
@@ -73,9 +73,9 @@ There are two places to update values relevant to the frontend.
 - `netlify.toml`
 - `.env.production`
 
-For `netlify.toml`: This should be located in the `web/` sub-directory -- [see DANDI Archive web/netlify.toml](https://github.com/dandi/dandi-archive/blob/master/web/netlify.toml). This is a file in which you can configure different settings for different environments in Netlify
+For `netlify.toml`: This should be located in the `web/` sub-directory -- [see DANDI Archive web/netlify.toml](https://github.com/dandi/dandi-archive/blob/master/web/netlify.toml). This is a file in which you can configure different settings for different environments in Netlify.
 
-For `.env.production`: This should also be located in the `web/` sub-directory --  [see DANDI Archive web/.env.production](https://github.com/dandi/dandi-archive/blob/master/web/.env.production). This is a file that will inject environment variables into the frontend upon build (e.g. `vite build`)
+For `.env.production`: This should also be located in the `web/` sub-directory --  [see DANDI Archive web/.env.production](https://github.com/dandi/dandi-archive/blob/master/web/.env.production). This is a file that will inject environment variables into the frontend upon build (e.g. `vite build`).
 
 Update the relevant values that reflect what was in your `Social Application` object for both files. You will also notice an environment variable related to `Sentry` -- this value can be obtained from your Sentry account.
 

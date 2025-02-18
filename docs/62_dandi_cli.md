@@ -43,12 +43,12 @@ Once your DANDI clone is added to the list of available `DandiInstance` objects,
 Users will be prompted for a `DANDI_API_KEY`
 environment variable.  This variable does not need to be unique to your DANDI clone.  A user can just set their `DANDI_API_KEY` to the value that your DANDI API clone issues.  See docs on [storing access credentials](https://www.dandiarchive.org/handbook/13_upload/#storing-access-credentials).
 
-## Handling Versioning
+## Versioning
 
-DANDI CLI leverages a tool called [versioneer](https://pypi.org/project/versioneer/) for semantic versioning in PyPI.
+The DANDI Client leverages a tool called [versioneer](https://pypi.org/project/versioneer/) for semantic versioning in PyPI.
 
-Upon merging of a PR into `main`, if a given GitHub label is attached to the PR (`major`, `minor` or `patch` specifically)
-`versioneer` will generate a human-readable CHANGELOG entry, and then push to PyPI the proper new semantic version.
+Upon merging of a PR into `master`, if the `release` label is attached to the PR
+`versioneer` will generate a human-readable CHANGELOG entry, and then push to PyPI the new semantic version.  For more details on labeling `dandi-cli` pull requests, see [here](https://github.com/dandi/dandi-cli/blob/master/DEVELOPMENT.md#releasing-with-github-actions-auto-and-pull-requests).
 
 ### Versioning-Realted Resources
 - [PyPI package](https://pypi.org/project/dandi/)

@@ -2,26 +2,21 @@
 
 The DANDI ecosystem relies on vendor services to operate.  So first you will need to set up accounts with the following vendors:
 
-• **Heroku**: Provisions the API componenents
-• **AWS**: Provides storage buckets, as well as domain management, for resources across the DANDI ecosystem. As well as the services (Kubernetes, etc.) for deploying the JupyterHub.
-• **GitHub**: Serves as the authentication provider for accounts across the DANDI ecosystem
-• **Terraform Cloud**: Manages provisioned resources across cloud vendors in a version-controlled manner. 
-• **Netlify**: Deploys production frontend build, as well as staging previews to assist with frontend development
-• **Sentry**: Provides observability and monitoring for API events
+- **Heroku**: Provisions the API components
+
+- **AWS**: Provides storage buckets, as well as domain management, for resources across the DANDI ecosystem. As well as the services (Kubernetes, etc.) for deploying the JupyterHub.
+
+- **GitHub**: Serves as the authentication provider for accounts across the DANDI ecosystem
+
+- **Terraform Cloud**: Manages provisioned resources across cloud vendors in a version-controlled manner. 
+
+- **Netlify**: Deploys production frontend build, as well as staging previews to assist with frontend development
+
+- **Sentry**: Provides observability and monitoring for API events
 
 Some services are not yet integrated within the main infrastructure:
 
 • https://github.com/dandi/backups2datalad - to populate/update https://github.com/dandi/dandisets, https://github.com/dandisets, and https://github.com/dandizarrs/
-
-• TODO: heroku logs
-
-• TODO: aws s3 access stats dump
-
-• TODO: con/tinuous dumps of CI logs 
-
-• TODO: zarr manifests generation (ATM not on drogon even)
-
-• TODO: access stats analysis/plots (yet to be finished/cron deployed)
 
 ## Heroku
 
@@ -233,8 +228,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 ##### Obtaining your OAuth App Credentials
 
-After creating your OAuth App, you'll lastly want to obtain a client secret key and your client ID -- make sure to note these values for further steps when creating our API
-
+After creating your OAuth App, you'll lastly want to obtain a client secret key and your client ID -- make sure to note these values for further steps when creating your API.
 <br/><br/>
 <img
 src="../img/client_values.jpg"
@@ -278,7 +272,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 Terraform is configuration tool for managing "infrastructure-as-code" -- meaning that we can programmatically manage infrastructure in
 a traceable, version-controlled form.
 
-The Terraform ecosystem provides a UI tool called **Terraform Cloud**
+The Terraform ecosystem provides a UI tool called **Terraform Cloud**.
 
 Start by visiting `https://app.terraform.io/` and making an account.
 
@@ -380,11 +374,10 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-Your frontend should be able to deploy to an auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the [Frontend Deployment](../64_dandi_archive/#frontend-deployment) section of these within the DANDI Archive setup.
-
+Your frontend should be able to deploy to an auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the [Frontend Deployment](../64_dandi_archive/#frontend-deployment) section within the DANDI Archive setup.
 ## Sentry
 
-[Sentry](https://sentry.io/) is a monitoring tool used for the DANDI Archive API. It is integral in order to notify engineers if a system is down, experiencing poor performance, or may have unwanted users
+[Sentry](https://sentry.io/) is a monitoring tool used for the DANDI Archive API. It is integral in order to notify engineers if a system is down, experiencing poor performance, or may have unwanted users.
 
 Begin by creating a Sentry account -- once successful, you'll start by creating a new Project:
 
@@ -395,7 +388,7 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-For your account, the free `Developer` account should be accurate, as define in [Sentry's pricing structure](https://sentry.io/pricing/)
+For your account, the free `Developer` account should be sufficient, as defined in [Sentry's pricing structure](https://sentry.io/pricing/).
 
 ##### Select Django as an App Type
 
@@ -420,6 +413,10 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-## datalad (TBD)
+## datalad
 
-## git-annex (TBD)
+We will add docs in the future (https://github.com/dandi/dandi-docs/issues/132).
+
+## git-annex
+
+We will add docs in the future (https://github.com/dandi/dandi-docs/issues/132).
