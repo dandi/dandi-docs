@@ -23,6 +23,22 @@ A "Base (MATLAB)" server is also available, which provides a MATLAB cloud instal
 
 If you need additional software installed in the image, you can add a server image that will be made available for all users in the `Server Options` menu.  Add a server image by updating the `profileList` in the [JupyterHub config file](https://github.com/dandi/dandi-hub/blob/do-eks/helm/jupyterhub/dandihub.yaml) and submitting a pull request to the [dandi-hub repository](https://github.com/dandi/dandi-hub).  Once the pull request is merged, the DANDI team will redeploy JupyterHub and the image will be available.
 
+See https://github.com/dandi/dandi-hub/pull/233 as an example of the changes you need.
+
+
+The following command will build and run a new image, which can be viewed locally in the browser at 127.0.0.1:8888/
+
+```sh
+docker build -f $(CONTAINERFILE) -t dandihub-dev:latest .
+docker run --rm -p 8888:8888 --name dev_jupyterlab dandihub-dev:latest start-notebook.sh --NotebookApp.token=""
+```
+
+To add the new image to the test CI, and to the Dandi Archive Dockerhub, add it to the `include`
+matrix of both `.github/workflows/docker-push.yaml` and `.github/workflows/docker-test.yaml`.
+
+You can add the image to server options by adding options to `envs/shared/jupyterhub.yaml`
+
+
 ## Example notebooks
 
 The best way to share analyses on DANDI data is through the DANDI example notebooks.
