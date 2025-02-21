@@ -9,12 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v1
-
-      - name: Copy example-notebooks repository
-        run: |
-          git clone https://github.com/dandi/example-notebooks
-          mv ./example-notebooks ./docs/
+        uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Install version of Python
         uses: actions/setup-python@v5

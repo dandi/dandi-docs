@@ -11,12 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
-        uses: actions/checkout@v1
-
-      - name: Copy example-notebooks repository
-        run: |
-          git clone https://github.com/dandi/example-notebooks
-          mv ./example-notebooks ./docs/
+        uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
