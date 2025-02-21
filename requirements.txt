@@ -1,4 +1,4 @@
-mkdocs-material>=9.5.10
+mkdocs-material>=9.6.3
 pymdown-extensions
 mkdocs-open-in-new-tab
 mkdocs-jupyter

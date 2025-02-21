@@ -1,7 +1,7 @@
 # Welcome to the DANDI Archive Documentation
 
 <img
-src="./img/dandi-banner.png"
+src="./img/dandi-banner.jpg"
 alt="dandi_banner"
 style="width: 75%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -16,7 +16,7 @@ it tries to solve, check out the [Introduction](./01_introduction.md).
 To start using the archive, head over to [Using DANDI](./10_using_dandi.md) in the User Guide section.
 
 If are a developer and want to know how the project is organized, check out the [Project Structure](.
-/20_project_structure)
+/20_project_structure.md)
 page in the Developer Guide section.
 
 
@@ -30,20 +30,20 @@ request features [at our helpdesk](https://github.com/dandi/helpdesk/issues/new/
 and use the tag [dandi](https://neurostars.org/tag/dandi).
 - You can use the DANDI Slack workspace, which we will invite you to after approving your [registration on 
   DANDI using GitHub](https://dandiarchive.org/) (this registration is required to upload data or to use the DANDI 
-  JupyterHub). See [here for details on how to 
-  register](./13_upload.md).
+  JupyterHub). See [here for details on how to
+  [register](./13_upload.md).
 - Email us: [info@dandiarchive.org](mailto: info@dandiarchive.org)
 
 ## Contributing and Feedback
 
 We are looking for people to give us feedback on this documentation. If anything
-is unclear, [open an issue on our repository](https://github.com/dandi/handbook/issues). You can also get in touch on 
+is unclear, [open an issue on our repository](https://github.com/dandi/dandi-docs/issues). You can also get in touch on 
 our Slack channel, which is available to those who have
 registered an account on the archive.
 
 If you want to get started right away and contribute directly to this
 documentation, see the [About This Documentation](.
-/100_about_this_doc.md) section.
+/100_contribute_docs.md) section.
 
 ## License
 

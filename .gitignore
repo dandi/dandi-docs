@@ -6,3 +6,4 @@ node_modules
 local_data
 
 site/
+venv/
