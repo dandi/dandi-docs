@@ -1,0 +1,4 @@
+[submodule "doc/example-notebooks"]
+	path = docs/example-notebooks
+	url = https://github.com/dandi/example-notebooks
+	datalad-url = https://github.com/dandi/example-notebooks
