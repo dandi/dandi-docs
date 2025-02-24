@@ -13,13 +13,13 @@ theme:
   logo: img/dandi-logo-square_sw.png
   palette:
     - scheme: default
-      toggle: 
+      toggle:
         icon: material/weather-night
         name: Dark mode
       primary: "dark blue"
       accent: "light blue"
     - scheme: slate
-      toggle: 
+      toggle:
         icon: material/weather-sunny
         name: Light mode
       primary: "dark blue"
@@ -54,10 +54,10 @@ nav:
     - Create DANDI Instance:
       - Overview and Architecture: "59_overview.md"
       - Initialize Vendor Accounts for DANDI: "60_initialize_vendors.md"
-      - DANDI Authentication: "61_dandi_authentication.md"
-      - DANDI Client: "62_dandi_cli.md"
       - DANDI Infrastructure: "63_dandi_infrastructure.md"
       - DANDI Archive: "64_dandi_archive.md"
+      - DANDI Authentication: "61_dandi_authentication.md"
+      - DANDI Client: "62_dandi_cli.md"
       - DANDI Hub: "65_dandi_hub.md"
     - Contributing Documentation: "100_contribute_docs.md"
   - DANDI Hub: "50_hub.md"
