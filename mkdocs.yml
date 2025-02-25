@@ -111,12 +111,12 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:info@dandiarchive.org
       name: Email
-    - icon: fontawesome/brands/x-twitter
-      link: https://twitter.com/dandiarchive
-      name: X-Twitter
     - icon: fontawesome/brands/github
       link: https://github.com/dandi
       name: GitHub
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@dandiarchive
       name: YouTube
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/dandiarchive.org
+      name: Bluesky
