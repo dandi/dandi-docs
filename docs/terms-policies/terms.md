@@ -8,7 +8,7 @@ the following terms:
 
 1. DANDI is an open dissemination research data repository for the preservation
    and making available of research, educational and informational content. Access
-   to DANDI’s content is open to all.
+   to DANDI's content is open to all.
 
 1. Content may be uploaded free of charge by the US BRAIN Initiative and other
    projects required to submit data to a public archive and those without ready

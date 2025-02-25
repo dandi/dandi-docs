@@ -1,9 +1,6 @@
-# Overview and Architecture
+# System Architecture
 
-The series of docs in this directory define how to create your own DANDI ecosystem (i.e. a clone of the entire DANDI ecosystem).
-It is suggested that you briefly read through each of the documents in this guide before starting.
-
-This section provides a high-level view of how DANDI’s core components fit together in a typical “full stack” deployment.
+This page provides a high-level view of how DANDI's core components fit together in a typical "full stack" deployment.
 
 ## The Big Picture
 
@@ -28,7 +25,7 @@ style="width: 90%; height: auto; display: block; margin-left: auto;  margin-righ
 * The **API** queries or updates metadata in its Postgres DB (hosted on Heroku).
 * The **API** calls AWS S3 to read/write DANDI assets.
 * Certain heavy-lift or background tasks get queued into Celery tasks, handled by the **Workers**.
-* Domain names, certificates, and load-balancing records are handled by AWS Route 53 or Netlify’s DNS, depending on whether it’s the API subdomain or the apex domain for the UI.
+* Domain names, certificates, and load-balancing records are handled by AWS Route 53 or Netlify's DNS, depending on whether it's the API subdomain or the apex domain for the UI.
 * Large chunks of data can be streamed from S3 directly to the Client via presigned URLs
 
 ## Key Components

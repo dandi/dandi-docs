@@ -19,7 +19,7 @@
   [Neuroimaging Data Model](https://nidm.nidash.org/), and other [BRAIN Initiative](https://braininitiative.nih.gov/)
   standards. We are working with the community to improve these standards and to
   make DANDI archive FAIR.
-- **Data quality:** All data are provided “as-is”, and the user shall hold
+- **Data quality:** All data are provided "as-is", and the user shall hold
   DANDI and data providers supplying data to the DANDI Archive free and harmless in
   connection with the use of such data.
 - **Metadata types and sources:** All metadata is stored internally in JSON format
