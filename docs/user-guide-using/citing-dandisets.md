@@ -1,4 +1,4 @@
-# Citing a Dandiset
+# Citing Dandisets
 
 If you use a Dandiset in your research, please acknowledge the Dandiset by citing it, just as you would a publication,
 including the DOI.

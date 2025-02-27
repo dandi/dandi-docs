@@ -3,15 +3,10 @@
 The DANDI ecosystem relies on vendor services to operate.  So first you will need to set up accounts with the following vendors:
 
 - **Heroku**: Provisions the API components.
-
 - **AWS**: Provides storage buckets (S3), as well as domain management (Route53), for resources across the DANDI ecosystem. As well as the services (EC2, Kubernetes, etc.) for deploying the JupyterHub.
-
 - **GitHub**: Serves as the authentication provider for accounts across the DANDI ecosystem.
-
 - **Terraform Cloud**: Manages provisioned resources across cloud vendors in a version-controlled manner. 
-
 - **Netlify**: Deploys production frontend build, as well as staging previews to assist with frontend development.
-
 - **Sentry**: Provides observability and monitoring for API events.
 
 Some services are not yet integrated within the main infrastructure:
@@ -32,7 +27,7 @@ Send invites to the appropriate e-mail addresses to onboard your team
 
 <br/><br/>
 <img
-src="../img/heroku_create_app.jpg"
+src="../../../img/heroku_create_app.jpg"
 alt="heroku_create_app"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -41,7 +36,7 @@ You can name whatever you wish -- no need to add a pipeline, etc. **Be sure to n
 
 <br/><br/>
 <img
-src="../img/heroku_app_name.jpg"
+src="../../../img/heroku_app_name.jpg"
 alt="heroku_app_name"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -56,7 +51,7 @@ First go to your `Account Settings`:
 
 <br/><br/>
 <img
-src="../img/heroku_settings.jpg"
+src="../../../img/heroku_settings.jpg"
 alt="heroku_app_name"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -65,7 +60,7 @@ Next, find the `API Key` section and generate a new key.
 
 <br/><br/>
 <img
-src="../img/heroku_key.jpg"
+src="../../../img/heroku_key.jpg"
 alt="heroku_app_name"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -83,7 +78,7 @@ No special steps here, just create!
 
 <br/><br/>
 <img
-src="../img/user_group.jpg"
+src="../../../img/user_group.jpg"
 alt="user_group"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -92,7 +87,7 @@ Ensure that you click the right policy in the `Attach permissions policies` sect
 
 <br/><br/>
 <img
-src="../img/permissions.jpg"
+src="../../../img/permissions.jpg"
 alt="permissions"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -102,7 +97,7 @@ to the credentials of `AdministratorAccess` in AWS can be an extreme security ha
 
 <br/><br/>
 <img
-src="../img/create_group.jpg"
+src="../../../img/create_group.jpg"
 alt="create_group"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -112,7 +107,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 <br/><br/>
 <img
-src="../img/create_user.jpg"
+src="../../../img/create_user.jpg"
 alt="create_user"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -121,7 +116,7 @@ Next, give a unique name -- no need to enable Console Access
 
 <br/><br/>
 <img
-src="../img/specify_user.jpg"
+src="../../../img/specify_user.jpg"
 alt="specify_user"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -130,7 +125,7 @@ Lastly, add them to the Group you made in the step above:
 
 <br/><br/>
 <img
-src="../img/add_perms.jpg"
+src="../../../img/add_perms.jpg"
 alt="add_perms"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -144,7 +139,7 @@ Firstly, go to your User and click the `Security Credentials` tab:
 
 <br/><br/>
 <img
-src="../img/creds.jpg"
+src="../../../img/creds.jpg"
 alt="creds"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -152,7 +147,7 @@ Navigate to `Create access key`
 
 <br/><br/>
 <img
-src="../img/access_key.jpg"
+src="../../../img/access_key.jpg"
 alt="access_key"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -161,7 +156,7 @@ You'll be prompted to provide a reason for the access key creation. It doesn't m
 
 <br/><br/>
 <img
-src="../img/creds_purpose.jpg"
+src="../../../img/creds_purpose.jpg"
 alt="creds_purpose"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -170,7 +165,7 @@ Time to create the key!
 
 <br/><br/>
 <img
-src="../img/create_tag.jpg"
+src="../../../img/create_tag.jpg"
 alt="create_tag"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -179,7 +174,7 @@ You'll be provided with the values of your `Access key` and `Secret access key` 
 
 <br/><br/>
 <img
-src="../img/retrieve.jpg"
+src="../../../img/retrieve.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -194,7 +189,7 @@ Once you create the Organization, navigate to the `Settings` tab:
 
 <br/><br/>
 <img
-src="../img/github_home.jpg"
+src="../../../img/github_home.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -203,7 +198,7 @@ Under `Settings`, you'll want to initialize an `OAuth App` -- navigate to `Devel
 
 <br/><br/>
 <img
-src="../img/oauth_app.jpg"
+src="../../../img/oauth_app.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -212,7 +207,7 @@ Click on `New Org OAuth App` next
 
 <br/><br/>
 <img
-src="../img/new_app.jpg"
+src="../../../img/new_app.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -221,7 +216,7 @@ You'll be prompted with the following form -- see the example values populated i
 
 <br/><br/>
 <img
-src="../img/register_new.jpg"
+src="../../../img/register_new.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -231,7 +226,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 After creating your OAuth App, you'll lastly want to obtain a client secret key and your client ID -- make sure to note these values for further steps when creating your API.
 <br/><br/>
 <img
-src="../img/client_values.jpg"
+src="../../../img/client_values.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -244,7 +239,7 @@ Once you have the repository forked, you'll want to navigate to `Settings` in th
 
 <br/><br/>
 <img
-src="../img/linc_settings.jpg"
+src="../../../img/linc_settings.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -253,7 +248,7 @@ Next, navigate to `Security > Secrets and variables > Actions`
 
 <br/><br/>
 <img
-src="../img/secrets_actions.jpg"
+src="../../../img/secrets_actions.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -262,7 +257,7 @@ And then lastly create two new secrets, `HEROKU_EMAIL` should be the email addre
 
 <br/><br/>
 <img
-src="../img/heroku_secrets.jpg"
+src="../../../img/heroku_secrets.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -282,7 +277,7 @@ Once you have successfully made an account, you'll want to create a `Workspace` 
 
 <br/><br/>
 <img
-src="../img/terraform_init.jpg"
+src="../../../img/terraform_init.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -298,7 +293,7 @@ Populate the following variables in the `Variables` section of the `Workspace`:
 
 <br/><br/>
 <img
-src="../img/terraform_vars.jpg"
+src="../../../img/terraform_vars.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -309,7 +304,7 @@ Next, link your appropriate GitHub repository, in this case, most likely your fo
 
 <br/><br/>
 <img
-src="../img/tf_vcs.jpg"
+src="../../../img/tf_vcs.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -318,7 +313,7 @@ Link your repository -- you may need to declare the appropriate subdirectory
 
 <br/><br/>
 <img
-src="../img/tf_repo.jpg"
+src="../../../img/tf_repo.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -339,7 +334,7 @@ First, create an account. After creating an account, you'll want to navigate to 
 
 <br/><br/>
 <img
-src="../img/start_netlify.jpg"
+src="../../../img/start_netlify.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -349,7 +344,7 @@ enabled authorization, you'll need to specifically link your appropriate reposit
 
 <br/><br/>
 <img
-src="../img/netlify_auth.jpg"
+src="../../../img/netlify_auth.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -358,7 +353,7 @@ Now once you see the appropriate repository, you'll want to navigate to configur
 
 <br/><br/>
 <img
-src="../img/netlify_repo_search.jpg"
+src="../../../img/netlify_repo_search.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -369,12 +364,12 @@ These values can also be replicated in the settings.
 
 <br/><br/>
 <img
-src="../img/netlify_config.jpg"
+src="../../../img/netlify_config.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-Your frontend should be able to deploy to an auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the [Frontend Deployment](../64_dandi_archive/#frontend-deployment) section within the DANDI Archive setup.
+Your frontend should be able to deploy to an auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the [Frontend Deployment](./dandi_archive.md#frontend-deployment) section within the DANDI Archive setup.
 ## Sentry
 
 [Sentry](https://sentry.io/) is a monitoring tool used for the DANDI Archive API. It is integral in order to notify engineers if a system is down, experiencing poor performance, or may have unwanted users.
@@ -383,7 +378,7 @@ Begin by creating a Sentry account -- once successful, you'll start by creating 
 
 <br/><br/>
 <img
-src="../img/sentry_init.jpg"
+src="../../../img/sentry_init.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -396,7 +391,7 @@ DANDI Archive API is built as a Django app -- so proceed to select `Django` on t
 
 <br/><br/>
 <img
-src="../img/sentry_django.jpg"
+src="../../../img/sentry_django.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -408,7 +403,7 @@ This value will be used later as an environment variable while deploying your AP
 
 <br/><br/>
 <img
-src="../img/sentry_sdk_dsn.jpg"
+src="../../../img/sentry_sdk_dsn.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>

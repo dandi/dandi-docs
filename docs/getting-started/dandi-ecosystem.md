@@ -1,8 +1,8 @@
-# Project Structure
+# DANDI Ecosystem
 
 The DANDI project can be represented schematically:
 
-<img src="../img/dandi_structure.svg"
+<img src="../../img/dandi_structure.svg"
 alt="dandi_structure"
 style="width: 70%; height: auto; display: block; margin-left: auto; margin-right: auto;"/>
 

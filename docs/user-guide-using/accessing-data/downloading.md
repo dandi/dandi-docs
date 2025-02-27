@@ -1,16 +1,16 @@
-# Downloading Data and Dandisets
+# Downloading Data
 
 You can download the content of a Dandiset using the DANDI Web application (such a specific file) or entire
 Dandisets using the DANDI Python CLI.
 
 ## Using the DANDI Web Application
 
-Once you have the Dandiset you are interested in (see more in [the Dandiset View section](./11_view.md)), you can download the content of the Dandiset.
+Once you have the Dandiset you are interested in (see more in [Exploring Dandisets](../exploring-dandisets.md)), you can download the content of the Dandiset.
 On the landing page of each Dandiset, you can find `Download` button on the right-hand panel. After clicking the
 button, you will see the specific command you can use with DANDI Python CLI (as well as the information on how to download the CLI).
 
 <img
-src="../img/web_dandiset_rsp_download.jpg"
+src="../../../img/web_dandiset_rsp_download.jpg"
 alt="web_dandiset_rsp_download"
 style="width: 30%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -20,7 +20,7 @@ style="width: 30%; height: auto; display: block; margin-left: auto;  margin-righ
 The right-side panel of the Dandiset landing page allows you also to access the list of folders and files.
 
 <img
-src="../img/web_dandiset_files.jpg"
+src="../../../img/web_dandiset_files.jpg"
 alt="web_dandiset_files"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 
@@ -35,7 +35,7 @@ The [DANDI Python client](https://pypi.org/project/dandi/) gives you more option
 Dandisets.
 
 **Before You Begin**: You need to have Python 3.8+ and install the DANDI Python Client using `pip install dandi`.
-If you have an issue using the Python CLI, see the [Dandi Debugging section](./15_debugging.md).
+If you have an issue using the Python CLI, see the [Dandi Debugging section](https://dandi.readthedocs.io/en/latest/debugging.html).
 
 ### Download a Dandiset
 To download an entire Dandiset, you can use the same command as suggested by DANDI web application, e.g.:

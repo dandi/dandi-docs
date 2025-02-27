@@ -1,6 +1,6 @@
 ## Configuring Terraform
 
-[First, make sure you have set up your Terraform Cloud account and linked the account to the GitHub repository](../60_initialize_vendors/#terraform-cloud)
+[First, make sure you have set up your Terraform Cloud account and linked the account to the GitHub repository](./initialize_vendors.md#terraform-cloud)
 
 To double-check whether your GitHub repository is linked, proceed to the `Version Control` tab.
 
@@ -8,7 +8,7 @@ The `Version Control` Repository value should point to the repository, and the `
 
 <br/><br/>
 <img
-src="../img/terraform_config.jpg"
+src="../../../img/terraform_config.jpg"
 alt="terraform_config"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -31,7 +31,7 @@ To view, go to the `Runs` tab -- you will see that the Terraform run populates t
 
 <br/><br/>
 <img
-src="../img/terraform_auto.jpg"
+src="../../../img/terraform_auto.jpg"
 alt="terraform_auto"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -42,7 +42,7 @@ If you'd like more control over Terraform, you can also default to run manually.
 
 <br/><br/>
 <img
-src="../img/terraform_manual.jpg"
+src="../../../img/terraform_manual.jpg"
 alt="terraform_manual"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -98,7 +98,7 @@ Proceed to AWS `Certificate Manager`. Begin by requesting a certificate -- **Not
 
 <br/><br/>
 <img
-src="../img/aws_acm_dashboard.jpg"
+src="../../../img/aws_acm_dashboard.jpg"
 alt="aws_acm_dashboard"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -107,7 +107,7 @@ Next, request a `Public Certificate`
 
 <br/><br/>
 <img
-src="../img/public_cert.jpg"
+src="../../../img/public_cert.jpg"
 alt="public_cert"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -116,7 +116,7 @@ When setting up the certificate, provide a value of `*.<your_domain_name>` -- th
 
 <br/><br/>
 <img
-src="../img/valid_domain_acm.jpg"
+src="../../../img/valid_domain_acm.jpg"
 alt="valid_domain_acm"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -149,7 +149,7 @@ Heroku will provision an API endpoint for your DANDI Archive. In order to proper
 
 <br/><br/>
 <img
-src="../img/heroku_settings.jpg"
+src="../../../img/heroku_settings.jpg"
 alt="heroku_settings"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -159,7 +159,7 @@ the API (in the case of the screenshot below `sleepy-jellyfish-0e1p913yo2bgizl18
 
 <br/><br/>
 <img
-src="../img/heroku_domain_config.jpg"
+src="../../../img/heroku_domain_config.jpg"
 alt="heroku_domain_config"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -168,7 +168,7 @@ Proceed to AWS Route 53. Create a corresponding CNAME that maps to the DNS targe
 
 <br/><br/>
 <img
-src="../img/heroku_cname.jpg"
+src="../../../img/heroku_cname.jpg"
 alt="heroku_cname"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -182,7 +182,7 @@ Find your AWS Account ID. This value will be referenced in the `main.tf` Terrafo
 
 <br/><br/>
 <img
-src="../img/aws_account.jpg"
+src="../../../img/aws_account.jpg"
 alt="aws_account"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>

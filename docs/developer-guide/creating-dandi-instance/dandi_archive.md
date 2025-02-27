@@ -1,4 +1,4 @@
-This step assumes that you have completed all steps in: [Initialize Vendors](../60_initialize_vendors) & [DANDI Infrastructure](../63_dandi_infrastructure).
+This step assumes that you have completed all steps in: [Initialize Vendors](./initialize_vendors.md) & [DANDI Infrastructure](./dandi_infrastructure.md).
 
 ## Initial Steps
 
@@ -26,7 +26,7 @@ you'll see several entries:
 
 This `Procfile` shouldn't need to be changed or reconfigured much for a DANDI-clone; however, it is important to note so that one may understand how DANDI Archive is working.
 
-For information on the resource allocation of `dynos` in DANDI Archive, please reference the [DANDI Infrastructure Docs](../63_dandi_infrastructure).
+For information on the resource allocation of `dynos` in DANDI Archive, please reference the [DANDI Infrastructure Docs](./dandi_infrastructure.md).
 
 ## Understanding metrics and logging via Heroku
 
@@ -34,7 +34,7 @@ Heroku provides observability in a very convenient manner. If you'd like to see 
 
 <br/><br/>
 <img
-src="../img/metrics_heroku.jpg"
+src="../../../img/metrics_heroku.jpg"
 alt="metrics_heroku"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -47,21 +47,21 @@ You'll find options in the `Access` tab
 
 <br/><br/>
 <img
-src="../img/members_heroku.jpg"
+src="../../../img/members_heroku.jpg"
 alt="members_heroku"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
 ## Creating a Django "superuser" (Admin) Account
 
-Django has the concept of a `superuser` -- essentially an `administrator` user type. For steps such as [setting up authentication for DANDI Archive](../61_dandi_authentication/#creating-sites-and-social-app-in-dandi-archive-admin-panel) 
+Django has the concept of a `superuser` -- essentially an `administrator` user type. For steps such as [setting up authentication for DANDI Archive](./dandi_authentication.md#creating-sites-and-social-app-in-dandi-archive-admin-panel) 
 you'll need to set up a `superuser` account.
 
 Go into your Heroku app, and identify the `Run Console` option:
 
 <br/><br/>
 <img
-src="../img/heroku_console.jpg"
+src="../../../img/heroku_console.jpg"
 alt="heroku_console"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -70,7 +70,7 @@ Initialize a `bash` session
 
 <br/><br/>
 <img
-src="../img/heroku_bash.jpg"
+src="../../../img/heroku_bash.jpg"
 alt="heroku_bash"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -81,7 +81,7 @@ You'll now want to create a `superuser`
 
 <br/><br/>
 <img
-src="../img/heroku_user.jpg"
+src="../../../img/heroku_user.jpg"
 alt="heroku_user"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -94,9 +94,9 @@ You are all set here!
 
 ## Frontend Deployment
 
-A majority of the necessary setup steps here are defined already [during the vendor account setup for Netlify](../60_initialize_vendors/#netlify).
+A majority of the necessary setup steps here are defined already [during the vendor account setup for Netlify](./initialize_vendors.md#netlify).
 
-The only other major initial setup step for the DANDI Archive frontend is regarding authentication -- [see here for more details](../61_dandi_authentication/#populating-appropriate-values-for-the-frontend-to-handle-authentication)
+The only other major initial setup step for the DANDI Archive frontend is regarding authentication -- [see here for more details](./dandi_authentication.md#populating-appropriate-values-for-the-frontend-to-handle-authentication)
 
 ## API Deployment with GitHub CI/CD
 
@@ -108,7 +108,7 @@ To invoke the pipeline, proceed to the `Actions` tab in GitHub and find the pipe
 
 <br/><br/>
 <img
-src="../img/github_actions_workflow.jpg"
+src="../../../img/github_actions_workflow.jpg"
 alt="github_actions_workflow"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -117,7 +117,7 @@ Proceed to click the `Run Workflow` option.
 
 <br/><br/>
 <img
-src="../img/github_run_workflow.jpg"
+src="../../../img/github_run_workflow.jpg"
 alt="github_run_workflow"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -128,7 +128,7 @@ Other than the output of the CI/CD workflow, you can observe the status of the n
 
 <br/><br/>
 <img
-src="../img/github_label.jpg"
+src="../../../img/github_label.jpg"
 alt="github_label"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -165,7 +165,7 @@ Click on the `Users` tab -- in the tab, find the appropriate user and click on t
 
 <br/><br/>
 <img
-src="../img/user_approval.jpg"
+src="../../../img/user_approval.jpg"
 alt="user_approval"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -176,7 +176,7 @@ Click `Approved` and then `Save` on the bottom of the screen -- the user will no
 
 <br/><br/>
 <img
-src="../img/user_metadata.jpg"
+src="../../../img/user_metadata.jpg"
 alt="user_metadata"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -192,7 +192,7 @@ On the DANDI homepage, metrics exist for how many users, and how much data is st
 
 <br/><br/>
 <img
-src="../img/dandi_stats.jpg"
+src="../../../img/dandi_stats.jpg"
 alt="dandi_stats"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
