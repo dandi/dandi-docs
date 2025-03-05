@@ -75,12 +75,12 @@ nav:
     - Contributing Documentation: "developer-guide/contributing-documentation.md"
     - Creating a DANDI Instance:
       - Overview: "developer-guide/creating-dandi-instance/index.md"
-      - Initialize Vendor Accounts: "developer-guide/creating-dandi-instance/initialize_vendors.md"
-      - DANDI Authentication: "developer-guide/creating-dandi-instance/dandi_authentication.md"
-      - DANDI Client: "developer-guide/creating-dandi-instance/dandi_cli.md"
-      - DANDI Infrastructure: "developer-guide/creating-dandi-instance/dandi_infrastructure.md"
-      - DANDI Archive: "developer-guide/creating-dandi-instance/dandi_archive.md"
-      - DANDI Hub: "developer-guide/creating-dandi-instance/dandi_hub.md"
+      - Initialize Vendor Accounts: "developer-guide/creating-dandi-instance/initialize-vendors.md"
+      - DANDI Authentication: "developer-guide/creating-dandi-instance/dandi-authentication.md"
+      - DANDI Client: "developer-guide/creating-dandi-instance/dandi-cli.md"
+      - DANDI Infrastructure: "developer-guide/creating-dandi-instance/dandi-infrastructure.md"
+      - DANDI Archive: "developer-guide/creating-dandi-instance/dandi-archive.md"
+      - DANDI Hub: "developer-guide/creating-dandi-instance/dandi-hub.md"
   - Health Status:
     - Dandisets: https://github.com/dandi/dandisets-healthstatus
     - Services: https://status.dandiarchive.org
