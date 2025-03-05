@@ -4,7 +4,7 @@
 
 ## Overview
 
-NeuroConv provides a standardized approach to converting neurophysiology data to NWB format. It offers:
+NeuroConv provides a standardized approach for converting neurophysiology data to the NWB format. It offers:
 
 - A consistent API for converting data from different sources
 - Automated metadata extraction from source files
