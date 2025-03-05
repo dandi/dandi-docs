@@ -60,4 +60,4 @@ dandi organize path/to/files
 dandi upload
 ```
 
-For more information on the command-line interface, see the [CLI documentation](https://dandi.readthedocs.io/en/latest/cli.html).
+For more information on the command-line interface, see the [CLI documentation](https://dandi.readthedocs.io/en/latest/cmdline/index.html).
