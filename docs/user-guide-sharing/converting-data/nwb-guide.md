@@ -17,7 +17,7 @@ This tool is particularly useful for users who prefer a graphical interface over
 
 1. **Installation**: Follow the [installation instructions](https://nwb-guide.readthedocs.io/en/stable/installation.html) to install NWB GUIDE on your system.
 
-2. **Converting Data**: NWB GUIDE supports conversion from various formats. See the [conversion documentation](https://nwb-guide.readthedocs.io/en/stable/user_guide/conversion.html) for details.
+2. **Converting Data**: NWB GUIDE supports conversion from various formats. See the [NWB GUIDE tutorials](https://nwb-guide.readthedocs.io/en/stable/tutorials/index.html) for details.
 
 3. **Dataset Publication**: The [Dataset Publication Tutorial](https://nwb-guide.readthedocs.io/en/latest/tutorials/dataset_publication.html) provides step-by-step instructions for publishing data to DANDI using NWB GUIDE.
 
