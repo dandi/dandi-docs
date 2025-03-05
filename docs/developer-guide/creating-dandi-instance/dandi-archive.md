@@ -54,7 +54,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 ## Creating a Django "superuser" (Admin) Account
 
-Django has the concept of a `superuser` -- essentially an `administrator` user type. For steps such as [setting up authentication for DANDI Archive](./dandi-authentication.md#creating-sites-and-social-app-in-dandi-archive-admin-panel) 
+Django has the concept of a `superuser` -- essentially an `administrator` user type. For steps such as [setting up authentication for DANDI Archive](./dandi-authentication.md#creating-and-updating-objects-in-the-dandi-archive-admin-panel) 
 you'll need to set up a `superuser` account.
 
 Go into your Heroku app, and identify the `Run Console` option:

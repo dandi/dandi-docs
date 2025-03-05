@@ -13,7 +13,7 @@ alt="terraform_config"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-As described in the [Understanding the DANDI Infrastructure](#Understanding-the-DANDI-Infrastructure) section, the [dandi-infrastructure](https://github.com/dandi/dandi-infrastructure) 
+As described in the [Understanding the DANDI Infrastructure](#understanding-the-dandi-infrastructure) section, the [dandi-infrastructure](https://github.com/dandi/dandi-infrastructure) 
 repository includes many components that may not be needed for your use case.  You will need to define the infrastructure components in stepwise fashion, starting with the `api.tf` and `sponsored_bucket.tf`.
 
 ## Applying Terraform
