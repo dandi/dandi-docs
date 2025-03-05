@@ -9,7 +9,7 @@ created during [Obtaining your Oauth App creds](./initialize-vendors.md#obtainin
 
 ### Creating "Sites" and "Social App" Objects
 
-**In order to complete this step, you will need to have deployed an initial DANDI Archive API**.  See [Creating the DANDI Archive API](./dandi_archive.md) for more details.
+**In order to complete this step, you will need to have deployed an initial DANDI Archive API**.  See [Creating the DANDI Archive API](./dandi-archive.md) for more details.
 
 First, sign in via the Django admin panel with your credentials created via the [Creating an admin user account for the DANDI Archive API step](./dandi-archive.md#creating-a-django-superuser-admin-account)
 
