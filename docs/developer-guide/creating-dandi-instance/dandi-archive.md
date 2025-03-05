@@ -96,7 +96,7 @@ You are all set here!
 
 A majority of the necessary setup steps here are defined already [during the vendor account setup for Netlify](./initialize_vendors.md#netlify).
 
-The only other major initial setup step for the DANDI Archive frontend is regarding authentication -- [see here for more details](./dandi_authentication.md#populating-appropriate-values-for-the-frontend-to-handle-authentication)
+The only other major initial setup step for the DANDI Archive frontend is regarding authentication -- [see here for more details](./dandi-authentication.md#populating-appropriate-values-for-the-frontend-to-handle-authentication)
 
 ## API Deployment with GitHub CI/CD
 
