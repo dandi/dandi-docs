@@ -26,7 +26,7 @@ you'll see several entries:
 
 This `Procfile` shouldn't need to be changed or reconfigured much for a DANDI-clone; however, it is important to note so that one may understand how DANDI Archive is working.
 
-For information on the resource allocation of `dynos` in DANDI Archive, please reference the [DANDI Infrastructure Docs](./dandi_infrastructure.md).
+For information on the resource allocation of `dynos` in DANDI Archive, please reference the [DANDI Infrastructure Docs](./dandi-infrastructure.md).
 
 ## Understanding metrics and logging via Heroku
 
