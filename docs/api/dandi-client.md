@@ -20,7 +20,7 @@ The full documentation for the DANDI Client is available at [https://dandi.readt
 - Validate NWB files
 - Organize data for upload to the DANDI Archive
 - Upload data to the DANDI Archive
-- Search for Dandisets and assets
+- Search for Dandisets
 - Manage Dandisets and their metadata
 
 ## Python API
@@ -40,7 +40,7 @@ dandiset = client.get_dandiset("000123", "draft")
 dandiset.download("local_path")
 ```
 
-For more information on the Python API, see the [API documentation](https://dandi.readthedocs.io/en/latest/api.html).
+For more information on the Python API, see the [API documentation](https://dandi.readthedocs.io/en/latest/modref/index.html).
 
 ## Command-Line Interface
 
@@ -58,9 +58,6 @@ dandi organize path/to/files
 
 # Upload data to DANDI
 dandi upload
-
-# Search for Dandisets
-dandi search "query"
 ```
 
-For more information on the command-line interface, see the [CLI documentation](https://dandi.readthedocs.io/en/latest/cli.html).
+For more information on the command-line interface, see the [CLI documentation](https://dandi.readthedocs.io/en/latest/cmdline/index.html).

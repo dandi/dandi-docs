@@ -1,4 +1,4 @@
-This step assumes that you have completed all steps in: [Initialize Vendors](./initialize_vendors.md) & [DANDI Infrastructure](./dandi_infrastructure.md).
+This step assumes that you have completed all steps in: [Initialize Vendors](./initialize-vendors.md) & [DANDI Infrastructure](./dandi-infrastructure.md).
 
 ## Initial Steps
 
@@ -26,7 +26,7 @@ you'll see several entries:
 
 This `Procfile` shouldn't need to be changed or reconfigured much for a DANDI-clone; however, it is important to note so that one may understand how DANDI Archive is working.
 
-For information on the resource allocation of `dynos` in DANDI Archive, please reference the [DANDI Infrastructure Docs](./dandi_infrastructure.md).
+For information on the resource allocation of `dynos` in DANDI Archive, please reference the [DANDI Infrastructure Docs](./dandi-infrastructure.md).
 
 ## Understanding metrics and logging via Heroku
 
@@ -54,7 +54,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 ## Creating a Django "superuser" (Admin) Account
 
-Django has the concept of a `superuser` -- essentially an `administrator` user type. For steps such as [setting up authentication for DANDI Archive](./dandi_authentication.md#creating-sites-and-social-app-in-dandi-archive-admin-panel) 
+Django has the concept of a `superuser` -- essentially an `administrator` user type. For steps such as [setting up authentication for DANDI Archive](./dandi-authentication.md#creating-sites-and-social-app-in-dandi-archive-admin-panel) 
 you'll need to set up a `superuser` account.
 
 Go into your Heroku app, and identify the `Run Console` option:
@@ -94,9 +94,9 @@ You are all set here!
 
 ## Frontend Deployment
 
-A majority of the necessary setup steps here are defined already [during the vendor account setup for Netlify](./initialize_vendors.md#netlify).
+A majority of the necessary setup steps here are defined already [during the vendor account setup for Netlify](./initialize-vendors.md#netlify).
 
-The only other major initial setup step for the DANDI Archive frontend is regarding authentication -- [see here for more details](./dandi_authentication.md#populating-appropriate-values-for-the-frontend-to-handle-authentication)
+The only other major initial setup step for the DANDI Archive frontend is regarding authentication -- [see here for more details](./dandi-authentication.md#populating-appropriate-values-for-the-frontend-to-handle-authentication)
 
 ## API Deployment with GitHub CI/CD
 

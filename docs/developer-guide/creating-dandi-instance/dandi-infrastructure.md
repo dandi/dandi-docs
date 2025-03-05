@@ -1,6 +1,6 @@
 ## Configuring Terraform
 
-[First, make sure you have set up your Terraform Cloud account and linked the account to the GitHub repository](./initialize_vendors.md#terraform-cloud)
+[First, make sure you have set up your Terraform Cloud account and linked the account to the GitHub repository](./initialize-vendors.md#terraform-cloud)
 
 To double-check whether your GitHub repository is linked, proceed to the `Version Control` tab.
 
