@@ -62,6 +62,12 @@ nav:
     - DANDI Hub: "user-guide-using/dandi-hub.md"
   - Tutorials:
     - Dandiset Examples: https://dandi.github.io/example-notebooks
+    - DANDI User Guide, Part I: "example-notebooks/dandi/DANDI User Guide, Part I.ipynb"
+    - DANDI User Guide, Part II: "example-notebooks/dandi/DANDI User Guide, Part II.ipynb"
+    - Simple Dandiset Search: "example-notebooks/tutorials/neurodatarehack_2024/simple_dandiset_search.ipynb"
+    - Advanced Asset Search: "example-notebooks/tutorials/cosyne_2023/advanced_asset_search.ipynb"
+    - Streaming and interacting with NWB data: "example-notebooks/tutorials/bcm_2024/analysis-demo.ipynb"
+    - NWB Widget Demo: "example-notebooks/demos/NWBWidget-demo.ipynb"
   - Developer Guide:
     - System Architecture: "developer-guide/system-architecture.md"
     - Developer Notes: "developer-guide/developer-notes.md"
