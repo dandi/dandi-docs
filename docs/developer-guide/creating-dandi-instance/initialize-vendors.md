@@ -369,7 +369,7 @@ alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
 
-Your frontend should be able to deploy to an auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the [Frontend Deployment](./dandi_archive.md#frontend-deployment) section within the DANDI Archive setup.
+Your frontend should be able to deploy to an auto-generated URL via Netlify now! Steps for domain management and configuration are described further in the [Frontend Deployment](./dandi-archive.md#frontend-deployment) section within the DANDI Archive setup.
 ## Sentry
 
 [Sentry](https://sentry.io/) is a monitoring tool used for the DANDI Archive API. It is integral in order to notify engineers if a system is down, experiencing poor performance, or may have unwanted users.
