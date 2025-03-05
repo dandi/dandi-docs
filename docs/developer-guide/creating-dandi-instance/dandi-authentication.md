@@ -3,7 +3,7 @@
 Please follow the steps in [Initialize Vendors - GitHub](./initialize_vendors.md#github) to get started.
 
 For the next steps in setting up authentication, you'll want to record the values
-created during [Obtaining your Oauth App creds](./initialize_vendors.md#obtaining-your-oauth-app-credentials).
+created during [Obtaining your Oauth App creds](./initialize-vendors.md#obtaining-your-oauth-app-credentials).
 
 ## Creating and Updating Objects in the DANDI Archive Admin Panel
 
