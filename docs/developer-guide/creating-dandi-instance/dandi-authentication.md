@@ -66,7 +66,7 @@ After creating this object, you are all set in the Django Admin panel for now.
 
 ## Populating appropriate values for the frontend to handle authentication
 
-This step assumes that you have [successfully set up your Netlify account](./initialize_vendors.md#netlify).
+This step assumes that you have [successfully set up your Netlify account](./initialize-vendors.md#netlify).
 
 There are two places to update values relevant to the frontend.
 
