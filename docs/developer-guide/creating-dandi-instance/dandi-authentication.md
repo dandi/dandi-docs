@@ -1,6 +1,6 @@
 ## Setting up your GitHub OAuth Account
 
-Please follow the steps in [Initialize Vendors - GitHub](./initialize_vendors.md#github) to get started.
+Please follow the steps in [Initialize Vendors - GitHub](./initialize-vendors.md#github) to get started.
 
 For the next steps in setting up authentication, you'll want to record the values
 created during [Obtaining your Oauth App creds](./initialize-vendors.md#obtaining-your-oauth-app-credentials).
