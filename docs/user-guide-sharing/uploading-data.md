@@ -93,6 +93,5 @@ If you encounter issues during the upload process:
 
 - Ensure your NWB files pass validation (see [Validating NWB Files](./validating-files.md))
 - Check that you're using the latest versions of `dandi`, `PyNWB`, and `MatNWB`
-- See the [DANDI Debugging section](https://dandi.readthedocs.io/en/latest/debugging.html) for more help
 
 If you continue to have issues, please reach out via the [DANDI Help Desk](https://github.com/dandi/helpdesk/discussions).
