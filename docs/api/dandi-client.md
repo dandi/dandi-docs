@@ -40,7 +40,7 @@ dandiset = client.get_dandiset("000123", "draft")
 dandiset.download("local_path")
 ```
 
-For more information on the Python API, see the [API documentation](https://dandi.readthedocs.io/en/latest/api.html).
+For more information on the Python API, see the [API documentation](https://dandi.readthedocs.io/en/latest/modref/index.html).
 
 ## Command-Line Interface
 
