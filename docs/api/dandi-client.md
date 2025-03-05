@@ -58,9 +58,6 @@ dandi organize path/to/files
 
 # Upload data to DANDI
 dandi upload
-
-# Search for Dandisets
-dandi search "query"
 ```
 
 For more information on the command-line interface, see the [CLI documentation](https://dandi.readthedocs.io/en/latest/cli.html).
