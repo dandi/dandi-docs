@@ -20,7 +20,7 @@ The full documentation for the DANDI Client is available at [https://dandi.readt
 - Validate NWB files
 - Organize data for upload to the DANDI Archive
 - Upload data to the DANDI Archive
-- Search for Dandisets and assets
+- Search for Dandisets
 - Manage Dandisets and their metadata
 
 ## Python API
