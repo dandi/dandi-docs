@@ -23,7 +23,7 @@ Several tools are available to help you convert your data to NWB format:
 
 2. **[NeuroConv](https://neuroconv.readthedocs.io/)** is a Python library that automates conversion to NWB from a variety of popular formats. See the [Conversion Gallery](https://neuroconv.readthedocs.io/en/main/conversion_examples_gallery/index.html) for example conversion scripts.
 
-3. **[PyNWB](https://pynwb.readthedocs.io/en/stable/)** and **[MatNWB](https://github.com/NeurodataWithoutBorders/matnwb)** are APIs in Python and MATLAB that allow full flexibility in reading and writing data. ([PyNWB tutorials](https://pynwb.readthedocs.io/en/stable/tutorials/index.html), [MatNWB tutorials](https://github.com/NeurodataWithoutBorders/matnwb?tab=readme-ov-file#tutorials))
+3. **[PyNWB](https://pynwb.readthedocs.io/)** and **[MatNWB](https://matnwb.readthedocs.io/)** are APIs in Python and MATLAB that allow full flexibility in reading and writing data. ([PyNWB tutorials](https://pynwb.readthedocs.io/en/stable/tutorials/index.html), [MatNWB tutorials](https://matnwb.readthedocs.io/en/latest/pages/tutorials/index.html))
 
 4. **[NWB Overview Docs](https://nwb-overview.readthedocs.io)** points to more tools helpful for working with NWB files.
 
