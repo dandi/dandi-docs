@@ -1,4 +1,4 @@
-This step assumes that you have completed all steps in: [Initialize Vendors](./initialize_vendors.md) & [DANDI Infrastructure](./dandi_infrastructure.md).
+This step assumes that you have completed all steps in: [Initialize Vendors](./initialize-vendors.md) & [DANDI Infrastructure](./dandi-infrastructure.md).
 
 ## Initial Steps
 
