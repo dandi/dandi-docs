@@ -15,6 +15,13 @@ Before uploading data to DANDI, ensure you have:
    ```
 5. Set up your API key (see [Storing Access Credentials](#storing-access-credentials) below)
 
+## Technical limitations
+
+- **File name/path:** There is a limit of 512 characters for the full path length within a dandiset.
+- **Volume and size:** There is a limit of 5TB per file. We currently
+  accept any size of standardized datasets, as long as you can upload them over
+  an HTTPS connection. However, we ask you contact us if you plan to upload more than 10TB of data.
+
 ## Upload Methods
 
 DANDI provides two main methods for uploading data:
