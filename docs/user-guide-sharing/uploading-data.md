@@ -35,7 +35,7 @@ For command-line users or those with larger datasets, the DANDI CLI provides a p
    cd <dataset_id>
    ```
 
-2. **Organize your data** (skip this step if you are preparing a BIDS dataset with NWB files):
+2. **Organize your data** (skip this step if you are preparing a proper [BIDS dataset](https://bids.neuroimaging.io/) with e.g. OME-Zarr, NWB and other files):
 
    ```bash
    dandi organize <source_folder> -f dry  # Dry run to see what would happen
