@@ -40,11 +40,12 @@ nav:
   - "User Guide: Sharing Data":
     - Creating a Dandiset: "user-guide-sharing/creating-dandiset.md"
     - Data Licenses: "user-guide-sharing/data-licenses.md"
-    - Converting Data to NWB:
+    - Converting Data:
       - Overview: "user-guide-sharing/converting-data/index.md"
-      - NWB GUIDE: "user-guide-sharing/converting-data/nwb-guide.md"
-      - NeuroConv: "user-guide-sharing/converting-data/neuroconv.md"
-      - PyNWB and MatNWB: "user-guide-sharing/converting-data/pynwb-matnwb.md"
+      - NWB: "user-guide-sharing/converting-data/nwb/index.md"
+      - NWB GUIDE: "user-guide-sharing/converting-data/nwb/nwb-guide.md"
+      - NeuroConv: "user-guide-sharing/converting-data/nwb/neuroconv.md"
+      - PyNWB and MatNWB: "user-guide-sharing/converting-data/nwb/pynwb-matnwb.md"
     - Validating NWB Files: "user-guide-sharing/validating-files.md"
     - Uploading Data: "user-guide-sharing/uploading-data.md"
     - Dandiset Metadata: "user-guide-sharing/dandiset-metadata.md"
