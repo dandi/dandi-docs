@@ -30,37 +30,36 @@ theme:
 # Pages
 nav:
   - Welcome: "index.md"
-  - Introduction: "01_introduction.md"
-  - Data Standards: "30_data_standards.md"
-  - Data Licenses: "35_data_licenses.md"
-  - User Guide:
-    - Using DANDI: "10_using_dandi.md"
-    - Create DANDI Account: "16_account.md"
-    - Viewing Dandisets: "11_view.md"
-    - Downloading Data and Dandisets: "12_download.md"
-    - Creating Dandisets and Uploading Data: "13_upload.md"
-    - Validation Levels for NWB Files: "135_validation.md"
-    - Dandiset Metadata: "136_metadata.md"
-    - Publishing Dandisets: "14_publish.md"
-    - Citing a Dandiset: "citing.md"
-    - Debugging: "15_debugging.md"
-    - DANDI CLI and Python API: https://dandi.readthedocs.io
-  - Developer Guide:
-    - Project Structure: "20_project_structure.md"
-    - Models Integration: "21_models_integration.md"
-    - Notes: "40_development.md"
-    - REST API Swagger: https://api.dandiarchive.org/swagger
-    - REST API Redoc: https://api.dandiarchive.org/redoc
-    - Create DANDI Instance:
-      - Overview and Architecture: "59_overview.md"
-      - Initialize Vendor Accounts for DANDI: "60_initialize_vendors.md"
-      - DANDI Authentication: "61_dandi_authentication.md"
-      - DANDI Client: "62_dandi_cli.md"
-      - DANDI Infrastructure: "63_dandi_infrastructure.md"
-      - DANDI Archive: "64_dandi_archive.md"
-      - DANDI Hub: "65_dandi_hub.md"
-    - Contributing Documentation: "100_contribute_docs.md"
-  - DANDI Hub: "50_hub.md"
+  - Introduction: "introduction.md"
+  - Getting Started:
+    - Creating a DANDI Account: "getting-started/creating-account.md"
+    - DANDI Ecosystem: "getting-started/dandi-ecosystem.md"
+    - Data Standards:
+      - Overview: "getting-started/data-standards/index.md"
+      - NWB: "getting-started/data-standards/nwb.md"
+  - "User Guide: Sharing Data":
+    - Creating a Dandiset: "user-guide-sharing/creating-dandiset.md"
+    - Data Licenses: "user-guide-sharing/data-licenses.md"
+    - Converting Data:
+      - Overview: "user-guide-sharing/converting-data/index.md"
+      - NWB: "user-guide-sharing/converting-data/nwb/index.md"
+      - NWB GUIDE: "user-guide-sharing/converting-data/nwb/nwb-guide.md"
+      - NeuroConv: "user-guide-sharing/converting-data/nwb/neuroconv.md"
+      - PyNWB and MatNWB: "user-guide-sharing/converting-data/nwb/pynwb-matnwb.md"
+    - Validating NWB Files: "user-guide-sharing/validating-files.md"
+    - Uploading Data: "user-guide-sharing/uploading-data.md"
+    - Dandiset Metadata: "user-guide-sharing/dandiset-metadata.md"
+    - Publishing Dandisets: "user-guide-sharing/publishing-dandisets.md"
+    - Contributing an example notebook: "user-guide-sharing/contributing-notebook.md"
+  - "User Guide: Using Data":
+    - Exploring Dandisets: "user-guide-using/exploring-dandisets.md"
+    - Accessing Data:
+      - Overview: "user-guide-using/accessing-data/index.md"
+      - Downloading: "user-guide-using/accessing-data/downloading.md"
+      - Streaming: "user-guide-using/accessing-data/streaming.md"
+      - External Services: "user-guide-using/accessing-data/external-services.md"
+    - Citing Dandisets: "user-guide-using/citing-dandisets.md"
+    - DANDI Hub: "user-guide-using/dandi-hub.md"
   - Tutorials:
     - Dandiset Examples: https://dandi.github.io/example-notebooks
     - DANDI User Guide, Part I: "example-notebooks/dandi/DANDI User Guide, Part I.ipynb"
@@ -69,12 +68,28 @@ nav:
     - Advanced Asset Search: "example-notebooks/tutorials/cosyne_2023/advanced_asset_search.ipynb"
     - Streaming and interacting with NWB data: "example-notebooks/tutorials/bcm_2024/analysis-demo.ipynb"
     - NWB Widget Demo: "example-notebooks/demos/NWBWidget-demo.ipynb"
+  - Developer Guide:
+    - System Architecture: "developer-guide/system-architecture.md"
+    - Developer Notes: "developer-guide/developer-notes.md"
+    - Integrate External Services with DANDI: "developer-guide/integrate-external-services.md"
+    - Contributing Documentation: "developer-guide/contributing-documentation.md"
+    - Creating a DANDI Instance:
+      - Overview: "developer-guide/creating-dandi-instance/index.md"
+      - Initialize Vendor Accounts: "developer-guide/creating-dandi-instance/initialize-vendors.md"
+      - DANDI Authentication: "developer-guide/creating-dandi-instance/dandi-authentication.md"
+      - DANDI Client: "developer-guide/creating-dandi-instance/dandi-cli.md"
+      - DANDI Infrastructure: "developer-guide/creating-dandi-instance/dandi-infrastructure.md"
+      - DANDI Archive: "developer-guide/creating-dandi-instance/dandi-archive.md"
+      - DANDI Hub: "developer-guide/creating-dandi-instance/dandi-hub.md"
   - Health Status:
     - Dandisets: https://github.com/dandi/dandisets-healthstatus
     - Services: https://status.dandiarchive.org
   - Terms and Policies:
-      - Terms: "about/terms.md"
-      - Policies: "about/policies.md"
+    - Terms: "terms-policies/terms.md"
+    - Policies: "terms-policies/policies.md"
+  - API:
+    - DANDI Client: "api/dandi-client.md"
+    - REST API: "api/rest-api.md"
 
 # List of extensions
 markdown_extensions:
