@@ -49,7 +49,6 @@ nav:
     - Uploading Data: "user-guide-sharing/uploading-data.md"
     - Dandiset Metadata: "user-guide-sharing/dandiset-metadata.md"
     - Publishing Dandisets: "user-guide-sharing/publishing-dandisets.md"
-    - Citing your own Dandiset: "user-guide-sharing/citing-your-dandiset.md"
     - Contributing an example notebook: "user-guide-sharing/contributing-notebook.md"
   - "User Guide: Using Data":
     - Exploring Dandisets: "user-guide-using/exploring-dandisets.md"

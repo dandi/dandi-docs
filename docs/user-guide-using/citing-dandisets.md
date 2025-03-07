@@ -2,6 +2,7 @@
 
 If you use a Dandiset in your research, please acknowledge the Dandiset by citing it, just as you would a publication,
 including the DOI.
+
 The DOI can be found in the Dandiset's landing page on the DANDI Archive website.
 An example formatted citation can also be found on the Dandiset's landing page at the "CITE AS" button. This citation
 uses the DataCite citation style, which is a widely accepted standard for citing datasets, but you may need to adapt it
@@ -12,10 +13,10 @@ replace the need to cite the Dandiset itself.**
 
 Citing the Dandiset and other datasets is important because it provides a direct link to the data used in your research. That is crucial, because it:
 
-  - allows others to better understand and verify your results, and facilitates reproducibility, 
-  - connects your work to other research using the same dataset,
-  - provides credit to the data collectors and maintainers, 
-  - helps track the impact of DANDI and other data archives.
+- allows others to better understand and verify your results, and facilitates reproducibility, 
+- connects your work to other research using the same dataset,
+- provides credit to the data collectors and maintainers, 
+- helps track the impact of DANDI and other data archives.
 
 ## Data availability statement
 
