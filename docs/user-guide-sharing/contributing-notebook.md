@@ -57,10 +57,10 @@ To create effective example notebooks:
 
 The [dandi/example-notebooks](https://github.com/dandi/example-notebooks) repository is organized into several directories:
 
-- **dandi/**: Notebooks that demonstrate general DANDI functionality
-- **tutorials/**: Notebooks that provide step-by-step tutorials for specific tasks
-- **demos/**: Notebooks that showcase specific features or use cases
-- **dandisets/**: Notebooks that demonstrate how to use specific Dandisets
+- **[dandi/](https://github.com/dandi/example-notebooks/tree/master/dandi)**: Notebooks that demonstrate general DANDI functionality
+- **[tutorials/](https://github.com/dandi/example-notebooks/tree/master/tutorials)**: Notebooks that provide step-by-step tutorials for specific tasks
+- **[demos/](https://github.com/dandi/example-notebooks/tree/master/demos)**: Notebooks that showcase specific features or use cases
+- **`{dandiset_id}`/**: Notebooks that demonstrate how to use a specific Dandiset
 
 When contributing your notebook, place it in the appropriate directory based on its content and purpose.
 
