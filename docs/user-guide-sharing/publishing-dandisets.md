@@ -33,3 +33,18 @@ Follow these steps to publish your Dandiset:
 
 **NOTE:** Dandisets with Zarr assets currently cannot be published. We are 
 actively working on enabling this feature.
+
+## Citing DANDI
+
+You can add the following statement to the methods section of your manuscript.
+
+> Data and associated metadata were uploaded to the DANDI archive [RRID:SCR_017571] using 
+  the Python command line tool (https://doi.org/10.5281/zenodo.3692138). The data were first 
+  converted into the NWB format (https://doi.org/10.1101/2021.03.13.435173) and  organized 
+  into a BIDS-like (https://doi.org/10.1038/sdata.2016.44) structure.
+
+You can refer to DANDI using any of the following options:
+
+* Using an RRID [RRID:SCR_017571](https://scicrunch.org/scicrunch/Resources/record/nlx_144509-1/SCR_017571/resolver). 
+
+* Using the DANDI CLI reference: https://doi.org/10.5281/zenodo.3692138
