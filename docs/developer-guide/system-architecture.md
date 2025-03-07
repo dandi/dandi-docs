@@ -26,7 +26,7 @@ style="width: 90%; height: auto; display: block; margin-left: auto;  margin-righ
 * The **API** calls AWS S3 to read/write DANDI assets.
 * Certain heavy-lift or background tasks get queued into Celery tasks, handled by the **Workers**.
 * Domain names, certificates, and load-balancing records are handled by AWS Route 53 or Netlify's DNS, depending on whether it's the API subdomain or the apex domain for the UI.
-* Large chunks of data can be streamed from S3 directly to the Client via presigned URLs
+* Large chunks of data can be streamed from S3 directly to the Client via presigned URLs.
 
 ## Key Components
 
