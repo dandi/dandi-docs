@@ -13,7 +13,6 @@ Before uploading data to DANDI, ensure you have:
    ```bash
    pip install -U dandi
    ```
-
 5. Set up your API key (see [Storing Access Credentials](#storing-access-credentials) below)
 
 ## Upload Methods
@@ -28,34 +27,25 @@ The NWB GUIDE provides a graphical interface for uploading data to DANDI. See th
 
 For command-line users or those with larger datasets, the DANDI CLI provides a powerful way to upload data:
 
-1. **Download the Dandiset locally**:
-
+1. **Download the Dandiset locally**
    ```bash
    dandi download https://dandiarchive.org/dandiset/<dataset_id>/draft
    cd <dataset_id>
    ```
-
 2. **Organize your data** (skip this step if you are preparing a proper [BIDS dataset](https://bids.neuroimaging.io/) with e.g. OME-Zarr, NWB and other files):
-
    ```bash
    dandi organize <source_folder> -f dry  # Dry run to see what would happen
    dandi organize <source_folder>         # Actually organize the files
    ```
-
-3. **Validate your data**:
-
+3. **Validate your data**
    ```bash
    dandi validate .
    ```
-
-4. **Upload your data**:
-
+4. **Upload your data**
    ```bash
    dandi upload
    ```
-
    To upload to the development server, use:
-
    ```bash
    dandi upload -i dandi-staging
    ```
@@ -76,16 +66,16 @@ There are two options for storing your DANDI access credentials:
 
 ### 2. `keyring` Library
 
-- If the `DANDI_API_KEY` environment variable is not set, the CLI will look up the API key using the [keyring](https://github.com/jaraco/keyring) library, which supports numerous backends, including the system keyring, an encrypted keyfile, and a plaintext (unencrypted) keyfile.
+If the `DANDI_API_KEY` environment variable is not set, the CLI will look up the API key using the [keyring](https://github.com/jaraco/keyring) library, which supports numerous backends, including the system keyring, an encrypted keyfile, and a plaintext (unencrypted) keyfile.
 
-- **Specifying the `keyring` backend**:
-  - You can set the backend the `keyring` library uses either by setting the `PYTHON_KEYRING_BACKEND` environment variable or by filling in the `keyring` library's [configuration file](https://github.com/jaraco/keyring#configuring).
-  - IDs for the available backends can be listed by running `keyring --list`.
-  - If no backend is specified, the library will use the available backend with the highest priority.
+**Specifying the `keyring` backend**:
+You can set the backend the `keyring` library uses either by setting the `PYTHON_KEYRING_BACKEND` environment variable or by filling in the `keyring` library's [configuration file](https://github.com/jaraco/keyring#configuring).
+  IDs for the available backends can be listed by running `keyring --list`.
+If no backend is specified, the library will use the available backend with the highest priority.
 
-- **Storing the API key with `keyring`**:
-  1. You can store your API key where the `keyring` library can find it by using the `keyring` program: Run `keyring set dandi-api-dandi key` and enter the API key when asked for the password for `key` in `dandi-api-dandi`.
-  2. If the API key isn't stored in either the `DANDI_API_KEY` environment variable or in the keyring, the CLI will prompt you to enter the API key, and then it will store it in the keyring.
+**Storing the API key with `keyring`**:
+You can store your API key where the `keyring` library can find it by using the `keyring` program: Run `keyring set dandi-api-dandi key` and enter the API key when asked for the password for `key` in `dandi-api-dandi`.
+If the API key isn't stored in either the `DANDI_API_KEY` environment variable or in the keyring, the CLI will prompt you to enter the API key, and then it will store it in the keyring.
 
 ## Troubleshooting
 
