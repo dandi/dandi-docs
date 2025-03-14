@@ -11,7 +11,7 @@ The DANDI API is available at:
 
 ## API Documentation
 
-The API documentation is available in two formats:
+The API documentation is available in three formats:
 
 ### Swagger UI
 
@@ -36,6 +36,10 @@ The ReDoc interface provides:
 - Detailed information about each endpoint
 - Request and response examples
 - Schema definitions
+
+### ReadMe.io
+
+- Production: https://dandi.readme.io
 
 ## Authentication
 
