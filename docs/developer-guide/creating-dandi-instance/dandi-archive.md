@@ -100,9 +100,9 @@ The only other major initial setup step for the DANDI Archive frontend is regard
 
 ## API Deployment with GitHub CI/CD
 
-Within the DANDI Archive repository, GitHub actions workflows exist for deployments to [production](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-production-deploy.yml) and [staging](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-staging-deploy.yml) environments
+Within the DANDI Archive repository, GitHub actions workflows exist for deployments to [production](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-production-deploy.yml) and [sandbox](https://github.com/dandi/dandi-archive/blob/master/.github/workflows/backend-staging-deploy.yml) environments
 
-- **Staging**: by default, releases are manual via the `workflow_dispatch` clause in the workflow
+- **Sandbox**: by default, releases are manual via the `workflow_dispatch` clause in the workflow
 
 To invoke the pipeline, proceed to the `Actions` tab in GitHub and find the pipeline name in the column on the left
 

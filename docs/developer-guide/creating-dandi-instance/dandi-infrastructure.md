@@ -189,12 +189,12 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 Populate the value in the [appropriate account ID reference](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/main.tf#L14) in the `main.tf` template.
 
-### Staging vs. Production
+### Sandbox vs. Production
 
-For staging, you can modify and apply the [staging_bucket.tf](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/staging_bucket.tf) 
+For sandbox, you can modify and apply the [staging_bucket.tf](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/staging_bucket.tf) 
 and [staging_pipeline.tf](https://github.com/dandi/dandi-infrastructure/blob/master/terraform/staging_pipeline.tf).
 
-Setting up staging will require unique AWS Route 53 Domains, as well a different Heroku app with different compute.
+Setting up sandbox will require unique AWS Route 53 Domains, as well a different Heroku app with different compute.
 
 **Note -- ensure you review your `web/netlify.toml` file in DANDI Archive -- this will define different environment variables that correspond with staging vs. production**
 
