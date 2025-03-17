@@ -7,7 +7,7 @@ With an account, users can create and edit Dandisets, and use the DANDI Hub to a
 DANDI provides two servers:
 
 - **Main server**: [https://dandiarchive.org/](https://dandiarchive.org/) - This is the primary platform for most users.
-- **Staging server**: [https://gui-staging.dandiarchive.org/](https://gui-staging.dandiarchive.org/) - Ideal for training and testing purposes.
+- **Sandbox server**: [https://sandbox.dandiarchive.org/](https://sandbox.dandiarchive.org/) - Ideal for training and testing purposes.
 
 Accounts are independently managed on each server, allowing users to register on one or both, depending on their testing and deployment needs.
 
