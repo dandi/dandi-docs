@@ -46,7 +46,7 @@ nav:
       - NWB GUIDE: "user-guide-sharing/converting-data/nwb/nwb-guide.md"
       - NeuroConv: "user-guide-sharing/converting-data/nwb/neuroconv.md"
       - PyNWB and MatNWB: "user-guide-sharing/converting-data/nwb/pynwb-matnwb.md"
-    - Validating NWB Files: "user-guide-sharing/validating-files.md"
+    - Validating Files: "user-guide-sharing/validating-files.md"
     - Uploading Data: "user-guide-sharing/uploading-data.md"
     - Dandiset Metadata: "user-guide-sharing/dandiset-metadata.md"
     - Publishing Dandisets: "user-guide-sharing/publishing-dandisets.md"
