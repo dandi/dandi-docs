@@ -1,4 +1,7 @@
-# Validating NWB Files
+# Validating Files
+
+## Validating NWB Files
+
 To be accepted by DANDI, NWB files must conform to criteria that are enforced via three levels of validation:
 
 ## NWB File Validation
@@ -32,3 +35,7 @@ These requirements are specified in the
 
 Passing all of these levels of validation can sometimes be tricky. If you have any questions, please ask them via the 
 [DANDI Help Desk](https://github.com/dandi/helpdesk/discussions) and we would be happy to assist you.
+
+## Validating BIDS Files
+
+Once your files are converted to the BIDS standard, perform validation of the files using the [BIDS validator](https://bids.neuroimaging.io/tools/validator.html).
