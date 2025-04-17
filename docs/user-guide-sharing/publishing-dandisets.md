@@ -19,6 +19,10 @@ Follow these steps to publish your Dandiset:
     - Protocol information
     - Keywords
     - Related resources such as publications and code repositories
+    - Add text and images to the `Description`.  Images can be embedded using Markdown syntax with external links.
+      ```markdown
+      ![enter-text-here](<enter-url-to-image-here>)
+      ```
 
 1. Fix all asset metadata errors by modifying the asset files to eliminate
    the errors and re-uploading them.
