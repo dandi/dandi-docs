@@ -19,7 +19,7 @@ Follow these steps to publish your Dandiset:
     - Protocol information
     - Keywords
     - Related resources such as publications and code repositories
-    - Add text and images to the `Description` field.  Images can be embedded using Markdown syntax with external links.
+    - Description - Note, images can be embedded using Markdown syntax with external links:
       ```markdown
       ![enter-text-here](<enter-url-to-image-here>)
       ```
