@@ -13,13 +13,13 @@ theme:
   logo: img/dandi-logo-square_sw.png
   palette:
     - scheme: default
-      toggle: 
+      toggle:
         icon: material/weather-night
         name: Dark mode
       primary: "dark blue"
       accent: "light blue"
     - scheme: slate
-      toggle: 
+      toggle:
         icon: material/weather-sunny
         name: Light mode
       primary: "dark blue"

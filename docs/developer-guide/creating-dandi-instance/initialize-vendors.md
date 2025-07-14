@@ -216,7 +216,7 @@ You'll be prompted with the following form -- see the example values populated i
 
 <br/><br/>
 <img
-src="../../../img/register_new.jpg"
+src="../img/register_new_oauth.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
