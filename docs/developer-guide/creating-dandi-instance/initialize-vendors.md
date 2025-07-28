@@ -51,7 +51,7 @@ First go to your `Account Settings`:
 
 <br/><br/>
 <img
-src="../../../img/heroku_settings.jpg"
+src="../../../img/heroku_account_settings.jpg"
 alt="heroku_app_name"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>
@@ -216,7 +216,7 @@ You'll be prompted with the following form -- see the example values populated i
 
 <br/><br/>
 <img
-src="../../../img/register_new.jpg"
+src="../img/register_new_oauth.jpg"
 alt="retrieve"
 style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
 <br/><br/>

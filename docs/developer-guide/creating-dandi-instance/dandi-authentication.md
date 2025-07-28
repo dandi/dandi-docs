@@ -78,3 +78,9 @@ For `netlify.toml`: This should be located in the `web/` sub-directory -- [see D
 For `.env.production`: This should also be located in the `web/` sub-directory --  [see DANDI Archive web/.env.production](https://github.com/dandi/dandi-archive/blob/master/web/.env.production). This is a file that will inject environment variables into the frontend upon build (e.g. `vite build`).
 
 Update the relevant values that reflect what was in your `Social Application` object for both files. You will also notice an environment variable related to `Sentry` -- this value can be obtained from your Sentry account.
+
+## Upgrade Amazon SES Account from sandbox to production mode
+
+In Amazon Simple Email Service (SES) you will need to switch from SES sandbox to production, following the AWS [instructions](https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html).
+While your account is in the Amazon SES sandbox, certain restrictions are applied such as the inability to send emails to non-verified email addresses.
+This will cause errors when users are trying to create an account since the code is setup to send an email to the user once they have registered.
