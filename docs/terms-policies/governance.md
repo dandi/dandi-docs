@@ -48,3 +48,49 @@ DANDI (Distributed Archives for Neurophysiology Data Integration) enables FAIR (
 | JupterHub | [dandi-hub](https://github.com/dandi/dandi-hub), [nebari](https://github.com/dandi/nebari), [nebari-deployments](https://github.com/dandi/nebari-deployments), [nebari-docker-images](https://github.com/dandi/nebari-docker-images) |
 | Documentation & Support | [dandi-docs](https://github.com/dandi/dandi-docs), [dandi-about](https://github.com/dandi/dandi-about), [helpdesk](https://github.com/dandi/helpdesk) |
 
+## 5. Roles & Responsibilities
+
+### 5.1 Contributors
+Anyone submitting issues, pull requests, documentation, or feedback.  
+Responsibilities:
+- Follow Code of Conduct and contribution guidelines
+- Provide context and reproducible steps
+- Where applicable, write tests and documentation for code changes
+
+### 5.2 Reviewers
+Contributors granted reviewer status for designated repositories.  
+Responsibilities:
+- Perform timely, constructive reviews
+- Enforce style, testing, and security practices
+- Identify architectural and performance impacts
+Path to role:
+- Consistent high‑quality reviews
+- Sponsored by at least one Maintainer
+
+### 5.3 Maintainers
+Individuals with merge rights for designated repositories.  
+Responsibilities:
+- Final merge approval
+- Release planning and tagging
+- Triage (labels, prioritization, assignment)
+- Escalate policy or security concerns
+- Facilitate cross‑repository alignment
+- Onboard and mentor reviewers
+Expectations:
+- Active presence
+- Adhere to conflict of interest and bias avoidance
+Path to role:
+- Demonstrated sustained contributions and review quality
+- Nomination and consensus of existing repository Maintainers
+
+### 5.4 Project Leadership
+- Current leadership team:
+    - Satrajit Ghosh
+    - Yaroslav O. Halchenko
+- Responsibilities:
+    - Approve or amend governance document and Code of Conduct
+    - Strategic project oversight
+    - Resolve escalated disputes
+    - Approve major architectural shifts
+    - Oversee risk, sustainability, funding alignment
+
