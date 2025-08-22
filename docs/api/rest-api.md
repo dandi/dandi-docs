@@ -7,7 +7,7 @@ The DANDI Archive provides a RESTful API that allows programmatic access to the 
 The DANDI API is available at:
 
 - Production: [https://api.dandiarchive.org/](https://api.dandiarchive.org/)
-- Staging: [https://api-staging.dandiarchive.org/](https://api-staging.dandiarchive.org/)
+- Sandbox: [https://api.sandbox.dandiarchive.org/](https://api.sandbox.dandiarchive.org/)
 
 ## API Documentation
 
@@ -16,7 +16,7 @@ The API documentation is available in three formats:
 ### Swagger UI
 
 - Production: [https://api.dandiarchive.org/swagger/](https://api.dandiarchive.org/swagger/)
-- Staging: [https://api-staging.dandiarchive.org/swagger/](https://api-staging.dandiarchive.org/swagger/)
+- Sandbox: [https://api.sandbox.dandiarchive.org/swagger/](https://api.sandbox.dandiarchive.org/swagger/)
 
 The Swagger UI allows you to:
 
@@ -28,7 +28,7 @@ The Swagger UI allows you to:
 ### ReDoc
 
 - Production: [https://api.dandiarchive.org/redoc/](https://api.dandiarchive.org/redoc/)
-- Staging: [https://api-staging.dandiarchive.org/redoc/](https://api-staging.dandiarchive.org/redoc/)
+- Sandbox: [https://api.sandbox.dandiarchive.org/redoc/](https://api.sandbox.dandiarchive.org/redoc/)
 
 The ReDoc interface provides:
 

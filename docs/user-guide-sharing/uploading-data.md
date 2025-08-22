@@ -54,7 +54,7 @@ For command-line users or those with larger datasets, the DANDI CLI provides a p
    ```
    To upload to the development server, use:
    ```bash
-   dandi upload -i dandi-staging
+   dandi upload -i dandi-sandbox
    ```
 
 ## Storing Access Credentials
