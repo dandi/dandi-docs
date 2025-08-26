@@ -71,7 +71,17 @@ conda activate dandi
 
 ### Creating individual environments
 
-Individual environments should be stored in your home directory using the `--prefix` flag:
+If you need to use an environment, ie `dandi` with extra dependencies, please **do not** create a
+new conda environment. Instead use `venv` to create a local virtual environment **on top of an existing env.**
+
+```bash
+conda activate nebari-git-dandi
+python -m venv --system-site-packages my-dandi-extras
+source my-dandi-extras/bin/activate
+pip install some-extra-package
+```
+
+If you need to create a conda env make sure it is stored in your home directory using the `--prefix` flag:
 
 ```bash
 conda create --prefix /home/username/.conda/envs/my-env-name python=3.9
