@@ -41,23 +41,6 @@ Create individual environments when:
 Conda-store is a deployment service for shared environments only.
 Use regular conda commands for personal environments in your home directory.
 
-### Shared Environments list:
-
-#### nebari-git: 
-
-all dandi users have access
-
-| env name | description |
-|----------|-------------|
-| allensdk | |
-| dandi | |
-| dashboard | |
-| dask | |
-| linc | |
-| mlai | |
-| openscope | |
-
-
 ### Using shared environments
 
 #### Activating in the terminal
@@ -108,27 +91,6 @@ pip install package-name
 ```
 
 **Note:** Replace `username` with your actual username, or use `$HOME` instead of `/home/username`.
-
-## (Admin) Managing Shared Conda Environments
-
-TODO if you feel that a shared environment will be helpful please
-file an issue to have one created. 
-
-Shared conda environments are maintained by administrators
-
-### How to create simple environments
-
-TODO conda-store GUI upload conda-spec.yml
-TODO conda-store GUI select requirements
-
-### Using conda-lock
-
-TODO spin up a jupyterlab instance, and from your server run conda-lock against your conda-spec.yml
-then upload the conda lock to the conda-store GUI
-
-### Modifying and deleting shared envs
-
-TODO 
 
 ## Custom server image
 
