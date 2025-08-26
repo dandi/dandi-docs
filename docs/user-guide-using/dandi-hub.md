@@ -57,7 +57,7 @@ conda activate environment-name
 
 For example, to activate the dandi environment:
 ```bash
-conda activate dandi
+conda activate nebari-git-dandi
 ```
 
 #### Activating in your Jupyter notebook
