@@ -71,8 +71,10 @@ conda activate nebari-git-dandi
 
 ### Creating individual environments
 
-If you need to use an environment, ie `dandi` with extra dependencies, please **do not** create a
-new conda environment. Instead use `venv` to create a local virtual environment **on top of an existing env.**
+#### Lightweight `venv` overlay
+
+If you need to use an environment, ie `dandi` with extra dependencies, please **do not** create a new conda environment.
+Instead use `venv` to create a local virtual environment **on top of an existing env.**
 
 ```bash
 conda activate nebari-git-dandi
@@ -81,6 +83,8 @@ source my-dandi-extras/bin/activate
 pip install some-extra-package
 ```
 
+#### Full custom `conda` environment
+
 If you need to create a conda env make sure it is stored in your home directory using the `--prefix` flag:
 
 ```bash
@@ -88,11 +92,13 @@ conda create --prefix /home/username/.conda/envs/my-env-name python=3.9
 ```
 
 To activate your individual environment:
+
 ```bash
 conda activate /home/username/.conda/envs/my-env-name
 ```
 
 To install packages in your individual environment:
+
 ```bash
 conda activate /home/username/.conda/envs/my-env-name
 conda install package-name
