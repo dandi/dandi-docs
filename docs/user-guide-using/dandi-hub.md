@@ -65,7 +65,8 @@ conda activate nebari-git-dandi
 **At startup:** When launching JupyterLab, you can select a shared environment from the kernel dropdown in the launcher.
 
 **In an existing notebook:** 
-1. In the top right of a notebook, click the current environment which will open a "Start a new kernel for "mynotebook.ipynb"
+
+1. In the top right of a notebook, click the current environment which will open a "Start a new kernel for mynotebook.ipynb"
 2. Select the desired shared environment from the list
 3. The notebook will switch to use packages from that environment
 
