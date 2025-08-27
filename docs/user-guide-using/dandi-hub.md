@@ -19,6 +19,96 @@ We request that users of this server be considerate of their usage of the DANDI 
 Training large deep neural networks is not appropriate.
 A "Base (MATLAB)" server is also available, which provides a MATLAB cloud installation but you would be required to provide your own license.
 
+## Using conda environments
+
+DANDI Hub provides two ways to work with Python environments: shared environments managed through conda-store, and individual environments you create with conda in your home directory.
+
+**Shared environments** are managed through conda-store and are available to all DANDI Hub users.
+These environments contain commonly used packages for neurophysiology analysis and are maintained by administrators.
+Use shared environments when:
+- You need standard analysis tools and packages
+- You want to collaborate with other users using the same environment
+- You prefer not to manage package dependencies yourself
+
+**Individual environments** are created and managed using standard conda commands in your user home directory (`/home/username`).
+These are private to your account and **should be used instead of conda-store for personal environments**.
+Create individual environments when:
+- You need specific package versions not available in shared environments
+- You're experimenting with new packages or configurations
+- You need a customized environment for your specific analysis workflow
+
+**Important:** Do not use conda-store for creating individual environments.
+Conda-store is a deployment service for shared environments only.
+Use regular conda commands for personal environments in your home directory.
+
+### Using shared environments
+
+#### Activating in the terminal
+
+To see available shared environments:
+```bash
+conda env list
+```
+
+To activate a shared environment:
+```bash
+conda activate environment-name
+```
+
+For example, to activate the dandi environment:
+```bash
+conda activate nebari-git-dandi
+```
+
+#### Activating in your Jupyter notebook
+
+**At startup:** When launching JupyterLab, you can select a shared environment from the kernel dropdown in the launcher.
+
+**In an existing notebook:** 
+
+1. In the top right of a notebook, click the current environment which will open a "Start a new kernel for mynotebook.ipynb"
+2. Select the desired shared environment from the list
+3. The notebook will switch to use packages from that environment
+
+### Creating individual environments
+
+#### Lightweight `venv` overlay
+
+If you need to use an environment, ie `dandi` with extra dependencies, please **do not** create a new conda environment.
+Instead use `venv` to create a local virtual environment **on top of an existing env.**
+
+```bash
+conda activate nebari-git-dandi
+python -m venv --system-site-packages my-dandi-extras
+source my-dandi-extras/bin/activate
+pip install some-extra-package
+```
+
+#### Full custom `conda` environment
+
+If you need to create a conda env make sure it is stored in your home directory using the `--prefix` flag:
+
+```bash
+conda create --prefix /home/username/.conda/envs/my-env-name python=3.9
+```
+
+To activate your individual environment:
+
+```bash
+conda activate /home/username/.conda/envs/my-env-name
+```
+
+To install packages in your individual environment:
+
+```bash
+conda activate /home/username/.conda/envs/my-env-name
+conda install package-name
+# or
+pip install package-name
+```
+
+**Note:** Replace `username` with your actual username, or use `$HOME` instead of `/home/username`.
+
 ## Custom server image
 
 If you need additional software installed in the image, you can add a server image that will be made available for all users in the `Server Options` menu.  Add a server image by following the instructions below and submitting a pull request to the [dandi-hub repository](https://github.com/dandi/dandi-hub).  Once the pull request is merged, the DANDI team will redeploy JupyterHub and the image will be available.
