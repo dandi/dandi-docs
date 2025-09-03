@@ -43,7 +43,8 @@ Choose "Organization" and proceed to fill in information.
 ror.org is a platform that provides unique identifiers for institutions.
 It is highly recommended to search http://ror.org and include the unique identifiers for each funding agency.
 Make sure to inspect the metadata for each institution on the ror.org website, as many organizations have similar names
-(e.g. many different countries have an "NIH").
+(e.g. many different countries have an "NIH"). Make sure to select the role `dcite:Funder` to list the contributor
+under the "Funding information" section.
 
 ### Subject Matter
 
