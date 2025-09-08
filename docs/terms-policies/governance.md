@@ -108,6 +108,20 @@ Path to role:
   - Creates a GitHub release for the tag
 - For [dandi-cli](https://github.com/dandi/dandi-cli), upon release a new version is published to PyPI
 
+## 9. Security
+
+### 9.1 Reporting
+- Security reports via help@dandiarchive.org
+- Acknowledge within 48 hours
+
+### 9.2 Handling
+- Initial assessment within 5 business days
+- Coordinate and address issue within 30 days
+- User advisory via email when appropriate
+
+### 9.3 Hardening Practices
+- Mandatory dependency scanning
+- Principle of least privilege enforced for service accounts
 
 ## 10. Documentation
 
