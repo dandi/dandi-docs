@@ -100,6 +100,17 @@ Path to role:
 - Design documents for major decisions are available at https://github.com/dandi/dandi-archive/tree/master/doc
 - DEVELOPMENT.md and CODE_OF_CONDUCT.md are maintained in relevant repositories
 
+## 11. Communication
+
+Communication channels include:
+- GitHub Issues and Discussions for user support and team discussions
+- Slack for user support and team discussions
+- Email (info@dandiarchive.org, help@dandiarchive.org) for user support
+- Email announcements for critical notifications to users
+- GitHub Releases for release announcements
+- Email newsletter to highlight major changes
+
+
 ## 13. Amendments to Project Governance
 
 Process
