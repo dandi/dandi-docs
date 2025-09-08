@@ -150,3 +150,6 @@ If a component becomes unmaintained:
 - Update documentation to reflect deprecation including migration guidance
 - Mark repository with `ARCHIVED` notice
 
+## 15. Licenses
+
+- Source code licenses are declared per repository
