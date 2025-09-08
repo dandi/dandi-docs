@@ -94,7 +94,13 @@ Path to role:
     - Approve major architectural shifts
     - Oversee risk, sustainability, funding alignment
 
-## 12. Amendments to Project Governance
+## 10. Documentation
+
+- User and developer documentation is available at https://docs.dandiarchive.org
+- Design documents for major decisions are available at https://github.com/dandi/dandi-archive/tree/master/doc
+- DEVELOPMENT.md and CODE_OF_CONDUCT.md are maintained in relevant repositories
+
+## 13. Amendments to Project Governance
 
 Process
 1. Proposal pull request
