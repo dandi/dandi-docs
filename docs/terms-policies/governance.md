@@ -94,6 +94,21 @@ Path to role:
     - Approve major architectural shifts
     - Oversee risk, sustainability, funding alignment
 
+## 8. Releases
+
+### 8.1 Versioning
+- Semantic Versioning for APIs and libraries
+
+### 8.2 Release Steps
+- For [dandi-archive](https://github.com/dandi/dandi-archive), once a pull request is merged the changes are deployed to the sandbox environment (https://sandbox.dandiarchive.org) for review and testing prior to release.
+- New releases are created with a GitHub Actions workflow built around [`auto`](https://github.com/intuit/auto).
+- When a pull request is merged that has the "`release`" label, `auto`:
+  - Updates the changelog based on the pull requests since the last release and commits the results
+  - Tags the new commit with the next version number
+  - Creates a GitHub release for the tag
+- For [dandi-cli](https://github.com/dandi/dandi-cli), upon release a new version is published to PyPI
+
+
 ## 10. Documentation
 
 - User and developer documentation is available at https://docs.dandiarchive.org
