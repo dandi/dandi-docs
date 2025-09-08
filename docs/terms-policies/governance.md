@@ -122,3 +122,10 @@ Process
 - Urgent amendments may use an accelerated 7 day window with rationale documented.
 - The document becomes active upon Project Leadership approval and publication in the [DANDI Docs](https://docs.dandiarchive.org/).
 
+## 14. Sunset Policy
+
+If a component becomes unmaintained:
+- Create a plan with guidance from the Project Leadership
+- Update documentation to reflect deprecation including migration guidance
+- Mark repository with `ARCHIVED` notice
+
