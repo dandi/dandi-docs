@@ -94,6 +94,35 @@ Path to role:
     - Approve major architectural shifts
     - Oversee risk, sustainability, funding alignment
 
+
+## 7. Pull Request Workflow
+
+### 7.1 Pull Request Requirements
+- Link the associated issue
+- Add a clear description (problem, approach, alternatives considered)
+- Major architectural changes require a design document
+- Add or update tests
+- Update documentation
+- Ensure CI passes
+- Large pull requests should be split unless justified
+- No introduction of unreviewed secrets or credentials
+- Verified provenance for large binary additions (discouraged in code repos)
+
+### 7.2 Merge Policy
+- All pull requests require:
+    - All comments must be resolved or addressed
+    - Approval by at least 1 listed Maintainer for that repository
+    - 24 hour waiting period (unless addressing a critical issue)
+- See section below regarding updates to the Governance document
+
+### 7.3 Draft vs Ready for Review
+- Open as a Draft for early feedback
+- Convert to “Ready” only when tests and documentation are updated
+
+### 7.4 Reverts
+- Any Maintainer may revert a merged pull request causing regression, security issue, or service degradation, with immediate notice in original pull request thread.
+- Follow-up issue required to track remediation
+
 ## 8. Releases
 
 ### 8.1 Versioning
