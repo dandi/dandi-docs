@@ -123,7 +123,8 @@ Maintainers for the respective DANDI repositories:
 
 ### 6.2 Consensus Process
 1. Open a GitHub issue describing the bug/feature request, context, and possible solutions.
-2. For major architectural changes, create a design document.  For reference, see [previous design documents](https://github.com/dandi/dandi-archive/tree/master/doc).
+2. For major architectural changes, create a design document and submit as a PR for discussion and refinement.
+   For reference, see [previous design documents](https://github.com/dandi/dandi-archive/tree/master/doc).
 3. Collect feedback during a 7 day review period.
 4. Summarize consensus in the GitHub issue and resolve all suggestions in the design document.
 5. Implement via pull request(s) referencing the proposed design.
