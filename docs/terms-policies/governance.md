@@ -94,6 +94,23 @@ Path to role:
     - Approve major architectural shifts
     - Oversee risk, sustainability, funding alignment
 
+## 6. Decision-Making Model
+
+### 6.1 Roadmap
+- Project targets are discussed during the biweekly Engineering Core and Scientific Core meetings.
+- Project Leadership provides guidance on prioritization of targets.
+- Public notes of these meetings are available on [Google Drive](https://drive.google.com/drive/folders/1-jXLpcrh3L650FiZyTFgcs096nZjO2C3).
+
+### 6.2 Consensus Process
+1. Open a GitHub issue describing the bug/feature request, context, and possible solutions.
+2. For major architectural changes, create a design document.  For reference, see [previous design documents](https://github.com/dandi/dandi-archive/tree/master/doc).
+3. Collect feedback during a 7 day review period.
+4. Summarize consensus in the GitHub issue and resolve all suggestions in the design document.
+5. Implement via pull request(s) referencing the proposed design.
+
+### 6.3 Conflict of Interest
+- Participants should disclose direct commercial interest in a technology choice.
+- Conflicted member recuses oneself from final decision phase.
 
 ## 7. Pull Request Workflow
 
