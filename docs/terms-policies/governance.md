@@ -73,6 +73,7 @@ Responsibilities:
 - Final merge approval
 - Release planning and tagging
 - Triage (labels, prioritization, assignment)
+- Manage vulnerability reports
 - Escalate policy or security concerns
 - Facilitate cross‑repository alignment
 - Onboard and mentor reviewers
