@@ -102,8 +102,8 @@ Maintainers for the respective DANDI repositories:
 
 ### 5.4 Project Leadership
 - Current leadership team:
-    - Satrajit Ghosh
-    - Yaroslav O. Halchenko
+    - [Satrajit Ghosh](https://satra.cogitatum.org/) ([@satra](https://github.com/satra))
+    - [Yaroslav O. Halchenko](https://centerforopenneuroscience.org/whoweare) ([@yarikoptic](https://github.com/yarikoptic))
 - Responsibilities:
     - Approve or amend governance document and Code of Conduct
     - Strategic project oversight
