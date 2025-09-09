@@ -4,21 +4,13 @@
 
 To be accepted by DANDI, NWB files must conform to criteria that are enforced via three levels of validation:
 
-## NWB File Validation
+### NWB File Validation
 [PyNWB validation](https://pynwb.readthedocs.io/en/stable/validation.html) is used to validate the NWB files, 
 ensuring that they meet the specifications of core NWB and of any NWB extensions that were used. Generally 
 speaking, all files produced by PyNWB and MatNWB should pass validation, however there are occasional bugs. More 
 often, NWB files that fail to meet these criteria have been created outside PyNWB and MatNWB.
 
-## Critical NWB Checks
-The [NWB Inspector](https://nwbinspector.readthedocs.io/en/dev/) scans NWB files using heuristics to find mistakes 
-or areas for improvements in NWB files. There are three levels of importance for checks: `CRITICAL`, 
-`BEST PRACTICE VIOLATIONS`, and `BEST PRACTICE SUGGESTIONS`. `CRITICAL` warnings indicate some internal inconsistency in the data of the 
-NWB files. The NWB Inspector will print out all warnings, but only `CRITICAL` warnings will prevent a file from being 
-uploaded to DANDI. Errors in NWB Inspector will be block upload as well, but reflect a problem with the NWB 
-Inspector software as opposed to the NWB file. 
-
-## Missing DANDI Metadata
+### Missing DANDI Metadata
 DANDI has requirements for metadata beyond what is strictly required for NWB validation. The following metadata must 
 be present in the NWB file for a successful upload to DANDI:
 
@@ -32,6 +24,21 @@ be present in the NWB file for a successful upload to DANDI:
 
 These requirements are specified in the 
 [DANDI configuration file of NWB Inspector](https://github.com/NeurodataWithoutBorders/nwbinspector/blob/dev/src/nwbinspector/internal_configs/dandi.inspector_config.yaml).
+
+### Critical NWB Checks
+The [NWB Inspector](https://nwbinspector.readthedocs.io/en/dev/) scans NWB files using heuristics to find mistakes or areas for improvements in NWB files. There are three levels of importance for checks: `CRITICAL`, `BEST PRACTICE VIOLATIONS`, and `BEST PRACTICE SUGGESTIONS`. `CRITICAL` warnings indicate some internal inconsistency in the data of the NWB files. The NWB Inspector will print out all warnings, but only `CRITICAL` warnings will prevent a file from being uploaded to DANDI. The NWB Inspector supports a special configuration for DANDI that includes additional checks relevant to DANDI. To use this configuration, you can specify the `--config dandi` option when running NWB Inspector.
+
+You can run NWB Inspector locally by installing it via pip:
+```bash
+pip install nwbinspector
+```
+
+Then you can run it on your NWB file:
+```bash
+nwbinspector --config dandi path/to/yourfile.nwb
+```
+
+You can also use a directory as input, in which case it will recursively scan for NWB files.
 
 Passing all of these levels of validation can sometimes be tricky. If you have any questions, please ask them via the 
 [DANDI Help Desk](https://github.com/dandi/helpdesk/discussions) and we would be happy to assist you.
