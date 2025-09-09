@@ -197,6 +197,8 @@ Maintainers for the respective DANDI repositories:
 Communication channels include:
 
 - GitHub Issues and Discussions for user support and team discussions
+  - https://github.com/dandi/helpdesk for generic support requests and questions
+  - individual repositories for targeted discussions
 - Slack for user support and team discussions
 - Email (info@dandiarchive.org, help@dandiarchive.org) for user support
 - Email announcements for critical notifications to users
