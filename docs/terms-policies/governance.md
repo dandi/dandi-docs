@@ -17,6 +17,8 @@ Sites:
 Code git repositories:
 
 - https://github.com/dandi
+
+Data git/git-annex repositories:
 - https://github.com/dandisets
 - https://github.com/dandizarrs
 
