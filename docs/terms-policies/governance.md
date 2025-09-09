@@ -160,7 +160,7 @@ Maintainers for the respective DANDI repositories:
 ## 8. Releases
 
 ### 8.1 Versioning
-- Semantic Versioning for APIs and libraries
+- [Semantic Versioning 2.0](https://semver.org/spec/v2.0.0.html) for APIs and libraries
 
 ### 8.2 Release Steps
 - For [dandi-archive](https://github.com/dandi/dandi-archive), once a pull request is merged the changes are deployed to the sandbox environment (https://sandbox.dandiarchive.org) for review and testing prior to release.
