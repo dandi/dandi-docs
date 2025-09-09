@@ -9,11 +9,13 @@ Status: Draft
 This document defines the governance structure, roles, responsibilities, and decision‑making processes for the DANDI Archive ecosystem. It applies uniformly to all current and future repositories and services, including:
 
 Sites:
+
 - https://dandiarchive.org
 - https://hub.dandiarchive.org
 - https://about.dandiarchive.org
 
 Code repositories:
+
 - https://github.com/dandi
 - https://github.com/dandisets
 - https://github.com/dandizarrs
@@ -164,9 +166,9 @@ Maintainers for the respective DANDI repositories:
 - For [dandi-archive](https://github.com/dandi/dandi-archive), once a pull request is merged the changes are deployed to the sandbox environment (https://sandbox.dandiarchive.org) for review and testing prior to release.
 - New releases are created with a GitHub Actions workflow built around [`auto`](https://github.com/intuit/auto).
 - When a pull request is merged that has the "`release`" label, `auto`:
-  - Updates the changelog based on the pull requests since the last release and commits the results
-  - Tags the new commit with the next version number
-  - Creates a GitHub release for the tag
+    - Updates the changelog based on the pull requests since the last release and commits the results
+    - Tags the new commit with the next version number
+    - Creates a GitHub release for the tag
 - For [dandi-cli](https://github.com/dandi/dandi-cli), upon release a new version is published to PyPI
 
 ## 9. Security
@@ -193,6 +195,7 @@ Maintainers for the respective DANDI repositories:
 ## 11. Communication
 
 Communication channels include:
+
 - GitHub Issues and Discussions for user support and team discussions
 - Slack for user support and team discussions
 - Email (info@dandiarchive.org, help@dandiarchive.org) for user support
@@ -204,12 +207,13 @@ Communication channels include:
 
 - Outreach events are hosted in collaboration with the Neurodata Without Borders team and can be found at https://nwb.org/events
 - Code of Conduct is available at https://github.com/dandi/dandi-archive/blob/master/CODE_OF_CONDUCT.md
-  - Instances of Code of Conduct violation can be reported to  community@dandiarchive.org
-  - Enforcement of Code of Conduct is separate from primary technical decision flow where possible
+    - Instances of Code of Conduct violation can be reported to  community@dandiarchive.org
+    - Enforcement of Code of Conduct is separate from primary technical decision flow where possible
 
 ## 13. Amendments to Project Governance
 
 Process
+
 1. Proposal pull request
 2. Minimum of a 30 day public comment
 3. Approval by Project Leadership
