@@ -86,14 +86,16 @@ Path to role:
 Maintainers for the respective DANDI repositories:
 | Repository | Maintainers |
 | -- | -- |
-| dandi-archive | @waxlamp @jjnesbitt @mvandenburgh |
-| dandi-cli | @yarikoptic @CodyCBakerPhD @candleindark |
-| dandi-schema | @yarikoptic @candleindark @satra |
-| dandi-hub | @asmacdo @satra |
-| dandidav | @yarikoptic |
-| dandi-about | @kabilar @bendichter |
-| dandi-docs | @kabilar @bendichter |
-| example-notebooks | @kabilar @bendichter |
+| [dandi/dandi-archive](https://github.com/dandi/dandi-archive) | @waxlamp @jjnesbitt @mvandenburgh |
+| [dandi/dandi-cli](https://github.com/dandi/dandi-cli) | @yarikoptic @CodyCBakerPhD @candleindark |
+| [dandi/dandi-schema](https://github.com/dandi/dandi-schema) | @yarikoptic @candleindark @satra |
+| [dandi/dandi-hub](https://github.com/dandi/dandi-hub) | @asmacdo @satra |
+| [dandi/nebari-deployments](https://github.com/dandi/nebari-deployments) (Private) | @asmacdo @satra |
+| [dandi/nebari](https://github.com/dandi/nebari) | @asmacdo @satra |
+| [dandi/dandidav](https://github.com/dandi/dandidav) | @yarikoptic |
+| [dandi/dandi-about](https://github.com/dandi/dandi-about) | @kabilar @bendichter @yarikoptic @satra |
+| [dandi/dandi-docs](https://github.com/dandi/dandi-docs) | @kabilar @bendichter @yarikoptic @satra |
+| [dandi/example-notebooks](https://github.com/dandi/example-notebooks) | @kabilar @bendichter @yarikoptic @satra |
 
 ### 5.4 Project Leadership
 - Current leadership team:
