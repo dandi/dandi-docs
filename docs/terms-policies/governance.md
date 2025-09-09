@@ -83,6 +83,18 @@ Path to role:
 - Demonstrated sustained contributions and review quality
 - Nomination and consensus of existing repository Maintainers
 
+Maintainers for the respective DANDI repositories:
+| Repository | Maintainers |
+| -- | -- |
+| dandi-archive | @waxlamp @jjnesbitt @mvandenburgh |
+| dandi-cli | @yarikoptic @CodyCBakerPhD @candleindark |
+| dandi-schema | @yarikoptic @candleindark @satra |
+| dandi-hub | @asmacdo @satra |
+| dandidav | @yarikoptic |
+| dandi-about | @kabilar @bendichter |
+| dandi-docs | @kabilar @bendichter |
+| example-notebooks | @kabilar @bendichter |
+
 ### 5.4 Project Leadership
 - Current leadership team:
     - Satrajit Ghosh
