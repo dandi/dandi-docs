@@ -14,7 +14,7 @@ Sites:
 - https://hub.dandiarchive.org
 - https://about.dandiarchive.org
 
-Code repositories:
+Code git repositories:
 
 - https://github.com/dandi
 - https://github.com/dandisets
