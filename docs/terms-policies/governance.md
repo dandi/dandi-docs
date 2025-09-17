@@ -95,9 +95,9 @@ Maintainers for the respective DANDI repositories:
 | [dandi/dandi-archive](https://github.com/dandi/dandi-archive) | [@dandi/archive-maintainers](https://github.com/orgs/dandi/teams/archive-maintainers) |
 | [dandi/dandi-cli](https://github.com/dandi/dandi-cli) | [@dandi/dandi-cli-maintainers](https://github.com/orgs/dandi/teams/dandi-cli-maintainers) |
 | [dandi/dandi-schema](https://github.com/dandi/dandi-schema) | @yarikoptic @candleindark @satra |
-| [dandi/dandi-hub](https://github.com/dandi/dandi-hub) | @asmacdo @satra |
-| [dandi/nebari-deployments](https://github.com/dandi/nebari-deployments) (Private) | @asmacdo @satra |
-| [dandi/nebari](https://github.com/dandi/nebari) | @asmacdo @satra |
+| [dandi/dandi-hub](https://github.com/dandi/dandi-hub) | [@dandi/dandi-hub-maintainers](https://github.com/orgs/dandi/teams/dandi-hub-maintainers) |
+| [dandi/nebari-deployments](https://github.com/dandi/nebari-deployments) (Private) | [@dandi/dandi-hub-maintainers](https://github.com/orgs/dandi/teams/dandi-hub-maintainers) |
+| [dandi/nebari](https://github.com/dandi/nebari) | [@dandi/dandi-hub-maintainers](https://github.com/orgs/dandi/teams/dandi-hub-maintainers) |
 | [dandi/dandidav](https://github.com/dandi/dandidav) | @yarikoptic |
 | [dandi/dandi-about](https://github.com/dandi/dandi-about) | @kabilar @bendichter @yarikoptic @satra |
 | [dandi/dandi-docs](https://github.com/dandi/dandi-docs) | @kabilar @bendichter @yarikoptic @satra |
