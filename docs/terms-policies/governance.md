@@ -237,4 +237,5 @@ If a component becomes unmaintained:
 
 ## 15. Licenses
 
-- Source code licenses are declared per repository
+- Licenses (for code, artwork, documentation) are declared per repository
+- Licenses must be [DFSG](https://www.debian.org/social_contract#guidelines) and [OSI](https://opensource.org/licenses) compliant
