@@ -93,6 +93,7 @@ Maintainers for the respective DANDI repositories:
 | Repository | Maintainers |
 | -- | -- |
 | [dandi/dandi-archive](https://github.com/dandi/dandi-archive) | [@dandi/archive-maintainers](https://github.com/orgs/dandi/teams/archive-maintainers) |
+| [dandi/dandi-infrastructure](https://github.com/dandi/dandi-infrastructure) | [@dandi/archive-admin](https://github.com/orgs/dandi/teams/archive-admin) |
 | [dandi/dandi-cli](https://github.com/dandi/dandi-cli) | [@dandi/dandi-cli-maintainers](https://github.com/orgs/dandi/teams/dandi-cli-maintainers) |
 | [dandi/dandi-schema](https://github.com/dandi/dandi-schema) | [@dandi/dandi-schema-maintainers](https://github.com/orgs/dandi/teams/dandi-schema-maintainers) |
 | [dandi/dandi-hub](https://github.com/dandi/dandi-hub) | [@dandi/dandi-hub-maintainers](https://github.com/orgs/dandi/teams/dandi-hub-maintainers) |
