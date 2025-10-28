@@ -14,6 +14,7 @@ DANDI integrates with various external services to enhance data accessibility an
 4. Click the link to open the file in NWB Explorer
 
 NWB Explorer allows you to:
+
 - Browse the hierarchical structure of NWB files
 - Visualize time series data
 - View spike raster plots
@@ -32,6 +33,7 @@ NWB Explorer allows you to:
 4. Click the link to open the file in Neurosift
 
 Neurosift allows you to:
+
 - Visualize spike trains and raster plots
 - Explore LFP and other time series data
 - View position tracking data
