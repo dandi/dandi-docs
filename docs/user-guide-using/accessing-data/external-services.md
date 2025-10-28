@@ -1,8 +1,8 @@
 # External Services
 
-DANDI integrates with various external services to enhance data accessibility and analysis capabilities. This page describes the external services that can be used with DANDI data.
+DANDI integrates with various external services to enhance data accessibility and analysis capabilities. This page describes the trusted applications that can be used with DANDI data.
 
-The trusted applications below have worked with the DANDI team to integrate their tools. In some applications (e.g. Neurosift) you may enter your `DANDI_API_KEY` to view embargoed data. If you need to reset your `DANDI_API_KEY`, please see these [instructions](../../user-guide-sharing/uploading-data.md#1-dandi_api_key-environment-variable).
+In some trusted applications (e.g. Neurosift) you may enter your `DANDI_API_KEY` to view embargoed data. If you need to reset your `DANDI_API_KEY`, please see these [instructions](../../user-guide-sharing/uploading-data.md#1-dandi_api_key-environment-variable).
 
 ## NWB Explorer
 
