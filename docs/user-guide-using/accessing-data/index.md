@@ -17,12 +17,12 @@ DANDI offers several methods for accessing data, each suited to different use ca
 
 The best method for accessing data depends on your specific needs:
 
-- **For browsing and exploring data**: Use the [Web Interface](./downloading.md#using-the-dandi-web-application)
-- **For downloading entire Dandisets**: Use the [DANDI CLI](./downloading.md#using-the-python-cli-client)
-- **For version control and reproducibility**: Use [DataLad](./downloading.md#using-datalad)
-- **For integration with existing tools**: Use [WebDAV](./downloading.md#using-webdav)
-- **For cloud-based analysis**: Use [DANDI Hub](../dandi-hub.md)
-- **For programmatic access**: Use the [DANDI Python Client](https://dandi.readthedocs.io/)
+- **For browsing and exploring data**: Use the [Web Interface](./downloading.md#using-the-dandi-web-application).
+- **For downloading entire Dandisets**: Use the [DANDI CLI](./downloading.md#using-the-python-cli-client).
+- **For version control and reproducibility**: Use [DataLad](./downloading.md#using-datalad).
+- **For integration with existing tools**: Use [WebDAV](./downloading.md#using-webdav), [DANDI CLI](./downloading.md#using-the-python-cli-client), [DANDI Python Client](https://dandi.readthedocs.io/) or [DANDI API](./external-services.md#dandi-api) depending on the tool language/interfaces.
+- **For cloud-based analysis**: Use [DANDI Hub](../dandi-hub.md).
+- **For programmatic access**: Use the [DANDI Python Client](https://dandi.readthedocs.io/) for Python or the [DANDI API](./external-services.md#dandi-api) for other languages.
 
 ## Data Access Considerations
 
