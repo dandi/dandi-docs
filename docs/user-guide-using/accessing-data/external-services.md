@@ -1,6 +1,8 @@
 # External Services
 
-DANDI integrates with various external services to enhance data accessibility and analysis capabilities. This page describes the external services that can be used with DANDI data.
+DANDI integrates with various external services to enhance data accessibility and analysis capabilities. This page describes the trusted applications that can be used with DANDI data.
+
+In some trusted applications (e.g. Neurosift) you may enter your `DANDI_API_KEY` to view embargoed data. If you need to reset your `DANDI_API_KEY`, please see these [instructions](../../user-guide-sharing/uploading-data.md#1-dandi_api_key-environment-variable).
 
 ## NWB Explorer
 
@@ -14,6 +16,7 @@ DANDI integrates with various external services to enhance data accessibility an
 4. Click the link to open the file in NWB Explorer
 
 NWB Explorer allows you to:
+
 - Browse the hierarchical structure of NWB files
 - Visualize time series data
 - View spike raster plots
@@ -32,6 +35,7 @@ NWB Explorer allows you to:
 4. Click the link to open the file in Neurosift
 
 Neurosift allows you to:
+
 - Visualize spike trains and raster plots
 - Explore LFP and other time series data
 - View position tracking data
