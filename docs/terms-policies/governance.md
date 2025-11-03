@@ -61,7 +61,7 @@ The DANDI Project codebase includes the components listed in the table below. Mu
 Anyone submitting issues, pull requests, documentation, or feedback.
 
 Responsibilities:
-- Follow Code of Conduct and contribution guidelines
+- Follow [Code of Conduct](https://github.com/dandi/dandi-archive/blob/master/CODE_OF_CONDUCT.md) and contribution guidelines
 - Strive to provide sufficient context and steps to reproduce
 - Where applicable, write tests and documentation for code changes
 
