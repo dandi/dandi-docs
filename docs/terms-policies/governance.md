@@ -159,6 +159,7 @@ Maintainers for the respective DANDI repositories:
 ### 7.2 Merge Policy
 - All pull requests require:
     - All comments must be resolved or addressed
+    - If a comment cannot be resolved, the Project Leadership would be enlisted to decide on the path forward
     - Approval by at least 1 listed Maintainer for that repository
     - 24 hour waiting period (unless addressing a critical issue)
 - See section below regarding updates to the Governance document
