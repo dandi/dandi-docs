@@ -27,11 +27,11 @@ Data git/git-annex repositories:
 
 DANDI (Distributed Archives for Neurophysiology Data Integration) enables FAIR (Findable, Accessible, Interoperable, Reusable) publishing, preservation, discovery, and computational reuse of neurophysiology data.  DANDI provides:
 
-- A cloud-based platform to store, process, and disseminate data. You can use DANDI to collaborate and publish datasets.
-- Open access to data to enable secondary uses of data outside the intent of the study.
-- Optimize data storage and access through partnerships, compression and accessibility technologies.
-- Enables reproducible practices and publications through data standards such as NWB and BIDS.
-- The platform is not just an endpoint to dump data, it is intended as a living repository that enables collaboration within and across labs.
+- a cloud-based platform to store, process, and disseminate data. You can use DANDI to collaborate and publish datasets.
+- open access to data to enable secondary uses of data outside the intent of the study;
+- optimized data storage and access through partnerships, compression and accessibility technologies;
+- facilities to encourage reproducible practices and publications through data standards such as NWB and BIDS;
+- a platform that is not just an endpoint to dump data, but intended to be a living repository that enables collaboration within and across labs.
 
 ## 3. Core Principles
 
