@@ -1,4 +1,4 @@
-# DANDI Archive Project Governance
+# DANDI Project Governance
 
 Version: 1.0  
 Effective Date: YYYY-MM-DD  
@@ -6,7 +6,7 @@ Status: Draft
 
 ## 1. Purpose
 
-This document defines the governance structure, roles, responsibilities, and decision‑making processes for the DANDI ecosystem. It applies uniformly to all current and future repositories and services, including:
+This document defines the governance structure, roles, responsibilities, and decision‑making processes for the DANDI Project. It applies uniformly to all current and future repositories and services, including:
 
 Sites:
 
@@ -45,7 +45,7 @@ DANDI (Distributed Archives for Neurophysiology Data Integration) enables FAIR (
 
 ## 4. Project Structure
 
-The DANDI Project codebase includes the components listed in the table below. Multiple deployments of this codebase operate as separate instances, each serving distinct research communities and datasets. The DANDI Archive instance is available at https://dandiarchive.org/, and the EMBER-DANDI Archive instance is available at https://dandi.emberarchive.org/.
+The DANDI Project codebase includes the components listed in the table below:
 
 | Domain | Primary Repos |
 |--------|------------------------------|
@@ -54,6 +54,10 @@ The DANDI Project codebase includes the components listed in the table below. Mu
 | Metadata | [dandi-schema](https://github.com/dandi/dandi-schema), [schema](https://github.com/dandi/schema) |
 | JupterHub | [dandi-hub](https://github.com/dandi/dandi-hub), [nebari](https://github.com/dandi/nebari), [nebari-deployments](https://github.com/dandi/nebari-deployments), [nebari-docker-images](https://github.com/dandi/nebari-docker-images) |
 | Documentation & Support | [dandi-docs](https://github.com/dandi/dandi-docs), [dandi-about](https://github.com/dandi/dandi-about), [helpdesk](https://github.com/dandi/helpdesk) |
+
+Multiple deployments of this codebase operate as separate instances, each serving distinct research communities and datasets. The DANDI Archive instance is available at https://dandiarchive.org/, and the EMBER-DANDI Archive instance is available at https://dandi.emberarchive.org/. This document governs over the DANDI Project codebase unless otherwise specified.
+
+Contributing code to DANDI repositories does not grant rights or access to the separate instances. Similarly, using the DANDI Archive or EMBER-DANDI Archive service does not require contributing to the codebase.
 
 ## 5. Roles & Responsibilities
 
@@ -123,6 +127,16 @@ Maintainers for the respective DANDI repositories:
     - Resolve escalated disputes.
     - Approve major architectural shifts.
     - Oversee risk, sustainability, funding alignment.
+
+### 5.5 DANDI Archive Administrators
+
+Responsibilities:
+- Monitor service health and performance.
+- Manage user accounts and permissions.
+- Respond to data access requests and issues.
+
+Administrators:
+- @satra, @yarikoptic, @waxlamp, @mvandenburgh, @jjnesbitt, @danlamanna, @brianhelba, @kabilar, @asmacdo, @bendichter, @candleindark, @CodyCBakerPhD.
 
 ## 6. Decision-Making Model
 
