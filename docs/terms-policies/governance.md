@@ -6,7 +6,7 @@ Status: Draft
 
 ## 1. Purpose
 
-This document defines the governance structure, roles, responsibilities, and decision‑making processes for the DANDI Archive ecosystem. It applies uniformly to all current and future repositories and services, including:
+This document defines the governance structure, roles, responsibilities, and decision‑making processes for the DANDI ecosystem. It applies uniformly to all current and future repositories and services, including:
 
 Sites:
 
@@ -44,6 +44,8 @@ DANDI (Distributed Archives for Neurophysiology Data Integration) enables FAIR (
 7. Security & Privacy: Responsible handling of sensitive data and credentials
 
 ## 4. Project Structure
+
+The DANDI Project codebase includes the components listed in the table below. Multiple deployments of this codebase operate as separate instances, each serving distinct research communities and datasets. The DANDI Archive instance is available at https://dandiarchive.org/, and the EMBER-DANDI Archive instance is available at https://dandi.emberarchive.org/.
 
 | Domain | Primary Repos |
 |--------|------------------------------|
