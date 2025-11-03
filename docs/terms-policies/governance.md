@@ -64,6 +64,7 @@ Responsibilities:
 
 ### 5.2 Reviewers
 Contributors granted reviewer status for designated repositories.  
+
 Responsibilities:
 - Perform timely, constructive reviews
 - Enforce style, testing, and security practices
