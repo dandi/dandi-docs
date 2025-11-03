@@ -89,6 +89,7 @@ Responsibilities:
 Expectations:
 - Active presence
 - Adhere to conflict of interest and bias avoidance
+
 Path to role:
 - Demonstrated sustained contributions and review quality
 - Nomination and consensus of existing repository Maintainers
