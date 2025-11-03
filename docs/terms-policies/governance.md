@@ -76,6 +76,7 @@ Path to role:
 
 ### 5.3 Maintainers
 Individuals with merge rights for designated repositories.  
+
 Responsibilities:
 - Final merge approval
 - Release planning and tagging
