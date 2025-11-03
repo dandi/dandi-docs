@@ -170,6 +170,7 @@ Maintainers for the respective DANDI repositories:
 
 ### 7.4 Reverts
 - Any Maintainer may revert a merged pull request causing regression, security issue, or service degradation, with immediate notice in original pull request thread.
+- All changes (including reverts) must be submitted through a pull request, and a new release must be made if the prior change was already released.
 - Follow-up issue required to track remediation
 
 ## 8. Releases
