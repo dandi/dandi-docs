@@ -85,6 +85,7 @@ Responsibilities:
 - Escalate policy or security concerns
 - Facilitate cross‑repository alignment
 - Onboard and mentor reviewers
+
 Expectations:
 - Active presence
 - Adhere to conflict of interest and bias avoidance
