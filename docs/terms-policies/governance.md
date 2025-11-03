@@ -81,7 +81,7 @@ Path to role:
 Individuals with merge rights for designated repositories.  
 
 Responsibilities:
-- Final merge approval
+- Merge approval
 - Release planning and tagging
 - Triage (labels, prioritization, assignment)
 - Manage vulnerability reports
