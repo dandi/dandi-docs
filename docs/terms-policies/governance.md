@@ -35,13 +35,13 @@ DANDI (Distributed Archives for Neurophysiology Data Integration) enables FAIR (
 
 ## 3. Core Principles
 
-1. Openness & Transparency: Designs, discussions, and decisions are public by default
-2. FAIR & Reproducibility: Data and code follow standards and their evolution remain open, traceable, and citable
-3. Sustainability: Architectural and process decisions consider long-term maintainability
-4. Inclusivity & Respect: Guided by a Code of Conduct
-5. Stewardship: Authority derives from consistent, high‑quality contribution
-6. Accountability: Roles carry explicit responsibilities
-7. Security & Privacy: Responsible handling of sensitive data and credentials
+1. Openness & Transparency: Designs, discussions, and decisions are public by default.
+2. FAIR & Reproducibility: Data and code follow standards and their evolution remain open, traceable, and citable.
+3. Sustainability: Architectural and process decisions consider long-term maintainability.
+4. Inclusivity & Respect: Guided by a Code of Conduct.
+5. Stewardship: Authority derives from consistent, high‑quality contribution.
+6. Accountability: Roles carry explicit responsibilities.
+7. Security & Privacy: Responsible handling of sensitive data and credentials.
 
 ## 4. Project Structure
 
