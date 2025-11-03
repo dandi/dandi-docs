@@ -59,7 +59,7 @@ DANDI (Distributed Archives for Neurophysiology Data Integration) enables FAIR (
 Anyone submitting issues, pull requests, documentation, or feedback.  
 Responsibilities:
 - Follow Code of Conduct and contribution guidelines
-- Provide context and reproducible steps
+- Strive to provide sufficient context and steps to reproduce
 - Where applicable, write tests and documentation for code changes
 
 ### 5.2 Reviewers
