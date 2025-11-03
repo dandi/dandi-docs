@@ -69,6 +69,7 @@ Responsibilities:
 - Perform timely, constructive reviews
 - Enforce style, testing, and security practices
 - Identify architectural and performance impacts
+
 Path to role:
 - Consistent high‑quality reviews
 - Sponsored by at least one Maintainer
