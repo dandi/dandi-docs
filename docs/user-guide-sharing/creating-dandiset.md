@@ -9,14 +9,14 @@ Before creating a Dandiset, you should:
 1. **Register for DANDI and obtain an API key.** To create a new Dandiset, you need to have a DANDI account.
    * If you do not already have an account, see [Create a DANDI Account](../getting-started/creating-account.md) page for instructions. 
    * Once you are logged in, copy your API key by clicking on your user initials in the top-right corner after logging in.
-   * Production (https://dandiarchive.org) and staging (https://gui-staging.dandiarchive.org) servers have different API keys and different logins.
+   * Production (https://dandiarchive.org) and sandbox (https://sandbox.dandiarchive.org) servers have different API keys and different logins.
 
 2. **Choose a server.**
    * **Production server**: https://dandiarchive.org. This is the main server for DANDI and should be used for sharing neuroscience data.
      When you create a Dandiset, a permanent ID is automatically assigned to it.
      This Dandiset can be fully public or embargoed according to NIH policy.
      All data are uploaded as draft and can be adjusted before publishing on the production server.
-   * **Development server**: https://gui-staging.dandiarchive.org. This server is for testing and learning how to use DANDI.
+   * **Development server**: https://sandbox.dandiarchive.org. This server is for testing and learning how to use DANDI.
      It is not recommended for sharing data, but is recommended for testing the DANDI CLI and GUI or as a testing platform for developers.
      Note that the development server should not be used to stage your data.
 

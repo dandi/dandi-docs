@@ -16,10 +16,10 @@ known_instances = {
         "https://dandiarchive.org",
         "https://api.dandiarchive.org/api",
     ),
-    "dandi-staging": DandiInstance(
-        "dandi-staging",
-        "https://gui-staging.<your-domain>.org",
-        "https://api-staging.<your-domain>.org/api",
+    "dandi-sandbox": DandiInstance(
+        "dandi-sandbox",
+        "https://sandbox.<your-domain>.org",
+        "https://api.sandbox.<your-domain>.org/api",
     ),
     "dandi-api-local-docker-tests": DandiInstance(
         "dandi-api-local-docker-tests",

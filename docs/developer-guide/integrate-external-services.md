@@ -7,8 +7,8 @@ This page provides guidance on how to integrate external services with the DANDI
 **DANDI metadata models** are defined as 
 [Pydantic models](https://github.com/dandi/dandi-schema/blob/master/dandischema/models.py)
 in [**dandischema**](https://github.com/dandi/dandi-schema) and transformed into 
-[JSON schemas](https://github.com/dandi/schema). **Both** representations, 
-the original Pydantic definitions and JSON schemas, are used across the DANDI ecosystem. 
+[JSON schemas](https://github.com/dandi/schema). **Both** representations — 
+the original Pydantic definitions and JSON schemas — are used across the DANDI ecosystem. 
 The diagram below outlines how these two representations are integrated into various 
 components, including the CLI, the backend/API, and the web interface.
 

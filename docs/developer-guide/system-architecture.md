@@ -54,7 +54,7 @@ Provisions the servers, worker processes, and the database for the API.
 * **Frontend server**: Serves a static build of the DANDI Archive frontend (Vue.js).
 * **Autodeployment**: On each push or merge to `main` (or whichever branch is configured), Netlify automatically builds and deploys.
 * **Configuration**:
-  - **`netlify.toml`**: Describes build commands, environment variables for staging vs. production.
+  - **`netlify.toml`**: Describes build commands, environment variables for sandbox vs. production.
   - **`.env.production`**: Holds the environment variables for the Vue-based app at runtime (e.g. `VITE_API_URL`, `VITE_SENTRY_DSN`).
 
 ### 4. Terraform Infrastructure
