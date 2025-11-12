@@ -1,0 +1,2928 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.dandiarchive.org/example-notebooks/000108/chunglab/demo/2021-09-27_dandi-demo/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Demo notebook for the Chung lab dataset - DANDI Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-15WQLCLQ3L"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-15WQLCLQ3L",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-15WQLCLQ3L",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#demo-notebook-for-the-chung-lab-dataset" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://dandiarchive.org" title="DANDI Documentation" class="md-header__button md-logo" aria-label="DANDI Documentation" data-md-component="logo">
+      
+  <img src="../../../../../img/dandi-logo-square_sw.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DANDI Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Demo notebook for the Chung lab dataset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="light-blue"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="dark-blue" data-md-color-accent="light-blue"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dandi/dandi-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dandi/dandi-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://dandiarchive.org" title="DANDI Documentation" class="md-nav__button md-logo" aria-label="DANDI Documentation" data-md-component="logo">
+      
+  <img src="../../../../../img/dandi-logo-square_sw.png" alt="logo">
+
+    </a>
+    DANDI Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dandi/dandi-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dandi/dandi-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/creating-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a DANDI Account
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/dandi-ecosystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DANDI Ecosystem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Standards
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Standards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/data-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/data-standards/nwb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NWB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide: Sharing Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide: Sharing Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/creating-dandiset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a Dandiset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/data-licenses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Licenses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Converting Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Converting Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/converting-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/converting-data/nwb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NWB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/converting-data/nwb/nwb-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NWB GUIDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/converting-data/nwb/neuroconv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NeuroConv
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/converting-data/nwb/pynwb-matnwb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PyNWB and MatNWB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/validating-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validating Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/uploading-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/dandiset-metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dandiset Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/publishing-dandisets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing Dandisets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-sharing/contributing-notebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing an example notebook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide: Using Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide: Using Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-using/exploring-dandisets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exploring Dandisets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessing Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Accessing Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-using/accessing-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-using/accessing-data/downloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Downloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-using/accessing-data/streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Streaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-using/accessing-data/external-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-using/citing-dandisets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citing Dandisets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../user-guide-using/dandi-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DANDI Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dandi.github.io/example-notebooks" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dandiset Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../dandi/DANDI%20User%20Guide%2C%20Part%20I/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DANDI User Guide, Part I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../dandi/DANDI%20User%20Guide%2C%20Part%20II/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DANDI User Guide, Part II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/neurodatarehack_2024/simple_dandiset_search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simple Dandiset Search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/cosyne_2023/advanced_asset_search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Asset Search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/bcm_2024/analysis-demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Streaming and interacting with NWB data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../demos/NWBWidget-demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NWB Widget Demo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/system-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/developer-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/integrate-external-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrate External Services with DANDI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/contributing-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a DANDI Instance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Creating a DANDI Instance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/creating-dandi-instance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/creating-dandi-instance/initialize-vendors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initialize Vendor Accounts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/creating-dandi-instance/dandi-infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DANDI Infrastructure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/creating-dandi-instance/dandi-archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DANDI Archive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/creating-dandi-instance/dandi-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DANDI Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/creating-dandi-instance/dandi-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DANDI Client
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/creating-dandi-instance/dandi-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DANDI Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health Status
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Health Status
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/dandi/dandisets-healthstatus" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dandisets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://status.dandiarchive.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terms and Policies
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terms and Policies
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../terms-policies/terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../terms-policies/policies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Policies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../api/dandi-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DANDI Client
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../api/rest-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    REST API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="demo-notebook-for-the-chung-lab-dataset">Demo notebook for the Chung lab dataset<a class="headerlink" href="#demo-notebook-for-the-chung-lab-dataset" title="Permanent link">&para;</a></h1>
+<p>This notebook demonstrates how to retrieve volume data from the Kwanghun Chung lab's
+<a href="https://gui.dandiarchive.org/#/dandiset/000108/draft">dandiset</a>. This dataset
+is composed of ~2mm brain sections (slabs) imaged with a nuclear stain (YO),
+a stain for NeuN (NN) and a stain for blood vessels (LEC). The tissue was
+scanned on a light-sheet microscope that took consecutive stacks (chunks) scanning along the X
+direction. The stacks were acquired to overlap by approximately 200 voxels in the
+Y direction.</p>
+<p>The data is organized into microscopy sessions, in which you will find the chunks and stains
+for a given microscopy acquisition. The chunks are .h5 files that store a pyramid of 2x
+downsampling: dataset "0" is the original, "1" is 2x downsampled, "2" is 4x downsampled, etc.
+Each chunk has associated sidecar metadata which give the chunk extents and offsets. The
+sidecar allows the various chunks to be stitched together to form the whole volume of
+the slab.</p>
+<p>See the function, "read", below for how to simply read an arbitrary subvolume with stitching.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dandi.dandiapi</span> <span class="kn">import</span> <span class="n">DandiAPIClient</span><span class="p">,</span> <span class="n">RemoteDandiset</span>
+<span class="kn">from</span> <span class="nn">dandi.exceptions</span> <span class="kn">import</span> <span class="n">NotFoundError</span>
+<span class="kn">import</span> <span class="nn">h5py</span>
+<span class="kn">import</span> <span class="nn">hdf5plugin</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span><span class="p">,</span> <span class="n">image</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">typing</span>
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlencode</span>
+<span class="kn">from</span> <span class="nn">warnings</span> <span class="kn">import</span> <span class="n">simplefilter</span>
+<span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">ASSET_URL_DB</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">def</span> <span class="nf">get_asset_url</span><span class="p">(</span><span class="n">dandiset</span><span class="p">,</span> <span class="n">asset_id</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;draft&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return s3 url for a given asset id&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">asset_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ASSET_URL_DB</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">DandiAPIClient</span><span class="o">.</span><span class="n">for_dandi_instance</span><span class="p">(</span><span class="s2">&quot;dandi&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+            <span class="n">dandiset</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_dandiset</span><span class="p">(</span><span class="n">dandiset</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
+            <span class="n">asset</span> <span class="o">=</span> <span class="n">dandiset</span><span class="o">.</span><span class="n">get_asset</span><span class="p">(</span><span class="n">asset_id</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">asset_url</span> <span class="o">=</span> <span class="n">asset</span><span class="o">.</span><span class="n">get_content_url</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;s3\.amazonaws&quot;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">NotFoundError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>
+        <span class="n">ASSET_URL_DB</span><span class="p">[</span><span class="n">asset_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">asset_url</span>
+    <span class="k">return</span> <span class="n">ASSET_URL_DB</span><span class="p">[</span><span class="n">asset_id</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_json</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Read the given URL, returning the result interpreted as JSON</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;accept&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">req</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div>
+<p>Each microscope run is a different session. This method scans the
+directory for a given subject to find those sessions, returning the
+session name.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_all_sessions</span><span class="p">(</span><span class="n">dandiset</span><span class="p">,</span> <span class="n">subject</span><span class="p">):</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">urlencode</span><span class="p">({</span><span class="s2">&quot;path_prefix&quot;</span><span class="p">:</span><span class="sa">f</span><span class="s2">&quot;sub-</span><span class="si">{</span><span class="n">subject</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">})</span>
+    <span class="n">api</span> <span class="o">=</span> <span class="s2">&quot;https://api.dandiarchive.org&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/api/dandisets/</span><span class="si">{</span><span class="n">dandiset</span><span class="si">}</span><span class="s2">/versions/draft/assets/paths/?</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">sessions</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">qresult</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;next&#39;</span><span class="p">:</span> <span class="n">url</span><span class="p">}</span>
+    <span class="k">while</span> <span class="n">qresult</span><span class="p">[</span><span class="s1">&#39;next&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">&quot;results&quot;</span> <span class="ow">in</span> <span class="n">qresult</span><span class="p">:</span>
+            <span class="n">qresult</span><span class="p">[</span><span class="s2">&quot;next&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;&amp;</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">qresult</span> <span class="o">=</span> <span class="n">get_json</span><span class="p">(</span><span class="n">api</span> <span class="o">+</span> <span class="n">qresult</span><span class="p">[</span><span class="s1">&#39;next&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s2">&quot;results&quot;</span> <span class="ow">in</span> <span class="n">qresult</span><span class="p">:</span>
+            <span class="n">sessions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">qresult</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">][</span><span class="s2">&quot;folders&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">_</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;ses-&quot;</span><span class="p">)]))</span>
+    <span class="k">return</span> <span class="n">sessions</span>
+
+
+<span class="n">find_all_sessions</span><span class="p">(</span><span class="s2">&quot;000108&quot;</span><span class="p">,</span> <span class="s2">&quot;MITU01&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="find-chunks-in-a-session">Find chunks in a session<a class="headerlink" href="#find-chunks-in-a-session" title="Permanent link">&para;</a></h2>
+<p>Here, we use a directory-listing API on the DANDI server to list the contents of the "microscopy"
+directory which contains the chunks. We can build a dictionary for each chunk that gives us
+the chunk's asset_id and the sidecar's asset_id.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MissingSidecarError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">list_directory</span><span class="p">(</span><span class="n">dandiset</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">urlencode</span><span class="p">({</span><span class="s2">&quot;path_prefix&quot;</span><span class="p">:</span> <span class="n">path</span><span class="p">})</span>
+    <span class="n">api</span> <span class="o">=</span> <span class="s2">&quot;https://api.dandiarchive.org&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/api/dandisets/</span><span class="si">{</span><span class="n">dandiset</span><span class="si">}</span><span class="s2">/versions/draft/assets/paths/?</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;files&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+    <span class="n">qresult</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;next&#39;</span><span class="p">:</span> <span class="n">url</span><span class="p">}</span>
+    <span class="k">while</span> <span class="n">qresult</span><span class="p">[</span><span class="s1">&#39;next&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">&quot;results&quot;</span> <span class="ow">in</span> <span class="n">qresult</span><span class="p">:</span>
+            <span class="n">qresult</span><span class="p">[</span><span class="s2">&quot;next&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;&amp;</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">qresult</span> <span class="o">=</span> <span class="n">get_json</span><span class="p">(</span><span class="n">api</span> <span class="o">+</span> <span class="n">qresult</span><span class="p">[</span><span class="s1">&#39;next&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s2">&quot;results&quot;</span> <span class="ow">in</span> <span class="n">qresult</span><span class="p">:</span>
+            <span class="n">results</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">qresult</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">][</span><span class="s2">&quot;files&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">results</span>
+
+<span class="k">def</span> <span class="nf">find_all_chunks</span><span class="p">(</span><span class="n">dandiset</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    return a dictionary whose keys are (sample, stain) and</span>
+<span class="sd">    whose values are a sequence of dictionaries for each</span>
+<span class="sd">    of the chunks in the volume, with keys of</span>
+
+<span class="sd">    path - the path to the chunk h5 file</span>
+<span class="sd">    asset_id - the asset ID of the chunk h5 file</span>
+<span class="sd">    sidecar_path - the path to the sidecar json</span>
+<span class="sd">    sidecar_asset_id - the asset ID of the sidecar json</span>
+
+<span class="sd">    :param dandiset: The dandiset ID, e.g. 000108</span>
+<span class="sd">    :param subject: The subject providing the sample, e.g. MITU01</span>
+<span class="sd">    :param session: The microscopy session, e.g. ses-20210521h17m17s06</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="n">list_directory</span><span class="p">(</span><span class="n">dandiset</span><span class="p">,</span>  <span class="sa">f</span><span class="s2">&quot;sub-</span><span class="si">{</span><span class="n">subject</span><span class="si">}</span><span class="s2">/ses-</span><span class="si">{</span><span class="n">session</span><span class="si">}</span><span class="s2">/microscopy&quot;</span><span class="p">)</span>
+    <span class="n">ngff_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">sidecar_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;sub-(?P&lt;subject&gt;[^_]+)_ses-(?P&lt;session&gt;[^_]+)_run-(?P&lt;run&gt;[^_]+)_sample-(?P&lt;sample&gt;[^_]+)_stain-(?P&lt;stain&gt;[^_]+)_chunk-(?P&lt;chunk&gt;\d+)_spim.(?P&lt;extension&gt;.*)&quot;</span>
+    <span class="k">for</span> <span class="n">filename</span><span class="p">,</span> <span class="n">file_metadata</span> <span class="ow">in</span> <span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+            <span class="n">sample</span><span class="p">,</span> <span class="n">stain</span><span class="p">,</span> <span class="n">chunk</span><span class="p">,</span> <span class="n">extension</span> <span class="o">=</span> <span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">()[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span> <span class="s2">&quot;stain&quot;</span><span class="p">,</span> <span class="s2">&quot;chunk&quot;</span><span class="p">,</span> <span class="s2">&quot;extension&quot;</span><span class="p">)]</span>
+            <span class="n">chunk</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="n">ngff_dict</span> <span class="k">if</span> <span class="n">extension</span> <span class="o">==</span> <span class="s2">&quot;h5&quot;</span> <span class="k">else</span> <span class="n">sidecar_dict</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">stain</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+                <span class="n">d</span><span class="p">[</span><span class="n">sample</span><span class="p">,</span> <span class="n">stain</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">sample</span><span class="p">,</span> <span class="n">stain</span><span class="p">][</span><span class="n">chunk</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+                <span class="n">path</span><span class="o">=</span><span class="n">file_metadata</span><span class="p">[</span><span class="s2">&quot;path&quot;</span><span class="p">],</span>
+                <span class="n">asset_id</span><span class="o">=</span><span class="n">file_metadata</span><span class="p">[</span><span class="s2">&quot;asset_id&quot;</span><span class="p">]</span>
+            <span class="p">)</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">sample</span><span class="p">,</span> <span class="n">stain</span> <span class="ow">in</span> <span class="n">ngff_dict</span><span class="p">:</span>
+        <span class="n">output</span><span class="p">[</span><span class="n">sample</span><span class="p">,</span> <span class="n">stain</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">nd</span> <span class="o">=</span> <span class="n">ngff_dict</span><span class="p">[</span><span class="n">sample</span><span class="p">,</span> <span class="n">stain</span><span class="p">]</span>
+        <span class="n">sd</span> <span class="o">=</span> <span class="n">sidecar_dict</span><span class="p">[</span><span class="n">sample</span><span class="p">,</span> <span class="n">stain</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nd</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">chunk</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sd</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">MissingSidecarError</span><span class="p">(</span><span class="s2">&quot;Chunk </span><span class="si">%s</span><span class="s2"> is missing its sidecar&quot;</span> <span class="o">%</span> <span class="n">nd</span><span class="p">[</span><span class="n">chunk</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">])</span>
+            <span class="n">output</span><span class="p">[</span><span class="n">sample</span><span class="p">,</span> <span class="n">stain</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span>
+                <span class="n">asset_id</span><span class="o">=</span><span class="n">nd</span><span class="p">[</span><span class="n">chunk</span><span class="p">][</span><span class="s2">&quot;asset_id&quot;</span><span class="p">],</span>
+                <span class="n">path</span><span class="o">=</span><span class="n">nd</span><span class="p">[</span><span class="n">chunk</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">],</span>
+                <span class="n">sidecar_asset_id</span><span class="o">=</span><span class="n">sd</span><span class="p">[</span><span class="n">chunk</span><span class="p">][</span><span class="s2">&quot;asset_id&quot;</span><span class="p">],</span>
+                <span class="n">sidecar_path</span><span class="o">=</span><span class="n">sd</span><span class="p">[</span><span class="n">chunk</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">]</span>
+            <span class="p">))</span>
+    <span class="k">return</span> <span class="n">output</span>
+
+
+
+<span class="c1">#curl -X GET &quot;https://api.dandiarchive.org/api/dandisets/000108/versions/draft/assets/?path=sub-MITU01%2Fses-20210521h17m17s06%2Fmicroscopy%2Fsub-MITU01_run-1_sample-178_stain-LEC_chunk-1_spim.h5&quot; -H  &quot;accept: application/json&quot; </span>
+<span class="c1">#curl -X GET &quot;https://api.dandiarchive.org/api/dandisets/000108/versions/draft/assets/paths/?path_prefix=sub-MITU01%2Fses-20210521h17m17s06%2Fmicroscopy&quot; -H  &quot;accept: application/json&quot; </span>
+<span class="n">find_all_chunks</span><span class="p">(</span><span class="s2">&quot;000108&quot;</span><span class="p">,</span> <span class="s2">&quot;MITU01&quot;</span><span class="p">,</span> <span class="s1">&#39;20210820h19m29s49&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h1 id="session-photos">Session photos<a class="headerlink" href="#session-photos" title="Permanent link">&para;</a></h1>
+<p>Each session in the dataset has a photo of the accompanying sample (the slab).
+This is a JPEG - the following code gets you the image as an RGB image array.</p>
+<p>```python tags=[]
+def get_photo(dandiset, subject, session):
+    metadata = list_directory(dandiset,  f"sub-{subject}/ses-{session}/microscopy")
+    # example:
+    # sub-MITU01_ses-20210820h19m29s49_run-1_sample-41_photo.jpg
+    pattern = r"sub-(?P<subject>[^<em>]+)_ses-(?P<session>[^</em>]+)<em>run-(?P<run>[^</em>]+)<em>sample-(?P<sample>[^</em>]+)_photo.jpg"
+    for filename, file_metadata in metadata["files"].items():
+        match = re.match(pattern, filename)
+        if match:
+            url = get_asset_url(dandiset, file_metadata["asset_id"])
+            req = requests.get(url, headers={"accept": "image/jpeg"})
+            i = Image.open(BytesIO(req.content))
+            return np.asarray(i)</p>
+<p>subject =  "MITU01"
+session = '20210820h19m29s49'
+photo = get_photo("000108",subject, session)
+pyplot.figure(figsize=(12, 12))
+pyplot.imshow(photo)
+<div class="highlight"><pre><span></span><code>## Reading a stitched volume
+
+The following notebook cells read arbitrary volumes from a particular sample / stain.
+
+We collect the relevant chunks for a sample and stain, then we find the extents of
+each chunk, then find the ones that overlap and then we can read the parts of the
+chunk that fall inside the requested volume and stitch them.
+
+```python
+CHUNKDB = {}
+
+def find_volume_chunks(dandiset, subject, sample, stain):
+    &quot;&quot;&quot;
+    Find all the chunks needed to construct or sample from
+    a volume from a given sample (a slab of tissue) and stain.
+
+    :param dandiset: The name of the dandiset, e.g. &quot;000108&quot;
+    :param subject: The name of the subject e.g. &quot;MITU01&quot;
+    :param sample: The name of the slab we are trying to find
+    :param stain: The name of the stain, e.g. &quot;YO&quot;, &quot;NN&quot; or &quot;LEC&quot;
+    &quot;&quot;&quot;
+    key  = (dandiset, subject, sample, stain)
+    if key not in CHUNKDB:
+        for session in find_all_sessions(dandiset, subject):
+            try:
+                all_chunks = find_all_chunks(dandiset, subject, session)
+            except MissingSidecarError:
+                # Need to debug this - the sidecar is available locally but not in Dandi
+                continue
+            for csample, cstain in all_chunks:
+                if csample == sample and cstain == stain:
+                    CHUNKDB[key] = all_chunks[sample, stain]
+                    return all_chunks[sample, stain]
+    else:
+        return CHUNKDB[key]
+
+chunks_41 = find_volume_chunks(&quot;000108&quot;, &quot;MITU01&quot;, &quot;41&quot;, &quot;YO&quot;)
+chunks_41
+</code></pre></div></p>
+<p>```python tags=[]</p>
+<h1 id="this-is-what-our-sidecar-looks-like-were-going-to-use">This is what our sidecar looks like - we're going to use<a class="headerlink" href="#this-is-what-our-sidecar-looks-like-were-going-to-use" title="Permanent link">&para;</a></h1>
+<h1 id="the-pixel-size-and-pieces-of-the-chunk-transform-matrix">the pixel size and pieces of the chunk transform matrix.<a class="headerlink" href="#the-pixel-size-and-pieces-of-the-chunk-transform-matrix" title="Permanent link">&para;</a></h1>
+<p>meta = get_json(get_asset_url("000108", chunks_41[0]["sidecar_asset_id"]))
+meta
+<div class="highlight"><pre><span></span><code>```python tags=[]
+class Volume:
+    &quot;&quot;&quot;
+    This is a chunk record + the chunk&#39;s bounds
+
+    There are methods for reading the chunk data in global
+    coordinates and some methods that are needed for computing
+    the cosine blending.
+    &quot;&quot;&quot;
+
+    def __init__(self, rec, x0, x1, y0, y1, z0, z1, level):
+        &quot;&quot;&quot;
+        :param rec: a record detailing where to get the asset ids and such
+        :param x0: the minimum coordinate of the chunk in the x direction in global coordinates (divided by 2**level if level &gt; 0)
+        :param x1: the maximum coordinate of the chunk in the x direction in global coordinates
+        :param y0: the minimum coordinate of the chunk in the y direction in global coordinates
+        :param y1: the maximum coordinate of the chunk in the y direction in global coordinates
+        :param z0: the minimum coordinate of the chunk in the z direction in global coordinates
+        :param z1: the maximum coordinate of the chunk in the z direction in global coordinates
+        &quot;&quot;&quot;
+        self.rec = rec
+        self.x0 = x0
+        self.x1 = x1
+        self.y0 = y0
+        self.y1 = y1
+        self.z0 = z0
+        self.z1 = z1
+        self.level = level
+
+    def overlaps(self, x0, x1, y0, y1, z0, z1):
+        &quot;&quot;&quot;
+        Return True if the given global coordinates overlap the chunk to some degree
+        &quot;&quot;&quot;
+        return x1 &gt; self.x0 and self.x1 &gt; x0 and y1 &gt; self.y0 and self.y1 &gt; y0 and z1 &gt; self.z0 and self.z1 &gt; z0
+
+    def read_block(self, dandiset, x0, x1, y0, y1, z0, z1):
+        &quot;&quot;&quot;
+        Read the block indicated. For areas outside of the overlap, return an
+        intensity of zero.
+        &quot;&quot;&quot;
+        x0a = int(max(x0, self.x0))
+        x1a = int(min(x1, self.x1))
+        y0a = int(max(y0, self.y0))
+        y1a = int(min(y1, self.y1))
+        z0a = int(max(z0, self.z0))
+        z1a = int(min(z1, self.z1))
+        result = np.zeros((z1 - z0, y1 - y0, x1 - x0), np.uint16)
+        asset_id = self.rec[&quot;asset_id&quot;]
+        url = get_asset_url(dandiset, asset_id)
+        with h5py.File(url, &quot;r&quot;, driver=&quot;ros3&quot;) as fd:
+            block = fd[str(self.level)]
+            result[z0a - z0:z1a - z0, y0a - y0:y1a - y0, x0a - x0:x1a - x0] = \
+                block[0, 0, z0a - self.z0:z1a - self.z0, y0a - self.y0:y1a - self.y0, x0a - self.x0:x1a - self.x0]
+        return result
+
+    @property
+    def x_extent(self):
+        return self.x1 - self.x0
+
+    @property
+    def y_extent(self):
+        return self.y1 - self.y0
+
+    @property
+    def z_extent(self):
+        return self.z1 - self.z0
+
+    def distance_to_edge(self, x0: int, x1: int, y0: int, y1: int,
+                         z0: int, z1: int)\
+            -&gt; typing.Tuple[np.ndarray, np.ndarray, np.ndarray]:
+        &quot;&quot;&quot;
+        Get the distance to the nearest edge for every voxel in the block
+        defined by x0:x1, y0:y1, z0:z1. Points outside of the volume are marked
+        with negative distance.
+
+        :param x0: the starting x, in global coordinates
+        :param x1: the ending x, in global coordinates
+        :param y0: the starting y, in global coordinates
+        :param y1: the ending y, in global coordinates
+        :param z0: the starting z, in global coordinates
+        :param z1: the ending z in global coordinates
+        :return: the distance to the nearest edge for every voxel in the block
+        for the z, y and x directions
+        &quot;&quot;&quot;
+        z, y, x = np.mgrid[
+                  z0-self.z0:z1-self.z0,
+                  y0-self.y0:y1-self.y0,
+                  x0-self.x0:x1-self.x0]
+        to_x0 = x
+        to_x1 = self.x_extent - x
+        to_x = np.maximum(0, np.minimum(to_x0, to_x1))
+        to_y0 = y
+        to_y1 = self.y_extent - y
+        to_y = np.maximum(0, np.minimum(to_y0, to_y1))
+        to_z0 = z
+        to_z1 = self.z_extent - z
+        to_z = np.maximum(0, np.minimum(to_z0, to_z1))
+        mask = (x &gt;= 0) &amp; (x &lt; self.x_extent) &amp;\
+               (y &gt;= 0) &amp; (y &lt; self.y_extent) &amp;\
+               (z &gt;= 0) &amp; (z &lt; self.z_extent)
+        to_x[~ mask] = -1
+        to_y[~ mask] = -1
+        to_z[~ mask] = -1
+        return to_z, to_y, to_x
+
+def read(dandiset, subject, sample, stain, x0, x1, y0, y1, z0, z1, level=0):
+    &quot;&quot;&quot;
+    Read a subvolume and return as a Numpy array.
+    :param dandiset: the name of the dandiset, e.g. &quot;000108&quot;
+    :param subject: the subject from which the material was derived, e.g. &quot;MITU01&quot;
+    :param session: the microscopy session for the volume, e.g. &quot;20210521h17m17s06&quot;
+    :param sample: the sample name, e.g. &quot;178&quot;
+    :param stain: the stain name, e.g. &quot;YO&quot;, &quot;NN&quot; or &quot;LEC&quot;
+    :param x0: The x-minimum coordinate of the volume. If level &gt; 0,
+               this should be (x0 of the original volume) / (2 ** level),
+               in other words, the x0 of the downsampled volume
+    :param x1: The x-maximum coordinate of the volume
+    :param y0: The y-minimum coordinate of the volume
+    :param y1: The y-maximum coordinate of the volume
+    :param z0: The z-minimum coordinate of the volume
+    :param z1: The z-maximum coordinate of the volume
+    &quot;&quot;&quot;
+    chunkdb = find_volume_chunks(dandiset, subject, sample, stain)
+    volumes = []
+    #
+    # Collect the blocks that overlap
+    #
+    for rec in chunkdb:
+        volume = chunk_coords(dandiset, rec, level)
+        if volume.overlaps(x0, x1, y0, y1, z0, z1):
+            volumes.append(volume)
+
+    if len(volumes) == 0:
+        # Nothing overlaps
+        return np.zeros((z1-z0, y1-y0, x1-x0), np.uint16)
+
+    elif len(volumes) == 1:
+        # One block overlaps
+        return volumes[0].read_block(dandiset, x0, x1, y0, y1, z0, z1)
+    else:
+        block = np.zeros((z1-z0, y1-y0, x1-x0), np.float32)
+        distances = [volume.distance_to_edge(x0, x1, y0, y1, z0, z1)
+                     for volume in volumes]
+        masks = [((dz &gt;= 0) | (dy &gt;= 0) | (dx &gt;= 0)) for dz, dy, dx in distances]
+        total = np.zeros(block.shape, np.float32)
+        #
+        # Compute the cosine blending in overlapping regions. The idea here
+        # is to taper the intensity of an image as it approaches the image
+        # edge, relative to the other overlapping image
+        #
+        for volume, (dz, dy, dx), mask in zip(volumes, distances, masks):
+            vblock = volume.read_block(dandiset, x0, x1, y0, y1, z0, z1)
+            fraction = mask.astype(float)
+            for idx in [_ for _ in range(len(volumes))
+                        if volumes[_].rec[&quot;path&quot;] != volume.rec[&quot;path&quot;]]:
+                other = volumes[idx]
+                other_mask = masks[idx]
+                both_mask = mask &amp; other_mask
+                other_dz, other_dy, other_dx = distances[idx]
+                distance = 100000000 * np.ones(dx.shape, np.float32)
+                other_distance = 100000000 * np.ones(other_dx.shape, np.float32)
+                if np.any(dx[both_mask] != other_dx[both_mask]):
+                    distance = dx
+                    other_distance = other_dx
+                if np.any(dy[both_mask] != other_dy[both_mask]):
+                    distance = np.minimum(distance, dy)
+                    other_distance = np.minimum(other_distance, other_dy)
+                if np.any(dz[both_mask] != other_dz[both_mask]):
+                    distance = np.minimum(distance, dz)
+                    other_distance = np.minimum(other_distance, other_dz)
+                angle = np.arctan2(distance[both_mask],
+                                   other_distance[both_mask])
+                blending = np.sin(angle) ** 2
+                fraction[both_mask] *= blending
+            total += fraction
+            block += (fraction * vblock).astype(block.dtype)
+        return block / (total + np.finfo(np.float32).eps)
+
+
+def chunk_coords(dandiset, rec, level):
+    &quot;&quot;&quot;
+    Get the coordinates of a chunk relative to the slab
+
+    Coordinates are returned as (z0, z1), (y0, y1), (x0, x1)
+    &quot;&quot;&quot;
+    data = get_json(get_asset_url(dandiset, rec[&quot;sidecar_asset_id&quot;]))
+    lpower = 2 ** level
+    x_extent, y_extent, z_extent = [int(np.round(b / a)) // lpower for a, b in zip(data[&quot;PixelSize&quot;], data[&quot;FieldOfView&quot;])]
+    #
+    # There&#39;s a shortcut here - the affine matrix is always just a transposition
+    # and the transposition part is just the last element of the row.
+    #
+    matrix = data[&quot;ChunkTransformMatrix&quot;]
+    axes = data[&quot;ChunkTransformMatrixAxis&quot;]
+    pixel_size = data[&quot;PixelSize&quot;]
+    x_idx, y_idx, z_idx = [axes.index(_) for _ in (&quot;X&quot;, &quot;Y&quot;, &quot;Z&quot;)]
+    x0, y0, z0 = [int(matrix[idx][-1] / lpower / um) for idx, um in zip((x_idx, y_idx, z_idx), pixel_size)]
+    return Volume(rec, x0, x0+x_extent, y0, y0+y_extent, z0, z0+z_extent, level)
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_extents</span><span class="p">(</span><span class="n">dandiset</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">sample</span><span class="p">,</span> <span class="n">stain</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">min_x</span> <span class="o">=</span> <span class="n">min_y</span> <span class="o">=</span> <span class="n">min_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+    <span class="n">max_x</span> <span class="o">=</span> <span class="n">max_y</span> <span class="o">=</span> <span class="n">max_z</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">rec</span> <span class="ow">in</span> <span class="n">find_volume_chunks</span><span class="p">(</span><span class="n">dandiset</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">sample</span><span class="p">,</span> <span class="n">stain</span><span class="p">):</span>
+        <span class="n">volume</span> <span class="o">=</span> <span class="n">chunk_coords</span><span class="p">(</span><span class="n">dandiset</span><span class="p">,</span> <span class="n">rec</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+        <span class="n">min_x</span><span class="p">,</span> <span class="n">min_y</span><span class="p">,</span> <span class="n">min_z</span> <span class="o">=</span> <span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">((</span><span class="n">min_x</span><span class="p">,</span> <span class="n">volume</span><span class="o">.</span><span class="n">x0</span><span class="p">),</span> <span class="p">(</span><span class="n">min_y</span><span class="p">,</span> <span class="n">volume</span><span class="o">.</span><span class="n">y0</span><span class="p">),</span> <span class="p">(</span><span class="n">min_z</span><span class="p">,</span> <span class="n">volume</span><span class="o">.</span><span class="n">z0</span><span class="p">))]</span>
+        <span class="n">max_x</span><span class="p">,</span> <span class="n">max_y</span><span class="p">,</span> <span class="n">max_z</span> <span class="o">=</span> <span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">((</span><span class="n">max_x</span><span class="p">,</span> <span class="n">volume</span><span class="o">.</span><span class="n">x1</span><span class="p">),</span> <span class="p">(</span><span class="n">max_y</span><span class="p">,</span> <span class="n">volume</span><span class="o">.</span><span class="n">y1</span><span class="p">),</span> <span class="p">(</span><span class="n">max_z</span><span class="p">,</span> <span class="n">volume</span><span class="o">.</span><span class="n">z1</span><span class="p">))]</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">x0</span><span class="o">=</span><span class="n">min_x</span><span class="p">,</span> <span class="n">x1</span><span class="o">=</span><span class="n">max_x</span><span class="p">,</span> <span class="n">y0</span><span class="o">=</span><span class="n">min_y</span><span class="p">,</span> <span class="n">y1</span><span class="o">=</span><span class="n">max_y</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="n">min_z</span><span class="p">,</span> <span class="n">z1</span><span class="o">=</span><span class="n">max_z</span><span class="p">)</span>
+<span class="p">[</span><span class="n">find_extents</span><span class="p">(</span><span class="s2">&quot;000108&quot;</span><span class="p">,</span> <span class="s2">&quot;MITU01&quot;</span><span class="p">,</span> <span class="s2">&quot;41&quot;</span><span class="p">,</span> <span class="s2">&quot;YO&quot;</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span> <span class="k">for</span> <span class="n">level</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">)]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">level</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">extents6</span> <span class="o">=</span> <span class="n">find_extents</span><span class="p">(</span><span class="s2">&quot;000108&quot;</span><span class="p">,</span> <span class="s2">&quot;MITU01&quot;</span><span class="p">,</span> <span class="s2">&quot;41&quot;</span><span class="p">,</span> <span class="s2">&quot;YO&quot;</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+<span class="n">overview</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="s2">&quot;000108&quot;</span><span class="p">,</span> <span class="s2">&quot;MITU01&quot;</span><span class="p">,</span> <span class="s2">&quot;41&quot;</span><span class="p">,</span> <span class="s2">&quot;YO&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extents6</span><span class="p">[</span><span class="s2">&quot;x1&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extents6</span><span class="p">[</span><span class="s2">&quot;y1&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">extents6</span><span class="p">[</span><span class="s2">&quot;z1&quot;</span><span class="p">],</span> <span class="n">level</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">overview</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div>
+<p>```python tags=[]
+pyplot.figure(figsize=(12, 12))
+pyplot.imshow(overview[16, :], cmap='cubehelix')
+pyplot.figure(figsize=(12, 12))
+pyplot.imshow(photo[::-1, ::-1])
+<div class="highlight"><pre><span></span><code>### Use neuroglancer to display the stitched volume
+
+```python
+import neuroglancer
+import os
+</code></pre></div></p>
+<p>```python tags=[]
+viewer = neuroglancer.Viewer()
+<div class="highlight"><pre><span></span><code>```python tags=[]
+# This volume handle can be used to notify the viewer that the data has changed.
+volume = neuroglancer.LocalVolume(
+    overview,
+    dimensions=neuroglancer.CoordinateSpace(
+        names=[&#39;x&#39;, &#39;y&#39;, &#39;z&#39;],
+        units=[&#39;um&#39;, &#39;um&#39;, &#39;um&#39;],
+        scales=[val*level for val in meta[&quot;PixelSize&quot;]],
+    ),
+    voxel_offset=[0,0,0]
+    )
+with viewer.txn() as s:
+    s.layers[&#39;volume&#39;] = neuroglancer.ImageLayer(
+        source=volume,
+        # Define a custom shader to display this mask array as red+alpha.
+        shader=&quot;&quot;&quot;
+#uicontrol vec3 color color(default=&quot;green&quot;)
+#uicontrol float brightness slider(min=-1, max=1)
+#uicontrol float contrast slider(min=-9, max=-5, step=0.1)
+void main() {
+  emitRGB(color *
+          (toNormalized(getDataValue(0)) + brightness) *
+          exp(contrast));
+}
+&quot;&quot;&quot;,
+    )
+    s.position = np.array(overview.shape)/2
+print(&quot;Neuroglancer URL:&quot;, viewer.get_viewer_url().replace(&quot;http://127.0.0.1:&quot;, f&quot;https://hub.dandiarchive.org/user/{os.environ[&#39;GITHUB_USER&#39;]}/proxy/&quot;))
+</code></pre></div></p>
+<p>```python tags=[]</p>
+<h1 id="this-is-approximately-at-the-stitching-between-chunks-1-and-2">This is approximately at the stitching between chunks 1 and 2<a class="headerlink" href="#this-is-approximately-at-the-stitching-between-chunks-1-and-2" title="Permanent link">&para;</a></h1>
+<p>x, y, z = 16080, 1957, 1024
+img = read("000108", "MITU01", "41", "YO", x-200, x+200, y-200, y+200, z, z+1)[0]
+<div class="highlight"><pre><span></span><code>```python tags=[]
+pyplot.figure(figsize=(12, 12))
+pyplot.imshow(img, cmap=&#39;cubehelix&#39;)
+</code></pre></div></p>
+<h2 id="demo-of-a-simple-blood-vessel-segmentation">Demo of a simple blood vessel segmentation<a class="headerlink" href="#demo-of-a-simple-blood-vessel-segmentation" title="Permanent link">&para;</a></h2>
+<p>Get a portion of the Lectin channel which stains blood vessels. Compute vesselness
+on the block to enhance it and then threshold it to segment the blood vessels</p>
+<div class="highlight"><pre><span></span><code><span class="n">block_LEC</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="s2">&quot;000108&quot;</span><span class="p">,</span> <span class="s2">&quot;MITU01&quot;</span><span class="p">,</span> <span class="s2">&quot;41&quot;</span><span class="p">,</span> <span class="s2">&quot;LEC&quot;</span><span class="p">,</span> <span class="mi">19506</span><span class="p">,</span> <span class="mi">19706</span><span class="p">,</span> <span class="mi">8549</span><span class="p">,</span> <span class="mi">8749</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1064</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">block_LEC</span><span class="p">[</span><span class="mi">32</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cubehelix&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">skimage.feature</span> <span class="kn">import</span> <span class="n">hessian_matrix</span><span class="p">,</span> <span class="n">hessian_matrix_eigvals</span>
+<span class="n">hm</span> <span class="o">=</span> <span class="n">hessian_matrix</span><span class="p">(</span><span class="n">block_LEC</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">evs</span> <span class="o">=</span> <span class="n">hessian_matrix_eigvals</span><span class="p">(</span><span class="n">hm</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">vesselness</span><span class="p">(</span><span class="n">evs</span><span class="p">,</span> <span class="n">a1</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span> <span class="n">a2</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    From https://mevislabdownloads.mevis.de/docs/current/FMEstable/ReleaseMeVis/Documentation/Publish/ModuleReference/Vesselness.html</span>
+<span class="sd">    https://hal.archives-ouvertes.fr/hal-02544493/file/Lamy_ICPR_2020.pdf</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mask0</span> <span class="o">=</span> <span class="n">evs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+    <span class="n">mask1</span> <span class="o">=</span> <span class="p">(</span><span class="o">~</span> <span class="n">mask0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">evs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">mask2</span> <span class="o">=</span> <span class="p">(</span><span class="o">~</span> <span class="n">mask0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="o">~</span> <span class="n">mask1</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">evs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">result</span><span class="p">[</span><span class="n">mask1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">evs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">mask1</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">evs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">mask1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">a1</span> <span class="o">*</span> <span class="n">evs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">mask1</span><span class="p">])))</span>
+    <span class="n">result</span><span class="p">[</span><span class="n">mask2</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">evs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">mask2</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">evs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">mask2</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">a2</span> <span class="o">*</span> <span class="n">evs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">mask2</span><span class="p">])))</span>
+    <span class="k">return</span> <span class="n">result</span>
+<span class="n">ves</span> <span class="o">=</span> <span class="n">vesselness</span><span class="p">(</span><span class="n">evs</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ves</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cubehelix&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">skimage.filters</span> <span class="kn">import</span> <span class="n">threshold_otsu</span>
+<span class="n">seg</span> <span class="o">=</span> <span class="n">ves</span> <span class="o">&gt;</span> <span class="n">threshold_otsu</span><span class="p">(</span><span class="n">ves</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">block_LEC</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">seg</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.3</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC-BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://dandiarchive.slack.com" target="_blank" rel="noopener" title="Slack" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M94.1 315.1c0 25.9-21.2 47.1-47.1 47.1S0 341 0 315.1 21.2 268 47.1 268h47.1v47.1zm23.7 0c0-25.9 21.2-47.1 47.1-47.1s47.1 21.2 47.1 47.1v117.8c0 25.9-21.2 47.1-47.1 47.1s-47.1-21.2-47.1-47.1zm47.1-189c-25.9 0-47.1-21.2-47.1-47.1s21.2-47 47.1-47S212 53.2 212 79.1v47.1h-47.1zm0 23.7c25.9 0 47.1 21.2 47.1 47.1S190.8 244 164.9 244H47.1C21.2 244 0 222.8 0 196.9s21.2-47.1 47.1-47.1zm189 47.1c0-25.9 21.2-47.1 47.1-47.1s47 21.2 47 47.1-21.2 47.1-47.1 47.1h-47.1v-47.1zm-23.7 0c0 25.9-21.2 47.1-47.1 47.1S236 222.8 236 196.9V79.1c0-25.9 21.2-47.1 47.1-47.1s47.1 21.2 47.1 47.1zm-47.1 189c25.9 0 47.1 21.2 47.1 47.1s-21.2 47-47.1 47-47.1-21.2-47.1-47.1v-47.1h47.1zm0-23.7c-25.9 0-47.1-21.2-47.1-47.1s21.2-47.1 47.1-47.1h117.8c25.9 0 47.1 21.2 47.1 47.1s-21.2 47.1-47.1 47.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:info@dandiarchive.org" target="_blank" rel="noopener" title="Email" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/dandi" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@dandiarchive" target="_blank" rel="noopener" title="YouTube" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://bsky.app/profile/dandiarchive.org" target="_blank" rel="noopener" title="Bluesky" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3M288 227.1c-26.1-50.7-97.1-145.2-163.1-191.8C61.6-9.4 37.5-1.7 21.6 5.5 3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7 3.3-.5 6.6-.9 10-1.4-3.3.5-6.6 1-10 1.4-93.9 14-177.3 48.2-67.9 169.9C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4 102.4-103.4 28.1-156-65.8-169.9-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3 64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["toc.integrate"], "search": "../../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
