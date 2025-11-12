@@ -71,6 +71,13 @@ There are two options for storing your DANDI access credentials:
 
 - Note that there are no spaces around the "=".
 
+- If your `DANDI_API_KEY` needs to be reset (for example, because it was publicly exposed), you can cycle your API key by following the instructions below:
+
+   1. Log in to DANDI Archive
+   2. Click on your user initials in the top-right corner
+   3. Click the circular arrow
+   ![dandi_api_key_reset](../img/dandi_api_key_reset.png)
+
 ### 2. `keyring` Library
 
 If the `DANDI_API_KEY` environment variable is not set, the CLI will look up the API key using the [keyring](https://github.com/jaraco/keyring) library, which supports numerous backends, including the system keyring, an encrypted keyfile, and a plaintext (unencrypted) keyfile.
