@@ -47,9 +47,9 @@ Passing all of these levels of validation can sometimes be tricky. If you have a
 
 Once your files are converted to the BIDS standard,
 
-  - ensure that you have `.bidsignore` file containing `dandiset.yaml`, since that DANDI-specific file is not part of BIDS specification;
+  - ensure that you have a `.bidsignore` file containing `dandiset.yaml`, since that DANDI-specific file is not part of the BIDS specification;
   - perform validation of the files ideally using both
     - the stock [BIDS validator](https://bids.neuroimaging.io/tools/validator.html)
-    - and/or [dandi validate](https://dandi.readthedocs.io/en/latest/cmdline/validate.html) since it would also validate using other helper tools such as [NWB inspector](https://nwb.org/tools/core/nwbinspector/) if you have NWBs, to ensure that your data is compliant to all used standards.
+    - and [dandi validate](https://dandi.readthedocs.io/en/latest/cmdline/validate.html) since it would also validate using other helper tools such as [NWB inspector](https://nwb.org/tools/core/nwbinspector/) if you have NWBs, to ensure that your data is compliant to all used standards.
 
 Note that [dandi upload](https://dandi.readthedocs.io/en/latest/cmdline/upload.html) will also perform validation during upload.
