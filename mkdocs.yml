@@ -87,6 +87,7 @@ nav:
   - Terms and Policies:
     - Terms: "terms-policies/terms.md"
     - Policies: "terms-policies/policies.md"
+    - Project Governance: "terms-policies/governance.md"
   - API:
     - DANDI Client: "api/dandi-client.md"
     - REST API: "api/rest-api.md"
