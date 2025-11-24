@@ -4,7 +4,7 @@ Once you create a Dandiset, DANDI will automatically create a `draft` version
 of the Dandiset that can be changed as many times as needed by editing the 
 metadata or uploading new files.
 
-When the draft version is ready, you can *publish* your Dandiset. This results
+When the draft version is ready, you should *publish* your Dandiset. This results
 in an immutable snapshot of your Dandiset with its own unique version number
 that others can cite. If you need to change the data or metadata, you can do
 so by continuing to modify the draft version and publishing a new version
