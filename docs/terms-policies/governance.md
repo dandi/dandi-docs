@@ -155,7 +155,7 @@ Administrators:
 
 ### 6.3 Conflict of Interest
 - Participants should disclose direct commercial interest in a technology choice.
-- Conflicted member recuses oneself from final decision phase.
+- Conflicted member recuses themselves from final decision phase.
 
 ## 7. Pull Request Workflow
 
