@@ -239,7 +239,7 @@ Communication channels include:
 
 - Outreach events are hosted in collaboration with the Neurodata Without Borders team and can be found at https://nwb.org/events.
 - Code of Conduct is available at https://github.com/dandi/dandi-archive/blob/master/CODE_OF_CONDUCT.md
-    - Instances of Code of Conduct violation can be reported to  community@dandiarchive.org.
+    - Instances of Code of Conduct violation can be reported to community@dandiarchive.org.
     - Enforcement of Code of Conduct is separate from primary technical decision flow where possible.
 
 ## 13. Amendments to Project Governance
