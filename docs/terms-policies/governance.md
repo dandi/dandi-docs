@@ -247,11 +247,11 @@ Communication channels include:
 Process
 
 1. Proposal pull request.
-2. Minimum of a 30 day public comment.
+2. Minimum of a 30-day public comment.
 3. Approval by Project Leadership.
-4. Update version and effective date in Governance document header.
+4. Update version and effective data in Governance document header.
 
-- Urgent amendments may use an accelerated 7 day window with rationale documented.
+- Urgent amendments may use an accelerated 7-day window with rationale documented.
 - The document becomes active upon Project Leadership approval and publication in the [DANDI Docs](https://docs.dandiarchive.org/).
 
 ## 14. Sunset Policy
