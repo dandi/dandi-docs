@@ -90,6 +90,7 @@ nav:
   - API:
     - DANDI Client: "api/dandi-client.md"
     - REST API: "api/rest-api.md"
+  - Support: "support.md"
 
 # List of extensions
 markdown_extensions:
