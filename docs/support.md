@@ -1,13 +1,12 @@
-## Where to Get Help
+## Support
 
-You can communicate with the DANDI team in a variety of ways, depending on your needs:
+**For questions and support, we recommend using [GitHub Discussions](https://github.com/dandi/helpdesk/discussions/new?category=q-a)** 🙏
 
-- You can ask questions, report bugs, or 
-request features [at our helpdesk](https://github.com/dandi/helpdesk/issues/new/choose).
-- For interacting with the global neuroscience community, post on https://neurostars.org
-and use the tag [dandi](https://neurostars.org/tag/dandi).
-- You can use the DANDI Slack workspace, which we will invite you to after approving your [registration on 
-  DANDI using GitHub](https://dandiarchive.org/) (this registration is required to upload data or to use the DANDI 
-  JupyterHub). See [here for details on how to
-  register](./getting-started/creating-account.md).
-- Email us: [info@dandiarchive.org](mailto: info@dandiarchive.org)
+Additional support channels:
+
+| Channel | Best For |
+|---------|----------|
+| ✨ [GitHub Issues](https://github.com/dandi/helpdesk/issues) | Report bugs and request features |
+| 💬 [Slack](https://dandiarchive.slack.com/) | Interact with the DANDI community (available after [registration](./getting-started/creating-account.md)) |
+| ✉️ [Email](mailto:help@dandiarchive.org) | Communicate privately |
+| 🌟 [NeuroStars with the `dandi` tag](https://neurostars.org/tag/dandi) | Interact with the global neuroscience community |
