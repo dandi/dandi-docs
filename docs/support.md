@@ -1,4 +1,4 @@
-## Support
+# Support
 
 **For questions and support, we recommend using [GitHub Discussions](https://github.com/dandi/helpdesk/discussions/new?category=q-a)** 🙏
 
