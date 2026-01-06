@@ -66,3 +66,14 @@ It is highly recommended to add links to the following resources (if they exist)
   * A data analysis library associated with the publication that can take this data as input
   * An example notebook submitted to http://github.com/dandi/example-notebooks that demonstrates how to use the data
   * Associated datasets published on DANDI or on other archives.
+
+#### Related Resource Relation
+
+Related Resources include a relation attribute.
+The relation tag describes the relationship FROM the Dandiset TO the resource.
+In other words, this relation should satisfy: dandiset <relation> resource.
+
+Some common relations include:
+* For a publication or preprint that is the primary account of the data being deposited, use "dcite:isDescribedBy".
+* For a data descriptor paper, e.g. as is common in the journal Scientific Data, use "dcite:IsDocumentedBy".
+* To associate a new paper that analyzes the data in this Dandiset, use "dcite:IsCitedBy".
