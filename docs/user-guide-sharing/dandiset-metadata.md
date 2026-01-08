@@ -71,7 +71,9 @@ It is highly recommended to add links to the following resources (if they exist)
 
 Related Resources include a relation attribute.
 The relation tag describes the relationship FROM the Dandiset TO the resource.
-In other words, this relation should satisfy: dandiset <relation> resource.
+In other words, this relation should satisfy: dandiset `<relation>` resource.
+
+If the resource is a journal article or preprint, the "repository" should be the name of the journal or preprint server.
 
 Some common relations include:
 
