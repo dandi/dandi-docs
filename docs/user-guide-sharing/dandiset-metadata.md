@@ -46,6 +46,9 @@ Make sure to inspect the metadata for each institution on the ror.org website, a
 (e.g. many different countries have an "NIH"). Make sure to select the role `dcite:Funder` to list the contributor
 under the "Funding information" section.
 
+If there is more than one award number associated with a funding agency, you should enter the organization multiple times,
+once for each award number.
+
 ### Subject Matter
 
 The Subject Matter section allows you to annotate the Dandiset with links to terms in ontologies. Use `Generic Type`
