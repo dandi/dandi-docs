@@ -42,7 +42,7 @@ Neurosift allows you to:
 - Analyze neural data with interactive plots
 - Share visualizations with collaborators
 
-The video below demonstrates how to view the contents of a NWB file that is hosted on DANDI Archive in Neurosift.  Please note that this video has no sound.
+The video below demonstrates how to view the contents of a NWB file that is hosted on DANDI Archive in Neurosift.
 
 <video width="1024" height="768" controls>
   <source src="https://github.com/user-attachments/assets/2d4c1530-f3ac-4090-850d-ff7a5c7528d3" type="video/mp4">
