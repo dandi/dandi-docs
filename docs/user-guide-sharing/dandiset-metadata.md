@@ -36,7 +36,35 @@ The "Author" role is often appropriate for contributors.
 Marking a contributor as "Author" will make their name appear on the DLP.
 You can also add contributors that are non-authors, such as data curators.
 One of the personnel must be listed as the Contact, and this Person must have contact information.
-
+The following roles are available:
+  - Author
+  - Conceptualization
+  - Contact Person
+  - Data Collector
+  - Data Curator
+  - Data Manager
+  - Formal Analysis
+  - Funding Acquisition
+  - Investigation
+  - Maintainer
+  - Methodology
+  - Producer
+  - Project Leader
+  - Project Manager
+  - Project Member
+  - Project Administration
+  - Researcher
+  - Resources
+  - Software
+  - Supervision
+  - Validation
+  - Visualization
+  - Funder
+  - Sponsor
+  - Study Participant
+  - Affiliation (Affiliated with an entity)
+  - Ethics Approval (Approved ethics protocol)
+  - Other
 
 **The Contributors tab is also where you enter funding information.**
 Choose "Organization" and proceed to fill in information.
