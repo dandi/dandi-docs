@@ -57,7 +57,7 @@ The DANDI Project codebase includes the components listed in the table below:
 
 Multiple deployments of this codebase operate as separate instances, each serving distinct research communities and datasets. The DANDI Archive instance is available at https://dandiarchive.org/, and the EMBER-DANDI Archive instance is available at https://dandi.emberarchive.org/. This document governs over the DANDI Project codebase unless otherwise specified.
 
-Contributing code to DANDI repositories does not grant rights or access to the separate instances. Similarly, using the DANDI Archive or EMBER-DANDI Archive service does not require contributing to the codebase.
+Contributing code to DANDI repositories does not grant rights or access to the separate instances. Similarly, using any DANDI instance (e.g. the DANDI Archive or EMBER-DANDI Archive service) does not require contributing to the codebase.
 
 ## 5. Roles & Responsibilities
 
