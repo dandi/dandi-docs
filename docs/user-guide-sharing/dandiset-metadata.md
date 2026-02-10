@@ -66,6 +66,8 @@ The following roles are available:
   - Ethics Approval (Approved ethics protocol)
   - Other
 
+For more details about these roles, see the [DataCite documentation](https://datacite-metadata-schema.readthedocs.io/en/4.6/properties/contributor/#a-contributortype).
+
 **The Contributors tab is also where you enter funding information.**
 Choose "Organization" and proceed to fill in information.
 ror.org is a platform that provides unique identifiers for institutions.
