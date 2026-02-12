@@ -24,8 +24,7 @@ theme:
         name: Light mode
       primary: "dark blue"
       accent: "light blue"
-  features:
-    - toc.integrate
+  features: []
 
 # Pages
 nav:
