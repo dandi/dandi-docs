@@ -1,4 +1,4 @@
-# General Policies v1.1.0
+# General Policies v1.2.0
 
 ## Content
 
