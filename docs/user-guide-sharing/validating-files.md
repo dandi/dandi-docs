@@ -316,7 +316,18 @@ Compose multiple validation files for a combined view:
 cat upload1_validation.jsonl upload2_validation.jsonl | vd -f jsonl
 ```
 
-<!-- TODO: embed asciinema recording of VisiData demo here -->
+<div id="visidata-demo"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof AsciinemaPlayer !== 'undefined') {
+      AsciinemaPlayer.create(
+        '../examples/validation/visidata-demo.cast',
+        document.getElementById('visidata-demo'),
+        { cols: 120, rows: 36, speed: 1.5, idleTimeLimit: 2, theme: 'monokai' }
+      );
+    }
+  });
+</script>
 
 ## Validation Result Schema
 
