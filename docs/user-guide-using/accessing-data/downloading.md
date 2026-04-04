@@ -89,7 +89,7 @@ style="width: 60%; height: auto; display: block; margin-left: auto;  margin-righ
 
 Each Dandiset is represented as a separate DataLad dataset.
 <https://github.com/dandi/dandisets/> is a [DataLad superdataset](https://handbook.datalad.org/en/latest/glossary.html#term-DataLad-superdataset) that includes all individual Dandiset datasets as subdatasets ([git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)).
-Where present, individual [Zarr](https://zarr.dev/) files are included as subdatasets ([git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)) hosted in the GitHub organization <https://github.com/dandizarrs/>.
+Where present, individual [Zarr](https://zarr.dev/) assets are included as subdatasets ([git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)) hosted in the GitHub organization <https://github.com/dandizarrs/>.
 
 The Git revision histories of each dataset reflect the Dandiset's draft state as of each execution of the mirroring job.
 Published Dandiset versions are tagged with Git tags.
@@ -113,7 +113,8 @@ Learn more about DataLad from its handbook at <https://handbook.datalad.org/>.
 ## Using WebDAV
 
 DANDI provides a [WebDAV](https://en.wikipedia.org/wiki/WebDAV) service at https://webdav.dandiarchive.org/ for accessing the data in the DANDI archive.
-You can use any WebDAV client or even a web browser to access the data - any dandiset, any version, any file or collection of files.
+You can use any WebDAV client or even a web browser to access the data - any Dandiset, any version, any file or collection of files, and navigate inside Zarr assets (including their versions).
+
 You can use any web download tool to download the data from the DANDI archive, e.g.
 
 ````commandline
@@ -126,3 +127,67 @@ for a download of a specific release `0.210831.2033` of the `000027` dandiset.
 You might need to configure your WebDAV client to follow redirects; e.g., for the [davfs2](https://savannah.nongnu.org/projects/davfs2) WebDAV client, set `follow_redirect` to `1` in `/etc/davfs2/davfs2.conf`.
 
 **Developers' note:** The WebDAV service's code is available at https://github.com/dandi/dandidav/ and can also be used for independent DANDI deployments.
+
+
+## Using S3 Directly
+
+DANDI stores all asset content in the public AWS S3 bucket [`dandiarchive`](https://dandiarchive.s3.amazonaws.com/).
+Any S3 client (e.g. `aws s3`, `rclone`) works, and individual objects are also reachable over plain HTTPS using URLs of the form `https://dandiarchive.s3.amazonaws.com/<key>` — no AWS account or authentication is required for non-embargoed data.
+
+The bucket has three top-level folders relevant to data access:
+
+- **`blobs/`** — content of individual (non-Zarr) assets, named by a hash-derived key (e.g. `blobs/58c/537/58c53789-eec4-4080-ad3b-207cf2a1cac9`).
+- **`zarr/`** — content of [Zarr](https://zarr.dev/) assets, each laid out as the original Zarr directory tree under `zarr/<zarr-id>/`.
+- **`dandisets/`** — per-Dandiset manifests that map each Dandiset version to the specific entries it contains under `blobs/` and `zarr/`.
+
+Because `blobs/` and `zarr/` are keyed by content/identifier rather than by Dandiset path, you locate files by starting from `dandisets/`.
+
+### Browsing the bucket via Quilt
+
+[Quilt](https://open.quiltdata.com/b/dandiarchive/tree/README.md) offers a web UI for browsing the bucket — convenient for exploration without installing an S3 client.
+
+<img
+src="../../../img/web_quiltdata-topdir.jpg"
+alt="Quilt browser showing top-level folders in the dandiarchive bucket"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+### Locating files for a specific Dandiset version
+
+Each Dandiset version lives at `dandisets/<dandiset-id>/<version>/`, where `<version>` is either a published version (e.g. `0.260218.2052`) or `draft/` for the current draft state — for example, <https://open.quiltdata.com/b/dandiarchive/tree/dandisets/000003/0.260218.2052/>.
+
+<img
+src="../../../img/web_quiltdata-dandiset-1.jpg"
+alt="Files inside a published Dandiset version on Quilt"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+Inside this folder you will find:
+
+- **`dandiset.yaml`** / **`dandiset.jsonld`** — Dandiset-level metadata.
+- **`assets.yaml`** / **`assets.jsonld`** — every asset in this Dandiset version, with its original `path` and one or more `contentUrl` entries (e.g. <https://open.quiltdata.com/b/dandiarchive/tree/dandisets/000003/0.260218.2052/assets.yaml>).
+
+Each asset's `contentUrl` lists two URLs:
+
+1. A DANDI API download URL (`https://api.dandiarchive.org/api/assets/<id>/download/`) — use this for **embargoed** Dandisets where authenticated access is required.
+2. A direct S3 URL (`https://dandiarchive.s3.amazonaws.com/blobs/...` or `.../zarr/<zarr-id>/`) — anonymous and fastest for public data.
+
+<img
+src="../../../img/web_quiltdata-dandiset-contentUrl.jpg"
+alt="contentUrl entries in assets.yaml"
+style="width: 60%; height: auto; display: block; margin-left: auto;  margin-right: auto;"/>
+
+For example, an entry might read:
+
+````yaml
+path: sub-YutaMouse20/sub-YutaMouse20_ses-YutaMouse20-140327_behavior+ecephys.nwb
+contentUrl:
+- https://api.dandiarchive.org/api/assets/5e9e92e1-f044-4aa0-ab47-1cfcb8899348/download/
+- https://dandiarchive.s3.amazonaws.com/blobs/58c/537/58c53789-eec4-4080-ad3b-207cf2a1cac9
+````
+
+The S3 URL can then be fetched with any tool — for example:
+
+````commandline
+wget https://dandiarchive.s3.amazonaws.com/blobs/58c/537/58c53789-eec4-4080-ad3b-207cf2a1cac9 -O sub-YutaMouse20_..._behavior+ecephys.nwb
+````
+
+**Note:** [DataLad](#using-datalad) already encodes this Dandiset-version-to-S3-location mapping inside git-annex, so `datalad get` resolves files transparently without you having to read `assets.yaml` yourself.
