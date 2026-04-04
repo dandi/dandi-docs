@@ -48,7 +48,7 @@ problem.
 Passing all of these levels of validation can sometimes be tricky. If you have any questions, please ask them via the
 [DANDI Help Desk](https://github.com/dandi/helpdesk/discussions) and we would be happy to assist you.
 
-## Validating BIDS Files
+## Validating BIDS Datasets
 
 Once your files are converted to the BIDS standard,
 
@@ -321,7 +321,7 @@ cat upload1_validation.jsonl upload2_validation.jsonl | vd -f jsonl
   document.addEventListener('DOMContentLoaded', function() {
     if (typeof AsciinemaPlayer !== 'undefined') {
       AsciinemaPlayer.create(
-        '../examples/validation/visidata-demo.cast',
+        '../../examples/validation/visidata-demo.cast',
         document.getElementById('visidata-demo'),
         { cols: 120, rows: 36, speed: 1.5, idleTimeLimit: 2, theme: 'monokai' }
       );

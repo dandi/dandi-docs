@@ -3,8 +3,8 @@
 # Screencaster demo: Reviewing DANDI validation results with VisiData
 #
 # Uses datalad/screencaster (cast2asciinema) to produce an asciinema recording.
-# This script is SOURCED by cast2asciinema, so the functions type, key, sleep,
-# say, run, show are already defined.
+# This script is SOURCED by cast2asciinema or record.sh, so the functions
+# type, key, sleep, say, run, show are already defined.
 #
 # Terminal size: 120x35 (set width/height in cast2asciinema or use geometry env)
 #
@@ -18,10 +18,9 @@
 #   export DISPLAY=:99  # or real display
 #   Xvfb :99 -screen 0 1280x1024x24 &  # if headless
 #   cd /path/to/dandi-docs-enh-validation
-#   cast2asciinema scripts/visidata-demo/demo.sh docs/examples/validation/
+#   ./scripts/visidata-demo/record.sh
 #
-# The output .json can be played with: asciinema play docs/examples/validation/demo.json
-# or embedded via asciinema-player in the docs.
+# The output .cast can be played with: asciinema play docs/examples/validation/visidata-demo.cast
 
 # SCREENCAST_REPO is set by the caller; fall back to PWD
 DEMO_REPO="${SCREENCAST_REPO:-$PWD}"
@@ -40,7 +39,7 @@ sleep 4
 
 # --- Navigate to severity column ---
 key space; sleep 0.5
-type "go-col-regex"; sleep 0.5; key Return; sleep 0.3
+type "go-col-regex"; sleep 1; key Return; sleep 0.3
 type "severity"; key Return
 sleep 2
 
@@ -52,7 +51,7 @@ sleep 2
 key space; sleep 0.5
 type "demo-say"; sleep 0.5; key Return; sleep 0.3
 type "Frequency table on severity (Shift+F)"; key Return
-sleep 2
+sleep 4
 
 key shift+f
 sleep 3
@@ -61,10 +60,10 @@ sleep 3
 key space; sleep 0.5
 type "demo-say"; sleep 0.5; key Return; sleep 0.3
 type "22 ERRORs and 410 HINTs -- let us focus on errors"; key Return
-sleep 3
+sleep 4
 
 key slash; sleep 0.5
-type "ERROR"; key Return
+type "ERROR"; sleep 1; key Return
 sleep 1
 
 key Return
@@ -72,7 +71,7 @@ sleep 3
 
 # --- Frequency on id to see error types ---
 key space; sleep 0.5
-type "go-col-regex"; sleep 0.5; key Return; sleep 0.3
+type "go-col-regex"; sleep 1; key Return; sleep 0.3
 type "^id$"; key Return
 sleep 2
 
@@ -83,14 +82,14 @@ sleep 3
 key space; sleep 0.5
 type "demo-say"; sleep 0.5; key Return; sleep 0.3
 type "20 empty files, 1 unreadable NIfTI, 1 extension mismatch"; key Return
-sleep 3
+sleep 4
 
 # --- Back to error list ---
 key q; sleep 1
 
 # --- Navigate to message column ---
 key space; sleep 0.5
-type "go-col-regex"; sleep 0.5; key Return; sleep 0.3
+type "go-col-regex"; sleep 1; key Return; sleep 0.3
 type "message"; key Return
 sleep 2
 
@@ -98,31 +97,31 @@ sleep 2
 key space; sleep 0.5
 type "demo-say"; sleep 0.5; key Return; sleep 0.3
 type "Expand cell with z Enter to read full message"; key Return
-sleep 2
+sleep 4
 
 key z; sleep 0.3
 key Return
-sleep 3
+sleep 4
 
 key q; sleep 1
 
 # --- Hide less useful columns ---
 key space; sleep 0.5
-type "go-col-regex"; sleep 0.5; key Return; sleep 0.3
+type "go-col-regex"; sleep 1; key Return; sleep 0.3
 type "asset_paths"; key Return
 sleep 1
 key minus
 sleep 1
 
 key space; sleep 0.5
-type "go-col-regex"; sleep 0.5; key Return; sleep 0.3
+type "go-col-regex"; sleep 1; key Return; sleep 0.3
 type "within_asset"; key Return
 sleep 1
 key minus
 sleep 1
 
 key space; sleep 0.5
-type "go-col-regex"; sleep 0.5; key Return; sleep 0.3
+type "go-col-regex"; sleep 1; key Return; sleep 0.3
 type "path_regex"; key Return
 sleep 1
 key minus

@@ -71,7 +71,7 @@ function run() {
 # --- Start xterm with PATH pre-configured ---
 echo "Starting xterm ($geometry) on DISPLAY=$DISPLAY ..."
 SHELL=/bin/bash xterm -geometry $geometry \
-    -e bash --rcfile <(echo "export PATH='$INNER_PATH'; export PS1='\[\e[0;36m\]\w\[\e[0m\] %% '") &
+    -e bash --rcfile <(echo "export PATH='$INNER_PATH'; export PS1='\[\e[0;36m\]validation-demo\[\e[0m\] \$ '") &
 xterm_pid=$!
 $REAL_SLEEP 3
 
@@ -102,8 +102,8 @@ if ! echo "$PTREE" | grep -q asciinema; then
 fi
 echo "asciinema is running"
 
-# Set PS1 inside asciinema's bash
-_type "export PS1='\\[\\e[0;36m\\]\\w\\[\\e[0m\\] % '"
+# Set PS1 inside asciinema's bash (no absolute paths for reproducibility)
+_type "export PS1='\\[\\e[0;36m\\]validation-demo\\[\\e[0m\\] \$ '"
 _key Return
 $REAL_SLEEP 1
 
