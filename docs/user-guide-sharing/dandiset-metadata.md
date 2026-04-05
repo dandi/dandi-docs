@@ -46,6 +46,9 @@ Make sure to inspect the metadata for each institution on the ror.org website, a
 (e.g. many different countries have an "NIH"). Make sure to select the role `dcite:Funder` to list the contributor
 under the "Funding information" section.
 
+If there is more than one award number associated with a funding agency, you should enter the organization multiple times,
+once for each award number.
+
 ### Subject Matter
 
 The Subject Matter section allows you to annotate the Dandiset with links to terms in ontologies. Use `Generic Type`
@@ -66,3 +69,17 @@ It is highly recommended to add links to the following resources (if they exist)
   * A data analysis library associated with the publication that can take this data as input
   * An example notebook submitted to http://github.com/dandi/example-notebooks that demonstrates how to use the data
   * Associated datasets published on DANDI or on other archives.
+
+#### Related Resource Relation
+
+Related Resources include a relation attribute.
+The relation tag describes the relationship FROM the Dandiset TO the resource.
+In other words, this relation should satisfy: dandiset `<relation>` resource.
+
+If the resource is a journal article or preprint, the "repository" should be the name of the journal or preprint server.
+
+Some common relations include:
+
+* For a publication or preprint that is the primary account of the data being deposited, use "dcite:isDescribedBy".
+* For a data descriptor paper, e.g. as is common in the journal Scientific Data, use "dcite:IsDocumentedBy".
+* To associate a new paper that analyzes the data in this Dandiset, use "dcite:IsCitedBy".
