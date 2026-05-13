@@ -104,7 +104,7 @@ To access Sentry, login to https://dandiarchive.sentry.io .
 
 ### Heroku & Papertrail
 
-The `dandi-api` and `dandi-api-staging` apps have the Papertrail add-on configured to capture logs.
+The `dandi-api` and `dandi-api-sandbox` apps have the Papertrail add-on configured to capture logs.
 To access Papertrail, log in to the [Heroku dashboard](https://dashboard.heroku.com), proceed to the corresponding app and click on the "Papertrail" add-on.
 
 A cronjob on the `drogon` server backs up Papertrail logs as .csv files hourly at `/mnt/backup/dandi/papertrail-logs/{app}`.
@@ -120,7 +120,7 @@ Logs for many of the repositories are archived on `drogon` server at `/mnt/backu
 All code repositories are hosted on GitHub. The easiest way to contribute is to
 gain push access to the repositories by talking to @waxlamp; this way, you can
 create pull requests based on branches within the origin repositories, which in
-turn allows for Netlify deploy previews and Heroku staging previews to be built.
+turn allows for Netlify deploy previews and Heroku sandbox previews to be built.
 
 However, this is not strictly required. You can contribute using the standard
 fork-and-pull-request model, but under this workflow we will lose the benefit of

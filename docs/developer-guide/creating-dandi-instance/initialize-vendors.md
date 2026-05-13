@@ -6,7 +6,7 @@ The DANDI ecosystem relies on vendor services to operate.  So first you will nee
 - **AWS**: Provides storage buckets (S3), as well as domain management (Route53), for resources across the DANDI ecosystem. As well as the services (EC2, Kubernetes, etc.) for deploying the JupyterHub.
 - **GitHub**: Serves as the authentication provider for accounts across the DANDI ecosystem.
 - **Terraform Cloud**: Manages provisioned resources across cloud vendors in a version-controlled manner. 
-- **Netlify**: Deploys production frontend build, as well as staging previews to assist with frontend development.
+- **Netlify**: Deploys production frontend build, as well as sandbox previews to assist with frontend development.
 - **Sentry**: Provides observability and monitoring for API events.
 
 Some services are not yet integrated within the main infrastructure:
