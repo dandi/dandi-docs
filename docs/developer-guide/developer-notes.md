@@ -104,7 +104,7 @@ To access Sentry, login to https://dandiarchive.sentry.io .
 
 ### Heroku & Papertrail
 
-The `dandi-api` and `dandi-api-sandbox` apps have the Papertrail add-on configured to capture logs.
+The `dandi-api` and `dandi-api-staging` apps have the Papertrail add-on configured to capture logs.
 To access Papertrail, log in to the [Heroku dashboard](https://dashboard.heroku.com), proceed to the corresponding app and click on the "Papertrail" add-on.
 
 A cronjob on the `drogon` server backs up Papertrail logs as .csv files hourly at `/mnt/backup/dandi/papertrail-logs/{app}`.
