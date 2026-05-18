@@ -38,7 +38,7 @@ DANDI (Distributed Archives for Neurophysiology Data Integration) enables FAIR (
 1. Openness & Transparency: Designs, discussions, and decisions are public by default.
 2. FAIR & Reproducibility: Data and code follow standards and their evolution remain open, traceable, and citable.
 3. Sustainability: Architectural and process decisions consider long-term maintainability.
-4. Inclusivity & Respect: Guided by a Code of Conduct.
+4. Inclusivity & Respect: Guided by a project-wide [Code of Conduct](https://github.com/dandi/dandi-archive/blob/master/CODE_OF_CONDUCT.md) that applies across all DANDI repositories and instances, regardless of whether a `CODE_OF_CONDUCT.md` file is present in a given repository.
 5. Stewardship: Authority derives from consistent, high‑quality contribution.
 6. Accountability: Roles carry explicit responsibilities.
 7. Security & Privacy: Responsible handling of sensitive data and credentials.
