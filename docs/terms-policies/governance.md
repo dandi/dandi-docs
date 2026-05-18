@@ -163,6 +163,9 @@ Administrators:
 ## 7. Pull Request Workflow
 
 ### 7.1 Pull Request Requirements
+
+Requirements include, but are not limited to, the following.
+
 - Link the associated issue.
 - Add a clear description (problem, approach, alternatives considered).
 - Major architectural changes require a design document.
