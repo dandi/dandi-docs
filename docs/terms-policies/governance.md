@@ -29,7 +29,7 @@ DANDI (Distributed Archives for Neurophysiology Data Integration) enables FAIR (
 
 - a cloud-based platform to store, process, and disseminate data. You can use DANDI to collaborate and publish datasets.
 - open access to data to enable secondary uses of data outside the intent of the study;
-- optimized data storage and access through partnerships, compression and accessibility technologies;
+- optimized data storage and access, achieved through partnerships with cloud providers, compression to reduce storage costs and bandwidth, and accessibility technologies that broaden who can use the data;
 - facilities to encourage reproducible practices and publications through data standards such as NWB and BIDS;
 - a platform that is not merely an endpoint to dump data, but rather a living repository that enables collaboration within and across labs.
 
