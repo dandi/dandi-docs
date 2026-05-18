@@ -201,17 +201,26 @@ Requirements include, but are not limited to, the following.
 
 ## 8. Releases
 
-### 8.1 Versioning
-- [Semantic Versioning 2.0](https://semver.org/spec/v2.0.0.html) for APIs and libraries.
+### 8.1 Release Approach
+- Releases generally follow [Semantic Versioning 2.0](https://semver.org/spec/v2.0.0.html) for APIs and libraries.
+- Each repository has a release approach that is documented n the table below.
 
-### 8.2 Release Steps
-- For [dandi-archive](https://github.com/dandi/dandi-archive), once a pull request is merged the changes are deployed to the sandbox environment (https://sandbox.dandiarchive.org) for review and testing prior to release.
+| Repository | Approach | Tagging | Publishing |
+| -- | -- | -- | -- |
+| [dandi-archive](https://github.com/dandi/dandi-archive) | [`auto`](https://github.com/intuit/auto) creates a release upon merge of a `release`-labeled pull request | `v{version}` | [GitHub Release](https://github.com/dandi/dandi-archive/releases) |
+| [dandi-cli](https://github.com/dandi/dandi-cli) | [`auto`](https://github.com/intuit/auto) creates a release upon merge of a `release`-labeled pull request | `{version}` | [GitHub Release](https://github.com/dandi/dandi-cli/releases) + [PyPI](https://pypi.org/project/dandi/) |
+| [dandi-schema](https://github.com/dandi/dandi-schema) | [`auto`](https://github.com/intuit/auto) creates a release upon merge of a `release`-labeled pull request | `{version}` | [GitHub Release](https://github.com/dandi/dandi-schema/releases) + [PyPI](https://pypi.org/project/dandischema/) + [`dandi/schema` release for the JSON schema](https://github.com/dandi/schema/tree/master/releases) |
+| [dandidav](https://github.com/dandi/dandidav) | merge of a `release`-labeled pull request | `v{version}` | [GitHub Release](https://github.com/dandi/dandidav/releases) + https://webdav.dandiarchive.org |
+| [dandi-hub](https://github.com/dandi/dandi-hub), [nebari-deployments](https://github.com/dandi/nebari-deployments) | ad-hoc | - | https://hub.dandiarchive.org |
+| [dandi-docs](https://github.com/dandi/dandi-docs), [dandi-about](https://github.com/dandi/dandi-about) | continuous deployment from `master` | - | https://docs.dandiarchive.org, https://about.dandiarchive.org |
+
+### 8.2 Example of the `dandi-archive` release flow
+- Once a pull request is merged the changes are deployed to the sandbox environment (https://sandbox.dandiarchive.org) for review and testing prior to release.
 - New releases are created with a GitHub Actions workflow built around [`auto`](https://github.com/intuit/auto).
 - When a pull request is merged that has the "`release`" label, `auto`:
     - Updates the changelog based on the pull requests since the last release and commits the results.
     - Tags the new commit with the next version number.
     - Creates a GitHub release for the tag.
-- For [dandi-cli](https://github.com/dandi/dandi-cli), upon release a new version is published to PyPI.
 
 ## 9. Security
 
