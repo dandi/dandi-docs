@@ -171,7 +171,7 @@ Administrators:
 - Ensure CI passes.
 - Large pull requests should be split unless justified.
 - No introduction of unreviewed secrets or credentials.
-- Verified provenance for large binary additions (discouraged in code repos).
+- Large binary additions are discouraged in code repositories; when unavoidable, the contributor must document the binary's origin and licensing in the pull request description so its provenance can be verified during review.
 
 ### 7.2 Merge Policy
 - All pull requests require:
