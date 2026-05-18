@@ -42,6 +42,7 @@ DANDI (Distributed Archives for Neurophysiology Data Integration) enables FAIR (
 5. Stewardship: Authority derives from consistent, high‑quality contribution.
 6. Accountability: Roles carry explicit responsibilities.
 7. Security & Privacy: Responsible handling of sensitive data and credentials.
+8. Pragmatism: Decisions follow the sociocracy principle of "good enough for now, safe enough to try" — preferring incremental, reversible progress over indefinite deliberation.
 
 ## 4. Project Structure
 
