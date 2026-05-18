@@ -95,7 +95,8 @@ Responsibilities:
 
 Expectations:
 - Active presence.
-- Adhere to conflict of interest and bias avoidance.
+- Follow the [Conflict of Interest](#63-conflict-of-interest) policy.
+- Avoid bias (e.g., favoring contributions from one's own institution, affiliated collaborators, or preferred technologies over others on non-technical grounds). 
 
 Path to role:
 - Demonstrated sustained contributions and review quality.
