@@ -1,4 +1,4 @@
-# General Policies v1.1.0
+# General Policies v1.2.0
 
 ## Content
 
@@ -46,6 +46,16 @@
 - **Restricted access:** Depositors of embargoed datasets have the ability to
   share access with other collaborators. These files will not be made publicly
   available till the end of the embargo period.
+
+## Collected Information
+
+We and our service providers collect a variety of information through the sites and by other means, which may include:
+
+- **Information you submit**: When you contact us, we collect information when you send us an email or send information to our servers. This may include your name, email address, the content of your communication, and any data you upload in association with the DANDI project. This does not include the research data, which is subject to any applicable research consent and applicable provisions of the Terms and Conditions.
+- **Information collected automatically**: We or our third-party service providers may automatically receive and record certain information when you use our Sites. For example, this may include your device's IP address, information about your use of the sites during your current session and over time (including the pages you view and your interactions with them, as well as what information you download), the date and time of your visit, links you click, searches conducted, the website visited before navigating to the website, social media referrals used to find the website (such as Facebook and LinkedIn), your software and hardware attributes (including browser and operating system type and version), and your general location inferred from IP address. To obtain such information, we or our third-party service providers may use the following technologies to recognize your device and collect information about your usage of the sites:
+  - _Server logs_: When you use the website, we automatically receive and record certain information from your computer (or other device) and your browser. To obtain such information, we may use server logs or applications that recognize your device and gather information about its online activity.
+
+We may combine information collected through the Sites with information that we collect in other contexts, such as information from email communications with you. We will treat such combined information in accordance with this General Policy.
 
 ## Removal
 
