@@ -177,7 +177,6 @@ Administrators:
     - If a comment cannot be resolved, the Project Leadership would be enlisted to decide on the path forward.
     - Approval by at least 1 listed Maintainer for that repository.
     - 24-hour waiting period (unless addressing a critical issue or trivial issue [e.g. typos]).
-- See section below regarding updates to the Governance document.
 
 ### 7.3 Draft vs Ready for Review
 - Open as a Draft for early feedback.
