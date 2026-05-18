@@ -52,12 +52,12 @@ The DANDI Project codebase includes the components listed in the table below:
 | Archive | [dandi-archive](https://github.com/dandi/dandi-archive), [dandi-infrastructure](https://github.com/dandi/dandi-infrastructure) |
 | Client | [dandi-cli](https://github.com/dandi/dandi-cli), [dandidav](https://github.com/dandi/dandidav) |
 | Metadata | [dandi-schema](https://github.com/dandi/dandi-schema), [schema](https://github.com/dandi/schema) |
-| JupterHub | [dandi-hub](https://github.com/dandi/dandi-hub), [nebari](https://github.com/dandi/nebari), [nebari-deployments](https://github.com/dandi/nebari-deployments), [nebari-docker-images](https://github.com/dandi/nebari-docker-images) |
+| JupyterHub | [dandi-hub](https://github.com/dandi/dandi-hub), [nebari](https://github.com/dandi/nebari), [nebari-deployments](https://github.com/dandi/nebari-deployments), [nebari-docker-images](https://github.com/dandi/nebari-docker-images) |
 | Documentation & Support | [dandi-docs](https://github.com/dandi/dandi-docs), [dandi-about](https://github.com/dandi/dandi-about), [helpdesk](https://github.com/dandi/helpdesk) |
 
 Multiple deployments of this codebase operate as separate instances, each serving distinct research communities and datasets. The DANDI Archive instance is available at https://dandiarchive.org/, and the EMBER-DANDI Archive instance is available at https://dandi.emberarchive.org/. This document governs over the DANDI Project codebase unless otherwise specified.
 
-Contributing code to DANDI repositories does not grant rights or access to the separate instances. Similarly, using the DANDI Archive or EMBER-DANDI Archive service does not require contributing to the codebase.
+Contributing code to DANDI repositories does not grant rights or access to the separate instances. Similarly, using any DANDI instance (e.g. the DANDI Archive or EMBER-DANDI Archive service) does not require contributing to the codebase.
 
 ## 5. Roles & Responsibilities
 
@@ -149,13 +149,13 @@ Administrators:
 1. Open a GitHub issue describing the bug/feature request, context, and possible solutions.
 2. For major architectural changes, create a design document and submit as a PR for discussion and refinement.
    For reference, see [previous design documents](https://github.com/dandi/dandi-archive/tree/master/doc).
-3. Collect feedback during a 7 day review period.
+3. Collect feedback during a 7-day review period.
 4. Summarize consensus in the GitHub issue and resolve all suggestions in the design document.
 5. Implement via pull request(s) referencing the proposed design.
 
 ### 6.3 Conflict of Interest
 - Participants should disclose direct commercial interest in a technology choice.
-- Conflicted member recuses oneself from final decision phase.
+- Conflicted member recuses themselves from final decision phase.
 
 ## 7. Pull Request Workflow
 
@@ -175,7 +175,7 @@ Administrators:
     - All comments must be resolved or addressed.
     - If a comment cannot be resolved, the Project Leadership would be enlisted to decide on the path forward.
     - Approval by at least 1 listed Maintainer for that repository.
-    - 24 hour waiting period (unless addressing a critical issue or trivial issue [e.g. typos]).
+    - 24-hour waiting period (unless addressing a critical issue or trivial issue [e.g. typos]).
 - See section below regarding updates to the Governance document.
 
 ### 7.3 Draft vs Ready for Review
@@ -239,7 +239,7 @@ Communication channels include:
 
 - Outreach events are hosted in collaboration with the Neurodata Without Borders team and can be found at https://nwb.org/events.
 - Code of Conduct is available at https://github.com/dandi/dandi-archive/blob/master/CODE_OF_CONDUCT.md
-    - Instances of Code of Conduct violation can be reported to  community@dandiarchive.org.
+    - Instances of Code of Conduct violation can be reported to community@dandiarchive.org.
     - Enforcement of Code of Conduct is separate from primary technical decision flow where possible.
 
 ## 13. Amendments to Project Governance
@@ -247,11 +247,11 @@ Communication channels include:
 Process
 
 1. Proposal pull request.
-2. Minimum of a 30 day public comment.
+2. Minimum of a 30-day public comment.
 3. Approval by Project Leadership.
 4. Update version and effective data in Governance document header.
 
-- Urgent amendments may use an accelerated 7 day window with rationale documented.
+- Urgent amendments may use an accelerated 7-day window with rationale documented.
 - The document becomes active upon Project Leadership approval and publication in the [DANDI Docs](https://docs.dandiarchive.org/).
 
 ## 14. Sunset Policy
