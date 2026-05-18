@@ -61,6 +61,8 @@ Contributing code to DANDI repositories does not grant rights or access to the s
 
 ## 5. Roles & Responsibilities
 
+The responsibilities, expectations, and paths to role described in the subsections below include, but are not limited to, the items listed.
+
 ### 5.1 Contributors
 Anyone submitting issues, pull requests, documentation, or feedback.
 
