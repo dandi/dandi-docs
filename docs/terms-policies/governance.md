@@ -132,15 +132,21 @@ Maintainers for the respective DANDI repositories:
     - Approve major architectural shifts.
     - Oversee risk, sustainability, funding alignment.
 
-### 5.5 DANDI Archive Administrators
+### 5.5 DANDI Administrators
 
-Responsibilities:
+Administrators are scoped by DANDI service. Authoritative per-service membership lives in the corresponding [GitHub team](https://github.com/orgs/dandi/teams) and may evolve independently of this document.
+
+Responsibilities for each service:
 - Monitor service health and performance.
 - Manage user accounts and permissions.
-- Respond to data access requests and issues.
+- Respond to data access requests and operational issues.
 
-Administrators:
-- @satra, @yarikoptic, @waxlamp, @mvandenburgh, @jjnesbitt, @danlamanna, @brianhelba, @kabilar, @asmacdo, @bendichter, @candleindark, @CodyCBakerPhD.
+| Service/Repository | Administrators |
+| -- | -- |
+| `dandi-archive` & `dandi-infrastructure`| @satra, @yarikoptic, @waxlamp, @mvandenburgh, @jjnesbitt, @danlamanna, @brianhelba |
+| `dandi-cli` & `dandi-schema` | @satra, @yarikoptic, @CodyCBakerPhD, @candleindark, @asmacdo |
+| `dandi-hub` | @satra, @yarikoptic, @asmacdo, @kabilar |
+| `dandi-docs`, `dandi-about`, `helpdesk` | @satra, @yarikoptic, @kabilar, @bendichter, @CodyCBakerPhD |
 
 ## 6. Decision-Making Model
 
