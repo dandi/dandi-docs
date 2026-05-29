@@ -1,0 +1,14 @@
+[DANDI.NO_DANDISET_FOUND] 000027 — Path is not inside a Dandiset
+[pynwb.GENERIC] sub-RAT123/sub-RAT123.nwb — error: nwb_version '2.0b' is not a proper semantic version. See http://semver.org
+[NWBI.check_subject_age] sub-RAT123/sub-RAT123.nwb — Subject age, '12 mo', does not follow ISO 8601 duration format, e.g. 'P2Y' for 2 years or 'P23W' for 23 weeks. You may also specify a range using a '/' separator, e.g., 'P1D/P3D' for an age range somewhere from 1 to 3 days. If you cannot specify the upper bound of the range, you may leave the right side blank, e.g., 'P90Y/' means 90 years old or older.
+[NWBI.check_subject_weight] sub-RAT123/sub-RAT123.nwb — Subject weight '2 lbs' does not follow the expected form '[numeric] [unit]'. For example, '2.3 kg'. Without a unit, the weight is ambiguous. Valid units are: 'kg', 'g', 'mg', 'ug', 'μg', 'ng', 'pg'.
+--- Validation Summary ---
+Total issues: 4
+By severity:
+  ERROR: 4
+By validator:
+  dandi: 2
+  nwbinspector: 2
+By standard:
+  N/A: 3
+  DANDI-LAYOUT: 1

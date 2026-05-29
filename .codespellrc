@@ -1,4 +1,4 @@
 [codespell]
-skip = .git,*.pdf,*.svg,venvs,venv,site
+skip = .git,*.pdf,*.svg,venvs,venv,site,*.cast
 #
 # ignore-words-list =

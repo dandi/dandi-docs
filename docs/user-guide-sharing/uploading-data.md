@@ -48,6 +48,8 @@ For command-line users or those with larger datasets, the DANDI CLI provides a p
    ```bash
    dandi validate .
    ```
+   See [Validating Files](./validating-files.md) for full details on filtering, grouping,
+   and output format options.
 4. **Upload your data**
    ```bash
    dandi upload
@@ -113,7 +115,11 @@ logs varies by platform, e.g.:
 - macOS: `~/Library/Logs/dandi-cli`
 
 Logs are named with a combination of the time at which the `dandi` command
-started running and the process ID of the command.
+started running and the process ID of the command.  A JSONL validation companion
+file is also saved alongside each log (with a `_validation.jsonl` suffix) when
+`dandi validate` or `dandi upload` runs.  You can re-review these results later
+with different filtering or grouping — see
+[Validation During Upload](./validating-files.md#validation-during-upload) for details.
 
 Recent versions of the client include all possible debugging information in the
 logs, but if you're using an older version, only log messages that were printed

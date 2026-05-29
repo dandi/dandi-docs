@@ -26,6 +26,9 @@ theme:
       accent: "light blue"
   features:
     - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
 
 # Pages
 nav:
@@ -99,6 +102,13 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.critic
   - pymdownx.magiclink
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path: docs
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -137,3 +147,7 @@ extra:
     - icon: fontawesome/brands/bluesky
       link: https://bsky.app/profile/dandiarchive.org
       name: Bluesky
+extra_css:
+  - https://cdn.jsdelivr.net/npm/asciinema-player@3.9.0/dist/bundle/asciinema-player.css
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/asciinema-player@3.9.0/dist/bundle/asciinema-player.min.js

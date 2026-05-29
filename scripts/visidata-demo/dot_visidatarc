@@ -1,0 +1,27 @@
+# VisiData configuration for DANDI validation demo
+# Used by: cast2asciinema scripts/visidata-demo/demo.sh
+#
+# Place in ~/.visidatarc or use --config path/to/this/file
+
+# Command: display narration text in the status bar (for screencasts)
+Sheet.addCommand(
+    None,
+    'demo-say',
+    'status(input(">> "))',
+    'display a message in the status bar'
+)
+
+# Command: hide columns that are mostly empty (>90% null/empty)
+# Useful for validation JSONL where many fields are null
+Sheet.addCommand(
+    None,
+    'hide-degenerate-cols',
+    '''
+for c in columns:
+    vals = [c.getDisplayValue(r) for r in rows[:100]]
+    empty = sum(1 for v in vals if v in ("", "None", "null", "[]", "{}"))
+    if empty > len(vals) * 0.9:
+        c.hide()
+''',
+    'hide columns that are >90% empty'
+)
