@@ -110,24 +110,6 @@ Learn more about DataLad from its handbook at <https://handbook.datalad.org/>.
 
 **Developers' note:** DataLad datasets are created using the [dandi/backups2datalad](https://github.com/dandi/backups2datalad/) tool which is also available for use by the community to similarly maintain mirrors of independent DANDI deployments as DataLad datasets.
 
-## Using WebDAV
-
-DANDI provides a [WebDAV](https://en.wikipedia.org/wiki/WebDAV) service at https://webdav.dandiarchive.org/ for accessing the data in the DANDI archive.
-You can use any WebDAV client or even a web browser to access the data - any Dandiset, any version, any file or collection of files, and navigate inside Zarr assets (including their versions).
-
-You can use any web download tool to download the data from the DANDI archive, e.g.
-
-````commandline
-wget -r -np -nH --cut-dirs=3 https://webdav.dandiarchive.org/dandisets/000027/releases/0.210831.2033/
-````
-
-for a download of a specific release `0.210831.2033` of the `000027` dandiset.
-
-**Note:** The WebDAV service does not directly serve any file contents; it instead relies on redirects to AWS S3 storage where the contents are stored.
-You might need to configure your WebDAV client to follow redirects; e.g., for the [davfs2](https://savannah.nongnu.org/projects/davfs2) WebDAV client, set `follow_redirect` to `1` in `/etc/davfs2/davfs2.conf`.
-
-**Developers' note:** The WebDAV service's code is available at https://github.com/dandi/dandidav/ and can also be used for independent DANDI deployments.
-
 
 ## Using S3 Directly
 

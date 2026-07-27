@@ -107,18 +107,7 @@ asset = dandiset.get_asset_by_path("path/to/file.nwb")
 asset.download("local_file.nwb")
 ```
 
-### 3. WebDAV Integration
-
-DANDI provides a [WebDAV](https://en.wikipedia.org/wiki/WebDAV) service at https://webdav.dandiarchive.org/ that allows external services to access DANDI data using standard WebDAV clients:
-
-```python
-import requests
-
-# Access a file via WebDAV
-response = requests.get("https://webdav.dandiarchive.org/dandisets/000123/draft/path/to/file.nwb")
-```
-
-### 4. Custom Visualization Services
+### 3. Custom Visualization Services
 
 To integrate a custom visualization service with DANDI:
 
