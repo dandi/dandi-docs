@@ -74,9 +74,6 @@ We may combine information collected through the Sites with information that we 
   the original uploader to obtain consent. The DOI and the URL of the original
   object are retained.
 
-- **User data on Dandihub:** At present, user data on Dandihub is being removed
-  periodically and Dandihub storage space should not be considered persistent.
-
 ## Longevity
 
 - **Versions:** Datasets are versioned when published. Prior to publishing the
