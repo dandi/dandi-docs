@@ -81,7 +81,6 @@ nav:
       - DANDI Archive: "developer-guide/creating-dandi-instance/dandi-archive.md"
       - DANDI Authentication: "developer-guide/creating-dandi-instance/dandi-authentication.md"
       - DANDI Client: "developer-guide/creating-dandi-instance/dandi-cli.md"
-      - DANDI Hub: "developer-guide/creating-dandi-instance/dandi-hub.md"
   - Health Status:
     - Dandisets: https://github.com/dandi/dandisets-healthstatus
     - Services: https://status.dandiarchive.org

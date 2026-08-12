@@ -11,7 +11,7 @@ Example notebooks are Jupyter notebooks that demonstrate how to:
 - Reproduce figures from associated publications
 - Showcase the potential uses of your data
 
-These notebooks are maintained in the [dandi/example-notebooks](https://github.com/dandi/example-notebooks) repository and are available to all DANDI Hub users.
+These notebooks are maintained in the [dandi/example-notebooks](https://github.com/dandi/example-notebooks) repository and published at [notebooks.dandiarchive.org](https://notebooks.dandiarchive.org).
 
 ## Why Contribute an Example Notebook?
 
@@ -39,7 +39,7 @@ To contribute an example notebook:
     - Add your notebook to the appropriate directory
     - Submit a pull request with a clear description of your notebook
 
-3. **Wait for review and approval** from the DANDI team. Once approved, your notebook will be merged into the repository and made available to all DANDI Hub users.
+3. **Wait for review and approval** from the DANDI team. Once approved, your notebook will be merged into the repository and published at [notebooks.dandiarchive.org](https://notebooks.dandiarchive.org).
 
 ## Best Practices for Example Notebooks
 
@@ -50,7 +50,7 @@ To create effective example notebooks:
 - **Use relative paths** when accessing data to ensure portability
 - **Include visualizations** to help users understand the data
 - **Document any assumptions or limitations** of your analyses
-- **Test your notebook** in the DANDI Hub environment before submitting
+- **Test your notebook** in a clean environment before submitting
 - **Keep the notebook focused** on demonstrating how to use the data rather than complex analyses
 
 ## Example Notebook Organization

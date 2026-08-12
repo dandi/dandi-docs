@@ -2,7 +2,7 @@
 
 A DANDI account enhances your capabilities within the DANDI Archive.
 Without an account, users can freely search, view, and download available datasets.
-With an account, users can create and edit Dandisets, and use the DANDI Hub to analyze data.
+With an account, users can create and edit Dandisets.
 
 DANDI provides two servers:
 
