@@ -109,14 +109,13 @@ asset.download("local_file.nwb")
 
 ### 3. WebDAV Integration
 
-DANDI provides a [WebDAV](https://en.wikipedia.org/wiki/WebDAV) service at https://webdav.dandiarchive.org/ that allows external services to access DANDI data using standard WebDAV clients:
+!!! warning "Service discontinued"
 
-```python
-import requests
+    The DANDI [WebDAV](https://en.wikipedia.org/wiki/WebDAV) service (formerly at `https://webdav.dandiarchive.org/`) has been brought down and is no longer available.
 
-# Access a file via WebDAV
-response = requests.get("https://webdav.dandiarchive.org/dandisets/000123/draft/path/to/file.nwb")
-```
+    If your integration relied on WebDAV access to DANDI, please contact us at [info@dandiarchive.org](mailto:info@dandiarchive.org) so we can consider bringing the service back.
+
+    The service's source code remains available at <https://github.com/dandi/dandidav/> for independent DANDI deployments.
 
 ### 4. Custom Visualization Services
 
