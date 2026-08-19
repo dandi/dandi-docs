@@ -54,6 +54,13 @@ once for each award number.
 The Subject Matter section allows you to annotate the Dandiset with links to terms in ontologies. Use `Generic Type`
 for any type other than `Anatomy` or `Disorder`.
 
+The [EMBL-EBI Ontology Lookup Service](https://www.ebi.ac.uk/ols4/index) is a useful resource for searching for ontology terms, aggregating search across many excellent ontologies.
+
+* Brain areas and cell types should be annotated using the `Anatomy` type.
+* Diseases and disorders should be annotated using the `Disorder` type.
+
+The [Cognitive Atlas](http://www.cognitiveatlas.org/) is a useful resource for annotating cognitive functions, concepts, and tasks using the `Generic Type` type.
+
 ### Ethics Approvals
 
 The Ethics Approvals section allows you to provide information about the ethics approvals that were obtained for the
