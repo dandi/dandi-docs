@@ -53,6 +53,7 @@ nav:
     - Contributing an example notebook: "user-guide-sharing/contributing-notebook.md"
   - "User Guide: Using Data":
     - Exploring Dandisets: "user-guide-using/exploring-dandisets.md"
+    - Advanced Search: "user-guide-using/advanced-search.md"
     - Accessing Data:
       - Overview: "user-guide-using/accessing-data/index.md"
       - Downloading: "user-guide-using/accessing-data/downloading.md"
