@@ -41,7 +41,7 @@ Once your DANDI clone is added to the list of available `DandiInstance` objects,
 ## Access credentials
 
 Users will be prompted for a `DANDI_API_KEY`
-environment variable.  This variable does not need to be unique to your DANDI clone.  A user can just set their `DANDI_API_KEY` to the value that your DANDI API clone issues.  See docs on [storing access credentials](https://www.dandiarchive.org/handbook/13_upload/#storing-access-credentials).
+environment variable.  This variable does not need to be unique to your DANDI clone.  A user can just set their `DANDI_API_KEY` to the value that your DANDI API clone issues.  See docs on [storing access credentials](../../user-guide-sharing/uploading-data.md#storing-access-credentials).
 
 ## Versioning
 
