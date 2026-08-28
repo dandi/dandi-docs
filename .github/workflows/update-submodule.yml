@@ -1,0 +1,55 @@
+name: Update example-notebooks submodule
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-submodule:
+    name: Update example-notebooks submodule
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Update submodule
+        id: update
+        run: |
+          git submodule update --remote docs/example-notebooks
+          cd docs/example-notebooks
+          echo "sha=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+          cd ..
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push changes
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          branch="update-example-notebooks-submodule"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add docs/example-notebooks
+          git commit -m "Update example-notebooks submodule to ${{ steps.update.outputs.sha }}"
+          git push --force origin "$branch"
+
+      - name: Create pull request
+        if: steps.update.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create \
+            --title "Update example-notebooks submodule to commit ${{ steps.update.outputs.sha }}" \
+            --base master \
+            --head "update-example-notebooks-submodule" \
