@@ -8,7 +8,7 @@ DANDI provides several methods for streaming data:
 
 ### 1. Python-based streaming methods
 
-Using Python, you can set up data streaming using remfile, fsspec, or ros3. See the [PyNWB streaming tutorial](https://pynwb.readthedocs.io/en/stable/tutorials/advanced_io/streaming.html) for details. Note that these streaming methods tend to work better on [DANDI Hub](../dandi-hub.md), where data access is faster.
+Using Python, you can set up data streaming using remfile, fsspec, or ros3. See the [PyNWB streaming tutorial](https://pynwb.readthedocs.io/en/stable/tutorials/advanced_io/streaming.html) for details.
 
 ### 2. DataLad FUSE Mount
 

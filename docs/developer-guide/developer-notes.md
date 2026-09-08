@@ -120,7 +120,7 @@ Logs for many of the repositories are archived on `drogon` server at `/mnt/backu
 All code repositories are hosted on GitHub. The easiest way to contribute is to
 gain push access to the repositories by talking to @waxlamp; this way, you can
 create pull requests based on branches within the origin repositories, which in
-turn allows for Netlify deploy previews and Heroku staging previews to be built.
+turn allows for Netlify deploy previews and Heroku sandbox previews to be built.
 
 However, this is not strictly required. You can contribute using the standard
 fork-and-pull-request model, but under this workflow we will lose the benefit of

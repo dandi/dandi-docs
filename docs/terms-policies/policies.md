@@ -1,4 +1,4 @@
-# General Policies v1.2.0
+# General Policies v1.3.0
 
 ## Content
 
@@ -73,9 +73,6 @@ We may combine information collected through the Sites with information that we 
   uploader. In any other circumstance reasonable attempts will be made to contact
   the original uploader to obtain consent. The DOI and the URL of the original
   object are retained.
-
-- **User data on Dandihub:** At present, user data on Dandihub is being removed
-  periodically and Dandihub storage space should not be considered persistent.
 
 ## Longevity
 

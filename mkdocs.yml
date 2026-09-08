@@ -53,9 +53,11 @@ nav:
     - Uploading Data: "user-guide-sharing/uploading-data.md"
     - Dandiset Metadata: "user-guide-sharing/dandiset-metadata.md"
     - Publishing Dandisets: "user-guide-sharing/publishing-dandisets.md"
+    - Deleting Dandisets: "user-guide-sharing/deleting-dandisets.md"
     - Contributing an example notebook: "user-guide-sharing/contributing-notebook.md"
   - "User Guide: Using Data":
     - Exploring Dandisets: "user-guide-using/exploring-dandisets.md"
+    - Advanced Search: "user-guide-using/advanced-search.md"
     - Accessing Data:
       - Overview: "user-guide-using/accessing-data/index.md"
       - Downloading: "user-guide-using/accessing-data/downloading.md"
@@ -84,7 +86,6 @@ nav:
       - DANDI Archive: "developer-guide/creating-dandi-instance/dandi-archive.md"
       - DANDI Authentication: "developer-guide/creating-dandi-instance/dandi-authentication.md"
       - DANDI Client: "developer-guide/creating-dandi-instance/dandi-cli.md"
-      - DANDI Hub: "developer-guide/creating-dandi-instance/dandi-hub.md"
   - Health Status:
     - Dandisets: https://github.com/dandi/dandisets-healthstatus
     - Services: https://status.dandiarchive.org
