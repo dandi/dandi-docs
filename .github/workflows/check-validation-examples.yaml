@@ -2,14 +2,27 @@ name: Check validation examples freshness
 
 # Re-runs scripts/generate-validation-examples.sh against the latest released
 # dandi-cli/nwbinspector/bids-validator and compares the output to what's
-# committed under docs/examples/validation/. Opens an issue when they drift,
-# so the docs don't silently go stale as validators evolve.
+# committed under docs/examples/validation/. Fails the job on any drift, and
+# additionally opens/updates a tracking issue when that happens on the
+# schedule (a red PR check is enough signal there; a red scheduled run is
+# easy to miss unless someone opens the Actions tab).
 #
 # NOTE: until dandi/dandi-cli#1822 is merged and released, this job is
 # expected to fail (the script relies on --grouping/--summary/--load/
 # --format json_lines, which don't exist in released dandi-cli yet).
 
 on:
+  pull_request:
+    paths:
+      - "docs/examples/validation/**"
+      - "scripts/generate-validation-examples.sh"
+      - ".github/workflows/check-validation-examples.yaml"
+  push:
+    branches: [master]
+    paths:
+      - "docs/examples/validation/**"
+      - "scripts/generate-validation-examples.sh"
+      - ".github/workflows/check-validation-examples.yaml"
   schedule:
     # Every Monday at 06:17 UTC
     - cron: "17 6 * * 1"
@@ -48,8 +61,8 @@ jobs:
             git diff -- docs/examples/validation/ > /tmp/examples.diff
           fi
 
-      - name: Open issue on drift
-        if: steps.diff.outputs.changed == 'true'
+      - name: Open issue on drift (scheduled runs only)
+        if: steps.diff.outputs.changed == 'true' && github.event_name == 'schedule'
         uses: actions/github-script@v7
         with:
           script: |
@@ -100,3 +113,9 @@ jobs:
                 labels: ['validation-examples-drift'],
               });
             }
+
+      - name: Fail if examples are out of date
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          echo "::error::docs/examples/validation/ is out of date -- rerun scripts/generate-validation-examples.sh and commit the result."
+          exit 1
