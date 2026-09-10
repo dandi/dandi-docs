@@ -1,0 +1,72 @@
+[
+  {
+    "asset_paths": null,
+    "dandiset_path": "invalid_eeg_cbm",
+    "dataset_path": "invalid_eeg_cbm",
+    "id": "BIDS.README_FILE_MISSING",
+    "message": "The recommended file /README is missing.\nSee Section 03 (Modality agnostic files) of the BIDS specification.\n",
+    "metadata": null,
+    "origin": {
+      "standard": "BIDS",
+      "standard_schema_version": "1.2.1",
+      "standard_version": null,
+      "type": "VALIDATION",
+      "validator": "bids-validator-deno",
+      "validator_version": "2.4.1"
+    },
+    "path": "invalid_eeg_cbm/dataset_description.json",
+    "path_regex": null,
+    "record_version": "1",
+    "scope": "file",
+    "severity": "HINT",
+    "within_asset_paths": null
+  },
+  {
+    "asset_paths": null,
+    "dandiset_path": "invalid_eeg_cbm",
+    "dataset_path": "invalid_eeg_cbm",
+    "id": "BIDS.JSON_KEY_RECOMMENDED",
+    "message": "A JSON file is missing a key listed as recommended.\nsubCode: HEDVersion\nissueMessage: Field description: If HED tags are used:\nThe version of the HED schema used to validate HED tags for study.\nMay include a single schema or a base schema and one or more library schema.\n",
+    "metadata": null,
+    "origin": {
+      "standard": "BIDS",
+      "standard_schema_version": "1.2.1",
+      "standard_version": null,
+      "type": "VALIDATION",
+      "validator": "bids-validator-deno",
+      "validator_version": "2.4.1"
+    },
+    "path": "invalid_eeg_cbm/dataset_description.json",
+    "path_regex": null,
+    "record_version": "1",
+    "scope": "file",
+    "severity": "HINT",
+    "within_asset_paths": null
+  },
+  {
+    "asset_paths": null,
+    "dandiset_path": "invalid_eeg_cbm",
+    "dataset_path": "invalid_eeg_cbm",
+    "id": "BIDS.JSON_KEY_RECOMMENDED",
+    "message": "A JSON file is missing a key listed as recommended.\nsubCode: GeneratedBy\nissueMessage: Field description: Used to specify provenance of the dataset.\n",
+    "metadata": null,
+    "origin": {
+      "standard": "BIDS",
+      "standard_schema_version": "1.2.1",
+      "standard_version": null,
+      "type": "VALIDATION",
+      "validator": "bids-validator-deno",
+      "validator_version": "2.4.1"
+    },
+    "path": "invalid_eeg_cbm/dataset_description.json",
+    "path_regex": null,
+    "record_version": "1",
+    "scope": "file",
+    "severity": "HINT",
+    "within_asset_paths": null
+  },
+  {
+    "_truncated": true,
+    "omitted_count": 429
+  }
+]

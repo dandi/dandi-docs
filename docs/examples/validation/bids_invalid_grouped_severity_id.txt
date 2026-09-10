@@ -1,0 +1,43 @@
+=== HINT (410 issues) ===
+  === BIDS.README_FILE_MISSING (1 issue) ===
+    [BIDS.README_FILE_MISSING] invalid_eeg_cbm/dataset_description.json — The recommended file /README is missing.
+See Section 03 (Modality agnostic files) of the BIDS specification.
+  === BIDS.JSON_KEY_RECOMMENDED (3 issues) ===
+    [BIDS.JSON_KEY_RECOMMENDED] invalid_eeg_cbm/dataset_description.json — A JSON file is missing a key listed as recommended.
+subCode: HEDVersion
+issueMessage: Field description: If HED tags are used:
+The version of the HED schema used to validate HED tags for study.
+May include a single schema or a base schema and one or more library schema.
+    [BIDS.JSON_KEY_RECOMMENDED] invalid_eeg_cbm/dataset_description.json — A JSON file is missing a key listed as recommended.
+subCode: GeneratedBy
+issueMessage: Field description: Used to specify provenance of the dataset.
+    ... and 1 more issue
+  === BIDS.SIDECAR_KEY_RECOMMENDED (360 issues) ===
+    [BIDS.SIDECAR_KEY_RECOMMENDED] invalid_eeg_cbm/sub-cbm001/eeg/sub-cbm001_task-protmap_eeg.edf — A data file's JSON sidecar is missing a key listed as recommended.
+subCode: Manufacturer
+issueMessage: Field description: Manufacturer of the equipment that produced the measurements.
+    [BIDS.SIDECAR_KEY_RECOMMENDED] invalid_eeg_cbm/sub-cbm001/eeg/sub-cbm001_task-protmap_eeg.edf — A data file's JSON sidecar is missing a key listed as recommended.
+subCode: ManufacturersModelName
+issueMessage: Field description: Manufacturer's model name of the equipment that produced the measurements.
+    ... and 358 more issues
+  === BIDS.TSV_ADDITIONAL_COLUMNS_UNDEFINED (40 issues) ===
+    [BIDS.TSV_ADDITIONAL_COLUMNS_UNDEFINED] invalid_eeg_cbm/sub-cbm001/eeg/sub-cbm001_task-protmap_events.tsv — A TSV file has extra columns which are not defined in its associated JSON sidecar
+subCode: value
+    [BIDS.TSV_ADDITIONAL_COLUMNS_UNDEFINED] invalid_eeg_cbm/sub-cbm001/eeg/sub-cbm001_task-protmap_events.tsv — A TSV file has extra columns which are not defined in its associated JSON sidecar
+subCode: sample
+    ... and 38 more issues
+  === BIDS.EEG_CHANNEL_COUNT_MISMATCH (6 issues) ===
+    [BIDS.EEG_CHANNEL_COUNT_MISMATCH] invalid_eeg_cbm/sub-cbm015/eeg/sub-cbm015_task-protmap_eeg.edf — The EEGChannelCount metadata does not match the number of channels
+with type EEG in the associated channels.tsv file.
+    [BIDS.EEG_CHANNEL_COUNT_MISMATCH] invalid_eeg_cbm/sub-cbm016/eeg/sub-cbm016_task-protmap_eeg.edf — The EEGChannelCount metadata does not match the number of channels
+with type EEG in the associated channels.tsv file.
+    ... and 4 more issues
+=== ERROR (22 issues) ===
+  === BIDS.EMPTY_FILE (20 issues) ===
+    [BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm001/eeg/sub-cbm001_task-protmap_eeg.edf — Empty files not allowed.
+    [BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm002/eeg/sub-cbm002_task-protmap_eeg.edf — Empty files not allowed.
+    ... and 18 more issues
+  === BIDS.NIFTI_HEADER_UNREADABLE (1 issue) ===
+    [BIDS.NIFTI_HEADER_UNREADABLE] invalid_eeg_cbm/sub-cbm011/sub-cbm011_scans.nii — We were unable to parse header data from this NIfTI file. Please ensure it is not corrupted or mislabeled.
+  === BIDS.EXTENSION_MISMATCH (1 issue) ===
+    [BIDS.EXTENSION_MISMATCH] invalid_eeg_cbm/sub-cbm011/sub-cbm011_scans.nii — Extension used by file does not match allowed extensions for its suffix
