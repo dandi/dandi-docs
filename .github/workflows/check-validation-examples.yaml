@@ -73,6 +73,11 @@ jobs:
         if: steps.capability.outputs.supported == 'true'
         id: diff
         run: |
+          # `git add -N` stages new files with no content, so untracked
+          # examples (e.g. a file the script generates but nobody ever
+          # committed) show up in `git diff` too, instead of being silently
+          # invisible to it.
+          git add -N -- docs/examples/validation/
           git diff --stat -- docs/examples/validation/ | tee /tmp/examples.diffstat
           if git diff --quiet -- docs/examples/validation/; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
