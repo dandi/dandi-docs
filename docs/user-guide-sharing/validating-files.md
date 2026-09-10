@@ -169,40 +169,14 @@ dandi validate --ignore "BIDS.SIDECAR_KEY_RECOMMENDED" path/to/data/
 
 ```console
 $ dandi validate -g severity invalid_eeg_cbm/
-=== HINT (410 issues) ===
-  [BIDS.README_FILE_MISSING] dataset_description.json — The recommended file /README is missing.
-  [BIDS.JSON_KEY_RECOMMENDED] dataset_description.json — A JSON file is missing a key...
-  [BIDS.JSON_KEY_RECOMMENDED] dataset_description.json — A JSON file is missing a key...
-  ... and 407 more issues
-=== ERROR (22 issues) ===
-  [BIDS.EMPTY_FILE] sub-cbm001/eeg/sub-cbm001_task-protmap_eeg.edf — Empty files not allowed.
-  [BIDS.EMPTY_FILE] sub-cbm002/eeg/sub-cbm002_task-protmap_eeg.edf — Empty files not allowed.
-  [BIDS.EMPTY_FILE] sub-cbm003/eeg/sub-cbm003_task-protmap_eeg.edf — Empty files not allowed.
-  ... and 19 more issues
+--8<-- "examples/validation/bids_invalid_grouped_severity.txt"
 ```
 
 Hierarchical grouping with `-g severity -g id`:
 
 ```console
 $ dandi validate -g severity -g id --max-per-group 2 invalid_eeg_cbm/
-=== HINT (410 issues) ===
-  === BIDS.README_FILE_MISSING (1 issue) ===
-    [BIDS.README_FILE_MISSING] dataset_description.json — The recommended file /README is missing.
-  === BIDS.JSON_KEY_RECOMMENDED (3 issues) ===
-    [BIDS.JSON_KEY_RECOMMENDED] dataset_description.json — A JSON file is missing a key...
-    [BIDS.JSON_KEY_RECOMMENDED] dataset_description.json — A JSON file is missing a key...
-    ... and 1 more issue
-  === BIDS.SIDECAR_KEY_RECOMMENDED (360 issues) ===
-    ...
-=== ERROR (22 issues) ===
-  === BIDS.EMPTY_FILE (20 issues) ===
-    [BIDS.EMPTY_FILE] sub-cbm001/eeg/sub-cbm001_task-protmap_eeg.edf — Empty files not allowed.
-    [BIDS.EMPTY_FILE] sub-cbm002/eeg/sub-cbm002_task-protmap_eeg.edf — Empty files not allowed.
-    ... and 18 more issues
-  === BIDS.NIFTI_HEADER_UNREADABLE (1 issue) ===
-    ...
-  === BIDS.EXTENSION_MISMATCH (1 issue) ===
-    ...
+--8<-- "examples/validation/bids_invalid_grouped_severity_id.txt"
 ```
 
 Available grouping keys: `none`, `path`, `severity`, `id`, `validator`, `standard`, `dandiset`.
@@ -211,20 +185,7 @@ Use `--max-per-group N` to limit output per group and `--summary` to append aggr
 
 ```console
 $ dandi validate --summary 000027/
-[DANDI.NO_DANDISET_FOUND] 000027 — Path is not inside a Dandiset
-[pynwb.GENERIC] sub-RAT123/sub-RAT123.nwb — error: nwb_version '2.0b' is not a proper semantic version.
-[NWBI.check_subject_age] sub-RAT123/sub-RAT123.nwb — Subject age, '12 mo', does not follow ISO 8601 duration format...
-[NWBI.check_subject_weight] sub-RAT123/sub-RAT123.nwb — Subject weight '2 lbs' does not follow the expected form...
---- Validation Summary ---
-Total issues: 4
-By severity:
-  ERROR: 4
-By validator:
-  dandi: 2
-  nwbinspector: 2
-By standard:
-  N/A: 3
-  DANDI-LAYOUT: 1
+--8<-- "examples/validation/nwb_000027_summary.txt"
 ```
 
 ### Saving and Loading Results
@@ -301,14 +262,14 @@ vd results.jsonl
 
 Useful VisiData key bindings for validation review:
 
-| Key | Action |
-|-----|--------|
-| `[` / `]` | Sort ascending / descending by current column |
-| `F` | Frequency table for current column (great for severity or id) |
-| `\|` | Select rows matching a regex in the current column |
-| `-` | Hide the current column |
-| `z Enter` | Expand the current cell (useful for long messages) |
-| `q` | Quit the current sheet (or exit VisiData) |
+| Key       | Action                                                        |
+| --------- | ------------------------------------------------------------- |
+| `[` / `]` | Sort ascending / descending by current column                 |
+| `F`       | Frequency table for current column (great for severity or id) |
+| `\|`      | Select rows matching a regex in the current column            |
+| `-`       | Hide the current column                                       |
+| `z Enter` | Expand the current cell (useful for long messages)            |
+| `q`       | Quit the current sheet (or exit VisiData)                     |
 
 Compose multiple validation files for a combined view:
 
@@ -334,40 +295,40 @@ cat upload1_validation.jsonl upload2_validation.jsonl | vd -f jsonl
 Each validation result (whether displayed as text or serialized to JSON/YAML/JSONL) contains
 these fields:
 
-| Field | Description |
-|-------|-------------|
-| `id` | Issue identifier, e.g., `NWBI.check_subject_age`, `BIDS.EMPTY_FILE` |
-| `severity` | One of: `INFO`, `HINT`, `WARNING`, `ERROR`, `CRITICAL` |
-| `scope` | What was validated: `file`, `folder`, `dandiset`, or `dataset` |
-| `path` | Path to the problematic file or directory |
-| `message` | Human-readable description of the issue |
-| `asset_paths` | List of affected asset paths (if applicable) |
-| `within_asset_paths` | Location within an HDF5/NWB file hierarchy |
-| `dandiset_path` | Path to the Dandiset root |
-| `dataset_path` | Path to the dataset root |
-| `metadata` | Additional metadata (e.g., BIDS entity mappings) |
-| `origin` | Validator information (see below) |
-| `record_version` | Schema version for forward compatibility (currently `"1"`) |
+| Field                | Description                                                         |
+| -------------------- | ------------------------------------------------------------------- |
+| `id`                 | Issue identifier, e.g., `NWBI.check_subject_age`, `BIDS.EMPTY_FILE` |
+| `severity`           | One of: `INFO`, `HINT`, `WARNING`, `ERROR`, `CRITICAL`              |
+| `scope`              | What was validated: `file`, `folder`, `dandiset`, or `dataset`      |
+| `path`               | Path to the problematic file or directory                           |
+| `message`            | Human-readable description of the issue                             |
+| `asset_paths`        | List of affected asset paths (if applicable)                        |
+| `within_asset_paths` | Location within an HDF5/NWB file hierarchy                          |
+| `dandiset_path`      | Path to the Dandiset root                                           |
+| `dataset_path`       | Path to the dataset root                                            |
+| `metadata`           | Additional metadata (e.g., BIDS entity mappings)                    |
+| `origin`             | Validator information (see below)                                   |
+| `record_version`     | Schema version for forward compatibility (currently `"1"`)          |
 
 The `origin` field identifies which validator produced the result:
 
-| Field | Description |
-|-------|-------------|
-| `validator` | Tool name: `dandi`, `nwbinspector`, or `bids-validator-deno` |
-| `validator_version` | Version of the validator tool |
-| `standard` | Standard being checked: `BIDS`, `DANDI-LAYOUT`, `DANDI-SCHEMA`, `NWB`, `OME-ZARR` |
-| `standard_version` | Version of the standard (if applicable) |
-| `standard_schema_version` | Schema version (e.g., BIDS schema `1.2.1`) |
+| Field                     | Description                                                                       |
+| ------------------------- | --------------------------------------------------------------------------------- |
+| `validator`               | Tool name: `dandi`, `nwbinspector`, or `bids-validator-deno`                      |
+| `validator_version`       | Version of the validator tool                                                     |
+| `standard`                | Standard being checked: `BIDS`, `DANDI-LAYOUT`, `DANDI-SCHEMA`, `NWB`, `OME-ZARR` |
+| `standard_version`        | Version of the standard (if applicable)                                           |
+| `standard_schema_version` | Schema version (e.g., BIDS schema `1.2.1`)                                        |
 
 Severity levels in order of increasing importance:
 
-| Level | Value | Meaning |
-|-------|-------|---------|
-| `INFO` | 10 | Status information |
-| `HINT` | 20 | Data is valid but could be improved |
-| `WARNING` | 30 | Data is not fully valid; changes recommended |
-| `ERROR` | 40 | Data is invalid |
-| `CRITICAL` | 50 | Serious issue preventing further validation |
+| Level      | Value | Meaning                                      |
+| ---------- | ----- | -------------------------------------------- |
+| `INFO`     | 10    | Status information                           |
+| `HINT`     | 20    | Data is valid but could be improved          |
+| `WARNING`  | 30    | Data is not fully valid; changes recommended |
+| `ERROR`    | 40    | Data is invalid                              |
+| `CRITICAL` | 50    | Serious issue preventing further validation  |
 
 Only `ERROR` and `CRITICAL` issues block upload to DANDI.
 
