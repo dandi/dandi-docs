@@ -47,10 +47,22 @@ jobs:
       - name: Install dandi-cli and nwb2bids
         run: pip install --upgrade dandi nwb2bids
 
+      - name: Check installed dandi-cli supports the flags this script needs
+        id: capability
+        run: |
+          if dandi validate --help 2>&1 | grep -q -- '--grouping'; then
+            echo "supported=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "supported=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Installed dandi-cli ($(dandi --version 2>&1 | grep -v WARNING)) does not support --grouping/--summary/--load yet (dandi/dandi-cli#1822 not released) -- skipping the regeneration check until it is."
+          fi
+
       - name: Regenerate validation examples
+        if: steps.capability.outputs.supported == 'true'
         run: ./scripts/generate-validation-examples.sh
 
       - name: Diff against committed examples
+        if: steps.capability.outputs.supported == 'true'
         id: diff
         run: |
           git diff --stat -- docs/examples/validation/ | tee /tmp/examples.diffstat
@@ -60,6 +72,13 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
             git diff -- docs/examples/validation/ > /tmp/examples.diff
           fi
+
+      - name: Show diff in the job log
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          echo "::group::docs/examples/validation/ diff (first 100 lines)"
+          head -n 100 /tmp/examples.diff
+          echo "::endgroup::"
 
       - name: Open issue on drift (scheduled runs only)
         if: steps.diff.outputs.changed == 'true' && github.event_name == 'schedule'
