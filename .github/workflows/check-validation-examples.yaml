@@ -61,6 +61,14 @@ jobs:
         if: steps.capability.outputs.supported == 'true'
         run: ./scripts/generate-validation-examples.sh
 
+      - name: Upload regenerated examples
+        if: steps.capability.outputs.supported == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: regenerated-validation-examples
+          path: docs/examples/validation/
+          retention-days: 14
+
       - name: Diff against committed examples
         if: steps.capability.outputs.supported == 'true'
         id: diff
