@@ -144,8 +144,8 @@ For example, UBERON places the lateral septal complex inside the striatum, so
 `anatomy:striatum` returns Dandisets labeled with the lateral septal complex and
 `anatomy_exact:striatum` does not.
 
-Only Dandisets whose owners recorded a brain region can be found this way, which at the
-time of writing is about one in ten. See
+Only Dandisets whose owners recorded a brain region can be found this way.
+See
 [Dandiset Metadata](../user-guide-sharing/dandiset-metadata.md) for how to add one.
 
 ## Error Messages
