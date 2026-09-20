@@ -84,6 +84,31 @@ When several of these operators appear in one query, they must all be satisfied 
 same Dandiset version, so a draft version and a published version with different summaries
 do not combine into a spurious match.
 
+### Number of Subjects
+
+`num_subjects:VALUE` filters on the number of subjects in the asset summary
+(`assetsSummary.numberOfSubjects`). `VALUE` is a whole number, optionally after a
+comparator. A bare number means "at least".
+
+| Query | Meaning |
+|---|---|
+| `num_subjects:10` | At least 10 subjects |
+| `num_subjects:>=10` | At least 10 subjects |
+| `num_subjects:>10` | More than 10 subjects |
+| `num_subjects:<5` | Fewer than 5 subjects |
+| `num_subjects:<=5` | At most 5 subjects |
+| `num_subjects:=12` | Exactly 12 subjects |
+
+```
+species:mouse num_subjects:>10             # mouse Dandisets with more than 10 subjects
+num_subjects:>=5 num_subjects:<20          # repeat the operator for a range
+```
+
+The count is only recorded when subjects could be identified from the files, which works
+for NWB and BIDS data. A Dandiset with no assets, or with files in other formats, has no
+subject count and is not returned by any `num_subjects:` query, including `<` and `<=`.
+The count is never recorded as 0, so `num_subjects:=0` returns nothing.
+
 ### Owner
 
 `owner:VALUE` restricts the results to Dandisets owned by a matching user. `VALUE` is
@@ -108,6 +133,7 @@ Invalid syntax does not fail silently. The common cases are:
 |---|---|
 | `specie:mouse` | 400: `Unknown search operator "specie". Did you mean "species"? Wrap the term in double quotes (e.g. "foo:bar") to search for it as text.` |
 | `created_after:not-a-date` | 400: `Invalid date for "created_after": 'not-a-date'. Use YYYY-MM-DD.` |
+| `num_subjects:ten` | 400: `Invalid value for "num_subjects": 'ten'. Use a whole number, optionally after >, >=, <, <= or = (e.g. num_subjects:>10). A bare number means "at least".` |
 | `hello "world` | 400: `Unbalanced quote in search query. Remove the stray quote, or wrap the intended phrase in matched quotes.` |
 | `owner:` (empty value) | 400: `Operator "owner" requires a value (e.g. owner:something).` |
 
