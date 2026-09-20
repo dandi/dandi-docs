@@ -2,7 +2,7 @@
 
 The Dandiset list's search box accepts a Gmail-style syntax that lets you mix free-text
 terms with structured `key:value` operators, so you can filter by creation date, species,
-approach, measurement technique, and owner from the same input.
+approach, measurement technique, owner, and brain region from the same input.
 
 ## Example
 
@@ -100,6 +100,54 @@ owner:"Jane Doe"                       # full display name
 If a name matches multiple users, for example two people named Smith, Dandisets owned by
 any of them are returned.
 
+### Anatomy
+
+`anatomy:VALUE` finds Dandisets about a brain region. It reads the Anatomy entries in the
+"About" section of the Dandiset metadata, which are the regions shown on a Dandiset's
+landing page. `VALUE` can be written several ways:
+
+| Form | Example |
+|---|---|
+| Region name | `anatomy:hippocampus`, `anatomy:"primary motor cortex"` |
+| Ontology identifier | `anatomy:UBERON:0002421`, `anatomy:MBA:1089` |
+| Identifier with an underscore | `anatomy:UBERON_0002421` |
+| Term URL | `anatomy:http://purl.obolibrary.org/obo/UBERON_0002421` |
+
+The search includes everything inside the region. `anatomy:hippocampus` returns Dandisets
+labeled with the hippocampal formation and also those labeled with CA1, the dentate gyrus,
+or the entorhinal cortex, because the ontology records those as parts of it. The search
+does not go the other way: a Dandiset labeled only "brain" is not returned for
+`anatomy:hippocampus`.
+
+The recognized ontologies are [UBERON](https://www.ebi.ac.uk/ols4/ontologies/uberon), which
+covers all species, and the Allen Institute atlases: `MBA` (adult mouse), `DMBA`
+(developing mouse), `HBA` (adult human), and `DHBA` (developing human). A UBERON search
+also returns Dandisets labeled with the matching region of any of the atlases. An atlas
+term belongs to one species, so `anatomy:MBA:1089` returns only Dandisets labeled with the
+mouse atlas. To find mouse hippocampus data however it was labeled, combine a UBERON term
+with a species:
+
+```
+anatomy:hippocampus                         # the region and all of its parts
+anatomy:UBERON:0002421 species:mouse        # mouse data, UBERON or mouse atlas labels
+anatomy:MBA:1089                            # only Allen mouse atlas labels
+anatomy:"cerebral cortex" approach:electrophysiological
+```
+
+A region name is looked up among the ontology labels and synonyms. It is also compared, as
+whole words, with the names of Anatomy entries that have no ontology identifier, so
+Dandisets whose regions were typed as plain text are still found.
+
+`anatomy_exact:VALUE` takes the same forms and matches only the named region, without its
+parts or the atlas equivalents. It is useful when the expansion is broader than you want.
+For example, UBERON places the lateral septal complex inside the striatum, so
+`anatomy:striatum` returns Dandisets labeled with the lateral septal complex and
+`anatomy_exact:striatum` does not.
+
+Only Dandisets whose owners recorded a brain region can be found this way, which at the
+time of writing is about one in ten. See
+[Dandiset Metadata](../user-guide-sharing/dandiset-metadata.md) for how to add one.
+
 ## Error Messages
 
 Invalid syntax does not fail silently. The common cases are:
@@ -109,6 +157,7 @@ Invalid syntax does not fail silently. The common cases are:
 | `specie:mouse` | 400: `Unknown search operator "specie". Did you mean "species"? Wrap the term in double quotes (e.g. "foo:bar") to search for it as text.` |
 | `created_after:not-a-date` | 400: `Invalid date for "created_after": 'not-a-date'. Use YYYY-MM-DD.` |
 | `hello "world` | 400: `Unbalanced quote in search query. Remove the stray quote, or wrap the intended phrase in matched quotes.` |
+| `uberon:0002421` | 400: `Unknown search operator "uberon". Did you mean "anatomy:UBERON:0002421"?` |
 | `owner:` (empty value) | 400: `Operator "owner" requires a value (e.g. owner:something).` |
 
 Typo suggestions come from
@@ -150,9 +199,10 @@ lists every operator inline.
 
 ## Limitations and Notes
 
-Matching is by case-insensitive substring. `species:mouse` matches `House mouse`,
-`Mus musculus`, and anything else containing the substring. There is no exact-match mode
-at the moment, so use a longer substring to narrow the result.
+For the asset summary and owner operators, matching is by case-insensitive substring.
+`species:mouse` matches `House mouse`, `Mus musculus`, and anything else containing the
+substring. There is no exact-match mode for these operators at the moment, so use a longer
+substring to narrow the result.
 
 Operators always combine with AND. There is no OR or NOT, and no grammar for nesting, so
 `(species:mouse OR species:rat)` is not supported. To express OR, run two queries.
