@@ -57,6 +57,19 @@ For command-line users or those with larger datasets, the DANDI CLI provides a p
    dandi upload -i dandi-sandbox
    ```
 
+#### Uploading part of a Zarr
+
+By default, `dandi upload` synchronizes a [Zarr](https://zarr.dev/) asset in full, whereby files that exist on the server but not locally are deleted so the remote copy matches your local copy exactly.
+When you only want to add or update a subset of a Zarr's files, use `--zarr-mode patch`:
+
+```bash
+dandi upload --zarr-mode patch
+```
+
+In patch mode, only modified or new local files are uploaded, and remote files that are absent locally are **not** deleted.
+This is useful for editing metadata or adding to a large Zarr without needing a complete local copy.
+The default, `--zarr-mode full`, performs the usual full synchronization (including deletions).
+
 ## Storing Access Credentials
 
 There are two options for storing your DANDI access credentials:

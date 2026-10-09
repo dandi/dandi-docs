@@ -78,6 +78,24 @@ For example:
 
     dandi download --preserve-tree dandi://dandi/000026@draft/sub-I58/ses-Hip-CT/micr/sub-I58_sample-01_chunk-01_hipCT.json
 
+### Download part of a Zarr
+[Zarr](https://zarr.dev/) assets are directory trees that can contain many files, and you may need only a subset of them.
+The `--zarr` option lets you filter which entries within a Zarr asset are downloaded, so you can avoid transferring the full tree.
+
+The most common use is the `--zarr metadata` alias, which downloads only the Zarr metadata files (e.g. `zarr.json`, `.zarray`, `.zgroup`, `.zattrs`, `.zmetadata`) without any of the chunk data:
+
+    dandi download --zarr metadata dandi://dandi/001278@draft/sourcedata/raw/sub-Hb1/micr/sub-Hb1_sample-lefthemi_acq-overview_XPCT.ome.zarr
+
+You can also filter using an explicit `--zarr TYPE:PATTERN` expression, where `TYPE` is one of `glob`, `path`, or `regex`:
+
+| Type | Syntax | Description |
+|------|--------|-------------|
+| `glob:PATTERN` | `--zarr glob:'**/.z*'` | Download entries whose zarr-internal path matches the glob pattern, using `fnmatch` semantics per path component. `*` matches within a component, `**` matches across directory levels. |
+| `path:PREFIX` | `--zarr path:0/1/2` | Download entries whose zarr-internal path starts with the prefix. |
+| `regex:PATTERN` | `--zarr regex:'\.z(array|group|attrs)$'` | Download entries whose zarr-internal path matches the regular expression. |
+
+The `--zarr` option may be given multiple times, in which case an entry is downloaded if it matches **any** of the filters.
+
 ## Using DataLad
 
 All dandisets are regularly mirrored to DataLad datasets which are made available at the GitHub organization https://github.com/dandisets.
