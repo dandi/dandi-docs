@@ -1,0 +1,22 @@
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm001/eeg/sub-cbm001_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm002/eeg/sub-cbm002_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm003/eeg/sub-cbm003_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm004/eeg/sub-cbm004_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm005/eeg/sub-cbm005_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm006/eeg/sub-cbm006_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm007/eeg/sub-cbm007_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm008/eeg/sub-cbm008_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.NIFTI_HEADER_UNREADABLE] invalid_eeg_cbm/sub-cbm011/sub-cbm011_scans.nii — We were unable to parse header data from this NIfTI file. Please ensure it is not corrupted or mislabeled.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm009/eeg/sub-cbm009_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm010/eeg/sub-cbm010_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EXTENSION_MISMATCH] invalid_eeg_cbm/sub-cbm011/sub-cbm011_scans.nii — Extension used by file does not match allowed extensions for its suffix
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm011/eeg/sub-cbm011_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm012/eeg/sub-cbm012_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm013/eeg/sub-cbm013_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm014/eeg/sub-cbm014_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm015/eeg/sub-cbm015_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm016/eeg/sub-cbm016_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm017/eeg/sub-cbm017_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm018/eeg/sub-cbm018_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm019/eeg/sub-cbm019_task-protmap_eeg.edf — Empty files not allowed.
+[BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm020/eeg/sub-cbm020_task-protmap_eeg.edf — Empty files not allowed.

@@ -1,0 +1,17 @@
+=== HINT (410 issues) ===
+  [BIDS.README_FILE_MISSING] invalid_eeg_cbm/dataset_description.json — The recommended file /README is missing.
+See Section 03 (Modality agnostic files) of the BIDS specification.
+  [BIDS.JSON_KEY_RECOMMENDED] invalid_eeg_cbm/dataset_description.json — A JSON file is missing a key listed as recommended.
+subCode: HEDVersion
+issueMessage: Field description: If HED tags are used:
+The version of the HED schema used to validate HED tags for study.
+May include a single schema or a base schema and one or more library schema.
+  [BIDS.JSON_KEY_RECOMMENDED] invalid_eeg_cbm/dataset_description.json — A JSON file is missing a key listed as recommended.
+subCode: GeneratedBy
+issueMessage: Field description: Used to specify provenance of the dataset.
+  ... and 407 more issues
+=== ERROR (22 issues) ===
+  [BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm001/eeg/sub-cbm001_task-protmap_eeg.edf — Empty files not allowed.
+  [BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm002/eeg/sub-cbm002_task-protmap_eeg.edf — Empty files not allowed.
+  [BIDS.EMPTY_FILE] invalid_eeg_cbm/sub-cbm003/eeg/sub-cbm003_task-protmap_eeg.edf — Empty files not allowed.
+  ... and 19 more issues

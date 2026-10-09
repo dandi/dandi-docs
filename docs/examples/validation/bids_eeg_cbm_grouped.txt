@@ -1,0 +1,17 @@
+=== ERROR (21 issues) ===
+  [DANDI.NO_DANDISET_FOUND] eeg_cbm — Path is not inside a Dandiset
+  [BIDS.EMPTY_FILE] eeg_cbm/sub-cbm001/eeg/sub-cbm001_task-protmap_eeg.edf — Empty files not allowed.
+  [BIDS.EMPTY_FILE] eeg_cbm/sub-cbm002/eeg/sub-cbm002_task-protmap_eeg.edf — Empty files not allowed.
+  ... and 18 more issues
+=== HINT (410 issues) ===
+  [BIDS.README_FILE_SMALL] eeg_cbm/README — The recommended file '/README' is very small.
+Please consider expanding it with additional information about the dataset.
+  [BIDS.JSON_KEY_RECOMMENDED] eeg_cbm/dataset_description.json — A JSON file is missing a key listed as recommended.
+subCode: HEDVersion
+issueMessage: Field description: If HED tags are used:
+The version of the HED schema used to validate HED tags for study.
+May include a single schema or a base schema and one or more library schema.
+  [BIDS.JSON_KEY_RECOMMENDED] eeg_cbm/dataset_description.json — A JSON file is missing a key listed as recommended.
+subCode: GeneratedBy
+issueMessage: Field description: Used to specify provenance of the dataset.
+  ... and 407 more issues

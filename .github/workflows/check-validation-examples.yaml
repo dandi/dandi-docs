@@ -1,0 +1,153 @@
+name: Check validation examples freshness
+
+# Re-runs scripts/generate-validation-examples.sh against the latest released
+# dandi-cli/nwbinspector/bids-validator and compares the output to what's
+# committed under docs/examples/validation/. Fails the job on any drift, and
+# additionally opens/updates a tracking issue when that happens on the
+# schedule (a red PR check is enough signal there; a red scheduled run is
+# easy to miss unless someone opens the Actions tab).
+#
+# NOTE: until dandi/dandi-cli#1822 is merged and released, this job is
+# expected to fail (the script relies on --grouping/--summary/--load/
+# --format json_lines, which don't exist in released dandi-cli yet).
+
+on:
+  pull_request:
+    paths:
+      - "docs/examples/validation/**"
+      - "scripts/generate-validation-examples.sh"
+      - ".github/workflows/check-validation-examples.yaml"
+  push:
+    branches: [master]
+    paths:
+      - "docs/examples/validation/**"
+      - "scripts/generate-validation-examples.sh"
+      - ".github/workflows/check-validation-examples.yaml"
+  schedule:
+    # Every Monday at 06:17 UTC
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-examples:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install version of Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dandi-cli and nwb2bids
+        run: pip install --upgrade dandi nwb2bids
+
+      - name: Check installed dandi-cli supports the flags this script needs
+        id: capability
+        run: |
+          if dandi validate --help 2>&1 | grep -q -- '--grouping'; then
+            echo "supported=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "supported=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Installed dandi-cli ($(dandi --version 2>&1 | grep -v WARNING)) does not support --grouping/--summary/--load yet (dandi/dandi-cli#1822 not released) -- skipping the regeneration check until it is."
+          fi
+
+      - name: Regenerate validation examples
+        if: steps.capability.outputs.supported == 'true'
+        run: ./scripts/generate-validation-examples.sh
+
+      - name: Upload regenerated examples
+        if: steps.capability.outputs.supported == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: regenerated-validation-examples
+          path: docs/examples/validation/
+          retention-days: 14
+
+      - name: Diff against committed examples
+        if: steps.capability.outputs.supported == 'true'
+        id: diff
+        run: |
+          # `git add -N` stages new files with no content, so untracked
+          # examples (e.g. a file the script generates but nobody ever
+          # committed) show up in `git diff` too, instead of being silently
+          # invisible to it.
+          git add -N -- docs/examples/validation/
+          git diff --stat -- docs/examples/validation/ | tee /tmp/examples.diffstat
+          if git diff --quiet -- docs/examples/validation/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff -- docs/examples/validation/ > /tmp/examples.diff
+          fi
+
+      - name: Show diff in the job log
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          echo "::group::docs/examples/validation/ diff (first 100 lines)"
+          head -n 100 /tmp/examples.diff
+          echo "::endgroup::"
+
+      - name: Open issue on drift (scheduled runs only)
+        if: steps.diff.outputs.changed == 'true' && github.event_name == 'schedule'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const diffstat = fs.readFileSync('/tmp/examples.diffstat', 'utf8');
+            const diff = fs.readFileSync('/tmp/examples.diff', 'utf8').slice(0, 60000);
+            const title = 'Validation doc examples are out of date';
+            const body = [
+              'Re-running `scripts/generate-validation-examples.sh` against the ' +
+              'current `dandi`/`nwbinspector`/`bids-validator` produced different ' +
+              'output than what is committed under `docs/examples/validation/`.',
+              '',
+              '```',
+              diffstat,
+              '```',
+              '',
+              '<details><summary>Full diff</summary>',
+              '',
+              '```diff',
+              diff,
+              '```',
+              '</details>',
+              '',
+              'Run the script locally, review the changes, and commit the ' +
+              'refreshed example files (see `docs/user-guide-sharing/validating-files.md`, ' +
+              'which includes several of them verbatim via `pymdownx.snippets`).',
+            ].join('\n');
+
+            const { data: existing } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'validation-examples-drift',
+            });
+            if (existing.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing[0].number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['validation-examples-drift'],
+              });
+            }
+
+      - name: Fail if examples are out of date
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          echo "::error::docs/examples/validation/ is out of date -- rerun scripts/generate-validation-examples.sh and commit the result."
+          exit 1
