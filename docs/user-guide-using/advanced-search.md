@@ -110,6 +110,9 @@ Invalid syntax does not fail silently. The common cases are:
 | `created_after:not-a-date` | 400: `Invalid date for "created_after": 'not-a-date'. Use YYYY-MM-DD.` |
 | `hello "world` | 400: `Unbalanced quote in search query. Remove the stray quote, or wrap the intended phrase in matched quotes.` |
 | `owner:` (empty value) | 400: `Operator "owner" requires a value (e.g. owner:something).` |
+| `species:mouse OR species:rat` | 400: `"OR" is reserved for boolean search, which is not supported yet. ...` |
+| `-species:mouse` | 400: `"-species:mouse": excluding results with a leading "-" is not supported yet. ...` |
+| `Allen (2020)` | 400: `"(2020)": parentheses are reserved for grouping, which is not supported yet. ...` |
 
 Typo suggestions come from
 [`difflib.get_close_matches`](https://docs.python.org/3/library/difflib.html#difflib.get_close_matches),
@@ -117,6 +120,31 @@ so treat them as a hint rather than as authoritative.
 
 Search queries are capped at 1024 characters, which is well above any reasonable
 interactive query.
+
+## Grammar
+
+The full syntax, in [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form).
+`key` must be one of the operators listed above, and the first matching alternative of
+`term` wins, so `species:mouse` is an operator and `"species:mouse"` is a phrase.
+
+```ebnf
+query    = [ ws ] , [ term , { ws , term } ] , [ ws ] ;
+term     = operator | phrase | word ;
+operator = key , ":" , ( phrase | token ) ;
+phrase   = '"' , { any character except '"' } , '"' ;
+word     = token - reserved ;
+token    = non-space , { non-space } ;
+key      = ( "a" .. "z" | "_" ) , { "a" .. "z" | "_" } ;
+reserved = "AND" | "OR" | "NOT"
+         | "-" , key , ":" , { non-space }
+         | { non-space } , ( "(" | ")" ) , { non-space } ;
+ws       = " " , { " " } ;
+```
+
+The `reserved` forms return an error. They are set aside so that boolean operators,
+negation, and grouping can be added later without changing what existing queries mean.
+To search for one of them as text, put it in double quotes, for example `"(2020)"`.
+Lowercase `and`, `or`, and `not` are ordinary words.
 
 ## Using the Syntax From the API
 
@@ -154,8 +182,9 @@ Matching is by case-insensitive substring. `species:mouse` matches `House mouse`
 `Mus musculus`, and anything else containing the substring. There is no exact-match mode
 at the moment, so use a longer substring to narrow the result.
 
-Operators always combine with AND. There is no OR or NOT, and no grammar for nesting, so
-`(species:mouse OR species:rat)` is not supported. To express OR, run two queries.
+Operators always combine with AND. `OR`, `NOT`, `-key:value`, and parentheses are
+reserved but not supported yet (see [Grammar](#grammar)), so
+`(species:mouse OR species:rat)` returns an error. To express OR, run two queries.
 
 The existing `?user=me` query parameter still works for "my Dandisets". There is no
 `owner:me` alias in the operator syntax.
